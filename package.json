@@ -1,0 +1,28 @@
+{
+  "name": "three-editor-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.5.6",
+    "jszip": "^3.10.1",
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0",
+    "three-editor-cores": "^0.0.3",
+    "vue": "^3.4.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "vite": "^5.1.0",
+    "vitepress": "^1.1.4"
+  }
+}

@@ -1,0 +1,3485 @@
+{
+    "scene": {
+        "backgroundBlurriness": 0,
+        "backgroundIntensity": 1,
+        "backgroundUrls": [
+            "https://z2586300277.github.io/three-editor/dist/files/scene/skyBox0/1.png",
+            "https://z2586300277.github.io/three-editor/dist/files/scene/skyBox0/2.png",
+            "https://z2586300277.github.io/three-editor/dist/files/scene/skyBox0/3.png",
+            "https://z2586300277.github.io/three-editor/dist/files/scene/skyBox0/4.png",
+            "https://z2586300277.github.io/three-editor/dist/files/scene/skyBox0/5.png",
+            "https://z2586300277.github.io/three-editor/dist/files/scene/skyBox0/6.png"
+        ],
+        "envBackgroundUrls": null,
+        "environmentEnabled": false,
+        "background": {
+            "colorSpace": "srgb"
+        }
+    },
+    "perspectiveCamera": {
+        "fov": 50,
+        "near": 0.1,
+        "far": 100000,
+        "zoom": 1,
+        "layers": {
+            "mask": 1
+        },
+        "position": {
+            "x": -14.575769350340394,
+            "y": 8.15433296918544,
+            "z": 28.447449677271386
+        }
+    },
+    "webglRenderer": {
+        "outputColorSpace": "srgb",
+        "toneMapping": 0,
+        "toneMappingExposure": 1,
+        "shadowMap": {
+            "enabled": false,
+            "type": 1
+        },
+        "color": 0,
+        "opacity": 0,
+        "sortObjects": true,
+        "localClippingEnabled": false,
+        "clippingPlanes": []
+    },
+    "orbitControls": {
+        "maxPolarAngle": 1.5,
+        "autoRotate": false,
+        "autoRotateSpeed": 2,
+        "rotateSpeed": 1,
+        "panSpeed": 1,
+        "zoomSpeed": 1,
+        "enableDamping": true,
+        "dampingFactor": 0.05,
+        "minDistance": 0.01,
+        "maxDistance": 500,
+        "target": {
+            "x": -1.4954051012364848,
+            "y": 1.6135001978209265,
+            "z": 10.650591178020491
+        }
+    },
+    "transformControls": {
+        "mode": "translate",
+        "space": "world",
+        "size": 1,
+        "showX": true,
+        "showY": true,
+        "showZ": true,
+        "translationSnap": null,
+        "rotationSnap": null,
+        "scaleSnap": null
+    },
+    "effectComposer": {
+        "renderWay": "效果渲染",
+        "saoPass": {
+            "enabled": false,
+            "saoBias": 0.5,
+            "saoIntensity": 0.01,
+            "saoScale": 100,
+            "saoKernelRadius": 100,
+            "saoMinResolution": 0,
+            "saoBlur": true,
+            "saoBlurRadius": 8,
+            "saoBlurStdDev": 4,
+            "saoBlurDepthCutoff": 0.01
+        },
+        "unrealBloomPass": {
+            "enabled": false,
+            "strength": 1.5,
+            "radius": 0.4,
+            "threshold": 0.85
+        },
+        "ssrPass": {
+            "enabled": false,
+            "maxDistance": 0.01,
+            "distanceAttenuation": true,
+            "opacity": 0.5,
+            "thickness": 0.018,
+            "fresnel": true,
+            "infiniteThick": false,
+            "bouncing": false
+        },
+        "outlinePass": {
+            "enabled": true,
+            "edgeStrength": 3,
+            "edgeGlow": 0,
+            "edgeThickness": 1,
+            "pulsePeriod": 0,
+            "usePatternTexture": false,
+            "visibleEdgeColor": 16449071,
+            "hiddenEdgeColor": 16449071,
+            "overlayMaterial": {
+                "blending": 5,
+                "blendEquation": 100,
+                "blendSrc": 201,
+                "blendDst": 205
+            }
+        },
+        "fxaaPass": {
+            "enabled": true,
+            "multPixel": 1
+        },
+        "screenMaskPass": {
+            "enabled": false,
+            "intensity": 1,
+            "maskColor": 16777215,
+            "R": 0.2,
+            "sr": 1.2
+        }
+    },
+    "lighting": [
+        {
+            "name": "",
+            "type": "AmbientLight",
+            "visible": true,
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "color": 16777215,
+            "intensity": 1.0999999999999985,
+            "castShadow": false
+        },
+        {
+            "name": "",
+            "type": "DirectionalLight",
+            "visible": true,
+            "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "color": 16777215,
+            "intensity": 3.500000000000002,
+            "castShadow": false,
+            "shadow": {
+                "bias": 0,
+                "radius": 1,
+                "mapSize": {
+                    "x": 512,
+                    "y": 512
+                },
+                "normalBias": 0,
+                "camera": {
+                    "near": 0.5,
+                    "far": 500,
+                    "left": -5,
+                    "right": 5,
+                    "top": 5,
+                    "bottom": -5
+                }
+            },
+            "target": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "modelList": [
+        {
+            "group": {
+                "name": "",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": 332.69344037765063,
+                    "y": -2.392997989746874,
+                    "z": -603.5357292502885
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 1.4753058982618652,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 0.16116152727373,
+                    "y": 0.04007387257643356,
+                    "z": 0.17410841261202287
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 4870231,
+                        "opacity": 0.5,
+                        "transparent": true,
+                        "wireframe": false
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Obj3d66-1191469-441-556",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": -1.570796608924866,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 9.999999046325684,
+                            "y": 9.999999046325684,
+                            "z": 9.999999046325684
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/aroundBuilding.FBX",
+                "type": "FBX"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": 6644.599315062691,
+                    "y": 0,
+                    "z": -7251.001339427134
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": -92.22800374851495,
+                    "y": -92.22800374851495,
+                    "z": -92.22800374851495
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 12763842,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.4000000059604645
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "地面",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0.07500000298023224,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "G-__559245",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "G-__559245_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "G-__559245_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "G-__559245_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/foorGround.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": -9.53959158100765,
+                    "y": -0.04334863987531379,
+                    "z": 10.957203181106419
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 0,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 4671303,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.6136254668235779
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4343145787715912
+                    },
+                    {
+                        "visible": true,
+                        "color": 4934475,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.5243171453475952
+                    },
+                    {
+                        "visible": true,
+                        "color": 16316664,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5527864098548889
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4143657386302948
+                    },
+                    {
+                        "visible": true,
+                        "color": 7833238,
+                        "opacity": 0.6000000238418579,
+                        "transparent": true,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5243171453475952
+                    },
+                    {
+                        "visible": true,
+                        "color": 1448982,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4343145787715912
+                    },
+                    {
+                        "visible": true,
+                        "color": 16118504,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.39371341466903687
+                    },
+                    {
+                        "visible": true,
+                        "color": 5789784,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5527864098548889
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4343145787715912
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4143657386302948
+                    },
+                    {
+                        "visible": true,
+                        "color": 16448251,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5527864098548889
+                    },
+                    {
+                        "visible": true,
+                        "color": 3881787,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.7856453061103821
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "P_E3C03166_vray_black005",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格138",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_6",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_7",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_8",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_9",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_10",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_11",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_12",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_13",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_14",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/car.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": 9.770046643798754,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "blendShaderPrograms": {
+                    "shaderProgramsCodeName": "",
+                    "isBlendShaderPrograms": false,
+                    "uvType": "material"
+                },
+                "isSsr": false,
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 12439930,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Component5#1_003",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2000000476837158,
+                            "y": 1.2000000476837158,
+                            "z": 1.2000000476837158
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格001",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/tree.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": 5.177726289668141,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "blendShaderPrograms": {
+                    "shaderProgramsCodeName": "",
+                    "isBlendShaderPrograms": false,
+                    "uvType": "material"
+                },
+                "isSsr": false,
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 12439930,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Component5#1_003",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2000000476837158,
+                            "y": 1.2000000476837158,
+                            "z": 1.2000000476837158
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格001",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/tree.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": 14.914653760465537,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 6.265407954985034,
+                    "y": 6.265407954985034,
+                    "z": 6.265407954985034
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "blendShaderPrograms": {
+                    "shaderProgramsCodeName": "",
+                    "isBlendShaderPrograms": false,
+                    "uvType": "material"
+                },
+                "isSsr": false,
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 12439930,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Component5#1_003",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2000000476837158,
+                            "y": 1.2000000476837158,
+                            "z": 1.2000000476837158
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格001",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/tree.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": -9.573091701129222,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "blendShaderPrograms": {
+                    "shaderProgramsCodeName": "",
+                    "isBlendShaderPrograms": false,
+                    "uvType": "material"
+                },
+                "isSsr": false,
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 12439930,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Component5#1_003",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2000000476837158,
+                            "y": 1.2000000476837158,
+                            "z": 1.2000000476837158
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格001",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/tree.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": -4.746497533992979,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 12439930,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Component5#1_003",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2000000476837158,
+                            "y": 1.2000000476837158,
+                            "z": 1.2000000476837158
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格001",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/tree.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": -16.411940788492043,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 5.230926936550018,
+                    "y": 5.230926936550018,
+                    "z": 5.230926936550018
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 12439930,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.858578622341156
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Component5#1_003",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2000000476837158,
+                            "y": 1.2000000476837158,
+                            "z": 1.2000000476837158
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格001",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格001_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/tree.glb",
+                "type": "GLTF"
+            }
+        },
+        {
+            "group": {
+                "name": "Scene",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": 6.542544487173317,
+                    "y": 0,
+                    "z": 11.325678227971432
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "layers": {
+                    "mask": 1
+                },
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 0,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.858578622341156
+                    },
+                    {
+                        "visible": true,
+                        "color": 4671303,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.6136254668235779
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4343145787715912
+                    },
+                    {
+                        "visible": true,
+                        "color": 9088987,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.5243171453475952
+                    },
+                    {
+                        "visible": true,
+                        "color": 16316664,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5527864098548889
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4143657386302948
+                    },
+                    {
+                        "visible": true,
+                        "color": 7833238,
+                        "opacity": 0.6000000238418579,
+                        "transparent": true,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5243171453475952
+                    },
+                    {
+                        "visible": true,
+                        "color": 1448982,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4343145787715912
+                    },
+                    {
+                        "visible": true,
+                        "color": 16118504,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.39371341466903687
+                    },
+                    {
+                        "visible": true,
+                        "color": 5789784,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5527864098548889
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4343145787715912
+                    },
+                    {
+                        "visible": true,
+                        "color": 16777215,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 1,
+                        "roughness": 0.4143657386302948
+                    },
+                    {
+                        "visible": true,
+                        "color": 16448251,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.5527864098548889
+                    },
+                    {
+                        "visible": true,
+                        "color": 3881787,
+                        "opacity": 1,
+                        "transparent": false,
+                        "wireframe": false,
+                        "metalness": 0,
+                        "roughness": 0.7856453061103821
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "P_E3C03166_vray_black005",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "layers": {
+                            "mask": 1
+                        },
+                        "children": [
+                            {
+                                "name": "网格138",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_1",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_2",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_3",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "blendShaderPrograms": {
+                                    "shaderProgramsCodeName": "",
+                                    "isBlendShaderPrograms": false,
+                                    "uvType": "material"
+                                },
+                                "isSsr": false,
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_4",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_5",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_6",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_7",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_8",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_9",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_10",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_11",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_12",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_13",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "name": "网格138_14",
+                                "visible": true,
+                                "renderOrder": 0,
+                                "castShadow": false,
+                                "receiveShadow": false,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                },
+                                "layers": {
+                                    "mask": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/car.glb",
+                "type": "GLTF"
+            }
+        }
+    ],
+    "innerMeshList": [],
+    "drawMeshList": [],
+    "geoGroupList": [],
+    "particleList": [],
+    "textMeshList": [],
+    "borderGroupList": [],
+    "designMeshList": [],
+    "handler": {
+        "mode": "变换",
+        "openKey": true,
+        "selectPanelEnable": true,
+        "isTransformChildren": false,
+        "stats": {
+            "showStats": false,
+            "statsMode": 0
+        },
+        "helpers": {
+            "axes": {
+                "showAxes": true,
+                "axesLength": 1000
+            },
+            "grid": {
+                "showGrid": true,
+                "size": 1000,
+                "divisions": 15,
+                "colorCenterLine": 4473924,
+                "colorGrid": 8947848
+            },
+            "box3": {
+                "useBox3": true,
+                "color": 16776960
+            }
+        }
+    }
+}
