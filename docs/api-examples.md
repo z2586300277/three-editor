@@ -6,17 +6,22 @@ outline: deep
 
 ```md
 <script>
-import { ThreeEditor } from 'three-editor-cores'
+    
+const container =  document.querySelector('#threeBox')
 
-const threeEditor = new ThreeEditor({
-    threeBoxRef: document.querySelector('#div'),
-    rendererParams: {
-        fps: null,
-        pixelRatio: window.devicePixelRatio,
-        webglRenderParams: { antialias: true, alpha: true, logarithmicDepthBuffer: true }
-    },
-    sceneParams
-})
+const initParams = {
+
+    fps: null, // 最大帧率
+
+    pixelRatio: window.devicePixelRatio, //像素比
+
+    webglRenderParams: { antialias: true, alpha: true, logarithmicDepthBuffer: true } // 抗锯齿等
+
+}
+
+const sceneParams = null // 或保存得场景参数
+
+const threeEditor = new ThreeEditor(containor, initParams, sceneParams)
 
 </script>
 ```

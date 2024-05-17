@@ -17,7 +17,7 @@
     "jszip": "^3.10.1",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
-    "three-editor-cores": "^0.0.3",
+    "three-editor-cores": "^0.0.5",
     "vue": "^3.4.15"
   },
   "devDependencies": {

@@ -46,11 +46,9 @@ function createScene(sceneParams) {
 
     }
 
-    const threeEditor = new ThreeEditor({
+    const threeEditor = new ThreeEditor(threeBox.value,
 
-        threeBoxRef: threeBox.value,
-
-        rendererParams: {
+        {
 
             fps: null,
 
@@ -62,7 +60,7 @@ function createScene(sceneParams) {
 
         sceneParams
 
-    })
+    )
 
     const ishaveLight = threeEditor.scene.children.every(i => !i.isLight)
 

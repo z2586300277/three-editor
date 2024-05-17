@@ -24,7 +24,6 @@
                     <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新增</el-button>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">
                         <el-input v-model="inputSceneName" placeholder="请输入场景名称" />
-
                         <template #footer>
                             <div class="dialog-footer">
                                 <el-button @click="dialogVisible = false">取消</el-button>
