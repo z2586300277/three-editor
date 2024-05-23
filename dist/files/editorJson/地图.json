@@ -8394,7 +8394,7 @@
                 "outer": 500,
                 "maxVelocity": 50,
                 "sportType": "全随机",
-                "mapUrl": "https://z2586300277.github.io/three-editor/dist/files/icon/snow.png",
+                "mapUrl": "https://z2586300277.github.io/three-editor/dist/files/channels/snow.png",
                 "shaderCodeName": "彩虹光"
             },
             "material": {
