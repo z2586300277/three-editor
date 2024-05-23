@@ -9039,7 +9039,7 @@
                     "MAX_ITER": 5
                 }
             },
-            "fontLink": "https://z2586300277.github.io/three-editor/dist/files/font/cn.json",
+            "fontLink": "https://z2586300277.github.io/three-editor/dist/files/font/cn1.json",
             "text": "广东省",
             "geometry": {
                 "geometryType": "TextGeometry",
