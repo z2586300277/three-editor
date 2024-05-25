@@ -9,11 +9,28 @@
 
                         </div>
                     </template>
-                    <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : ' + sl(emitEditor.info?.point[i])
-                    }}</div>
+                    <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : ' +
+            sl(emitEditor.info?.point[i])
+                        }}</div>
                     <template #footer><el-button class="button"
                             @click="emitEditor.threeEditor.setLight('AmbientLight', { intensity: 3 })"
                             text>快速添加环境光</el-button></template>
+                </el-card>
+                <br />
+                <el-card class="box-card">
+                    <template #header>
+                        <div class="card-header">
+                            <span>Css2D/3D 使用 </span>
+                        </div>
+                    </template>
+                    <div>测试DOM: 
+                        <span ref="card"> 2D:<img class="logo" src="/site.png" alt="logo" width="25px"height="25px"></span>
+                        <span ref="card2"> 3D:<img class="logo" src="/site.png" alt="logo" width="25px"height="25px"></span>
+                    </div>
+                    <template #footer>
+                        <span style="display: flex;"> <el-button class="button" @click="useCss2D" text>Css2D</el-button>
+                            <el-button class="button" @click="useCss3D" text>Css3D</el-button></span>
+                    </template>
                 </el-card>
             </div>
         </div>
@@ -28,14 +45,23 @@
 
 <script setup>
 import { ref } from 'vue';
+import { THREE } from 'three-editor-cores'
 
-defineProps(['emitEditor']);
+const props = defineProps(['emitEditor']);
+
+const card = ref(null);
+const card2 = ref(null);
+
+const useCss2D = () => props.emitEditor.threeEditor.setCss2dDOM(card.value, new THREE.Vector3(0, 0, 0))
+
+const useCss3D = () => props.emitEditor.threeEditor.setCss3dDOM(card2.value, new THREE.Vector3(0, 0, 0)).scale.set(0.1, 0.1, 0.1)
+
 
 function sl(i) {
 
     if (!i) return '';
 
-    if(typeof i === 'number') return i.toFixed(12)
+    if (typeof i === 'number') return i.toFixed(12)
 
     else return i.slice(0, 12);
 
