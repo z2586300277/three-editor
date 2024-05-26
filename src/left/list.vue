@@ -64,6 +64,7 @@ fetchResource(Config.editorJsonUrl).then(res => data.list = res)
     }
 
     .item {
+        position: relative;
 
         img {
             position: absolute;
