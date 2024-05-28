@@ -107,25 +107,21 @@ const animatesPlay = () => {
 
     const arr1 = a_data.value.transformAnimationList
 
-    arr1.reduce(async (prev, next, k) => {
+    arr1.reduce(async (prev, next) => {
 
-        if (!prev) return setGsapMeshAction(a_data.value.transformAnimationMesh, next._transformInfo, next.transformInfo_, next.gsapParams)
+        await prev
 
-        else {
-            
-            await prev
+        return setGsapMeshAction(a_data.value.transformAnimationMesh, next._transformInfo, next.transformInfo_, next.gsapParams)
 
-            return setGsapMeshAction(a_data.value.transformAnimationMesh, next._transformInfo, next.transformInfo_, next.gsapParams)
-
-        }    
-
-    }, 0)
+    }, Promise.resolve())
 
     const arr2 = a_data.value.viewAngleList
 
-    arr2.reduce(async (prev, next, k) => {
+    arr2.reduce(async (prev, next) => {
 
-        if (!prev) return Promise.all([
+        await prev
+
+        return Promise.all([
 
             new Promise((resolve) => createGsapAnimation(camera.position, next.position, { duration: 2, onComplete: resolve })),
 
@@ -133,21 +129,7 @@ const animatesPlay = () => {
 
         ])
 
-        else {
-
-            await prev
-
-            return Promise.all([
-
-                new Promise((resolve) => createGsapAnimation(camera.position, next.position, { duration: 2, onComplete: resolve })),
-
-                new Promise((resolve) => createGsapAnimation(controls.target, next.target, { duration: 2, onComplete: resolve }))
-
-            ])
-
-        }
-
-    }, 0)
+    }, Promise.resolve())
 
 }
 

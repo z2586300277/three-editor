@@ -400,7 +400,7 @@
     "geoGroupList": [
         {
             "name": "广东底面",
-            "RootMaterials": [],
+            "RootMaterials":[],
             "visible": true,
             "renderOrder": 0,
             "castShadow": false,

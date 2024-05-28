@@ -22,6 +22,8 @@
                         </el-option>
                     </el-select>
                     <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新增</el-button>
+                    <el-upload class="upload" ref="myUpload" :auto-upload="false" action="" :on-change="uploadChange">
+                        <el-button class="btn-add" link icon="plus">导入本地模型到当前场景</el-button></el-upload>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">
                         <el-input v-model="inputSceneName" placeholder="请输入场景名称" />
                         <template #footer>
@@ -35,7 +37,7 @@
                     </el-dialog>
                 </div>
                 <div class="title">
-                    <img class="logo" src="/site.png" alt="logo" width="25px" height="25px">(版本0.0.2)
+                    <img class="logo" src="/site.png" alt="logo" width="25px" height="25px">
                     &nbsp;&nbsp;&nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
                 </div>
                 <div class="header-right">
@@ -95,10 +97,28 @@
 <script setup>
 import { ref, shallowReactive, watch } from 'vue'
 import { ElMessage } from 'element-plus'
-import Editor from './eidtor/scene.vue'
 import leftPanel from './leftPanel.vue'
 import rightPanel from './rightPanel.vue'
 import JSZip from 'jszip'
+import { setIndexDB } from './indexDb'
+import { createGsapAnimation, getObjectViews } from 'three-editor-cores'
+import { defineAsyncComponent } from 'vue'
+
+const Editor = defineAsyncComponent(() => {
+
+    return setIndexDB().then(async res => {
+
+        const { data } = await res.getAllRequest()
+
+        emitEditor.IndexDBList = data
+
+        emitEditor.IndexDB = res
+
+        return import('./eidtor/scene.vue')
+
+    })
+
+})
 
 let emitEditor = shallowReactive({
     info: null,
@@ -107,13 +127,18 @@ let emitEditor = shallowReactive({
     threeEditor: null,
     selectPanelEnable: false,
     openKey: false,
+    IndexDB: null,
+    IndexDBList: [],
     sceneName: localStorage.getItem('sceneName') || ''
 });
+
+
 
 const options = ref(JSON.parse(localStorage.getItem('sceneList')) || [])
 
 const dialogVisible = ref(false);
 const inputSceneName = ref('');
+const myUpload = ref(null);
 
 // 检测option 中是否含有当前场景名称
 if (!options.value.find(item => item.name === emitEditor.sceneName)) {
@@ -121,6 +146,52 @@ if (!options.value.find(item => item.name === emitEditor.sceneName)) {
     if (options.value.length > 0) emitEditor.sceneName = options.value[0].name
 
     else emitEditor.sceneName = ''
+
+}
+
+const uploadChange = file => {
+
+    if (!emitEditor.threeEditor) return ElMessage.error('请先创建场景')
+
+    const [_, end] = file.name.split('.')
+
+    myUpload.value.clearFiles()
+
+    if (!['fbx', 'glb', 'FBX', 'GLB'].includes(end)) return ElMessage.error('请上传fbx或glb格式的模型')
+
+    const url = URL.createObjectURL(file.raw)
+
+    emitEditor.IndexDB.getRequest(file.name, url).then(res => {
+
+        const rootInfo = { url: res.url, type: end.toLocaleUpperCase() === 'GLB' ? 'GLTF' : end.toLocaleUpperCase() }
+
+        const { loaderService } = emitEditor.threeEditor.modelCore.insertModel(rootInfo)
+
+        loaderService.complete = m => {
+
+            setTimeout(() => {
+
+                m.rootInfo.url = 'IndexDB:' + file.name
+
+            }, 100)
+
+            const { transformControls, camera, controls } = emitEditor.threeEditor
+
+            const { maxView, target } = getObjectViews(m)
+
+            Promise.all([createGsapAnimation(camera.position, maxView), createGsapAnimation(controls.target, target)]).then(() => {
+
+                emitEditor.threeEditor.setOutlinePass([m])
+
+                controls.target.copy(target)
+
+                transformControls.attach(m)
+
+            })
+
+        }
+
+    })
 
 }
 
@@ -398,6 +469,12 @@ async function exportFile() {
     color: #E5EAF3;
     border: none;
     background: none;
+}
+
+.upload {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 pre {

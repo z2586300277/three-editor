@@ -44,9 +44,8 @@ function listFiles(url) {
 
             if (url.indexOf('scene') !== -1) {
 
-                console.log('scene')
-
                 resolve(parseFolderList(xhr.responseText))
+                
             }
 
             else resolve(parseFileList(xhr.responseText))

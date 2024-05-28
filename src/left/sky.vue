@@ -25,7 +25,15 @@ const props = defineProps(['emitEditor'])
 
 const setSky = (i) => props.emitEditor.threeEditor.scene.setSceneBackground([0, 1, 2, 3, 4, 5].map(k => Config.skyUrl + i + '/' + (k + 1) + '.png'))
 
-const setEnv = (i) => props.emitEditor.threeEditor.scene.setEnvBackground([0, 1, 2, 3, 4, 5].map(k => Config.skyUrl + i + '/' + (k + 1) + '.png'))
+const setEnv = (i) => {
+
+    const { scene } = props.emitEditor.threeEditor
+
+    scene.setEnvBackground([0, 1, 2, 3, 4, 5].map(k => Config.skyUrl + i + '/' + (k + 1) + '.png'))
+
+    scene.environment = scene.envBackground
+
+}
 
 const data = shallowReactive({ list: [] })
 

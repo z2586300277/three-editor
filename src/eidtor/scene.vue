@@ -44,6 +44,42 @@ function createScene(sceneParams) {
 
         if (params) sceneParams = JSON.parse(params)
 
+
+        function getIndexDBUrl(i, name) {
+
+            const { IndexDBList } = props.emitEditor
+
+            const item = IndexDBList.find(i => i.name === name)
+
+            if (item) i.rootInfo.url = URL.createObjectURL(item.blob)
+
+            else sceneParams.modelList.splice(sceneParams.modelList.indexOf(i), 1)
+
+        }
+
+        sceneParams?.modelList?.forEach(i => {
+
+            if (i.rootInfo.indexDBNameUrl) {
+
+                const [_, name] = i.rootInfo.indexDBNameUrl.split(':')
+
+                getIndexDBUrl(i, name)
+
+            }
+
+            else if (i.rootInfo.url.indexOf('IndexDB:') === 0) {
+
+                const [_, name] = i.rootInfo.url.split(':')
+
+                i.rootInfo.indexDBNameUrl = i.rootInfo.url
+
+                getIndexDBUrl(i, name)
+
+            }
+
+        })
+
+
     }
 
     const threeEditor = new ThreeEditor(threeBox.value,
