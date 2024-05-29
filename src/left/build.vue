@@ -1,5 +1,12 @@
 <template>
     <div class="build">
+        <div class="back" v-for="i in emitEditor.IndexDBList">
+            <div class="item">
+                <el-link @click="load(i.name, 'indexDB')">
+                    本机: {{ sl(i.name) }}
+                </el-link>
+            </div>
+        </div>
         <div class="back" v-for="i in data.list">
             <div class="item">
                 <el-link @click="load(i.name)">
@@ -18,17 +25,33 @@ import { ElMessage } from 'element-plus'
 
 const props = defineProps(['emitEditor'])
 
-function load(url) {
+const sl = name => name.length > 20 ? name.slice(0, 20) + '...' : name
 
-    url = Config.buildUrl + url
+function load(name, t = 'online') {
 
-    const type = url.split('.').pop().toUpperCase()
+    const type = name.split('.').pop().toUpperCase()
+
+    let url
+
+    if (t === 'online') url = Config.buildUrl + name
+
+    else {
+
+        const item = props.emitEditor.IndexDBList.find(i => i.name === name)
+
+        if (item) url = URL.createObjectURL(item.blob)
+
+        else return
+
+    }
 
     if (!type) return
 
     if (!['FBX', 'GLB', 'GLTF', 'OBJ'].includes(type)) return
 
-    const { loaderService } = props.emitEditor.threeEditor.modelCore.insertModel({ url, type: type === 'GLB' ? 'GLTF' : type })
+    const rootInfo = { url, type: type === 'GLB' ? 'GLTF' : type, indexDBNameUrl: t === 'indexDB' ? 'IndexDB:' + name : '' }
+
+    const { loaderService } = props.emitEditor.threeEditor.modelCore.insertModel(rootInfo)
 
     props.emitEditor.loading = true
 
@@ -63,7 +86,6 @@ function load(url) {
         })
 
     }
-
 
 }
 

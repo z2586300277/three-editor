@@ -31,6 +31,8 @@ const setEnv = (i) => {
 
     scene.setEnvBackground([0, 1, 2, 3, 4, 5].map(k => Config.skyUrl + i + '/' + (k + 1) + '.png'))
 
+    scene.environmentEnabled = true
+
     scene.environment = scene.envBackground
 
 }

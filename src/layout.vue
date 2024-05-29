@@ -163,17 +163,11 @@ const uploadChange = file => {
 
     emitEditor.IndexDB.getRequest(file.name, url).then(res => {
 
-        const rootInfo = { url: res.url, type: end.toLocaleUpperCase() === 'GLB' ? 'GLTF' : end.toLocaleUpperCase() }
+        const rootInfo = { url: res.url, type: end.toLocaleUpperCase() === 'GLB' ? 'GLTF' : end.toLocaleUpperCase(), indexDBNameUrl: 'IndexDB:' + file.name }
 
         const { loaderService } = emitEditor.threeEditor.modelCore.insertModel(rootInfo)
 
         loaderService.complete = m => {
-
-            setTimeout(() => {
-
-                m.rootInfo.url = 'IndexDB:' + file.name
-
-            }, 100)
 
             const { transformControls, camera, controls } = emitEditor.threeEditor
 

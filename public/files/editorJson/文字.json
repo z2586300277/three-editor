@@ -227,7 +227,7 @@
                 }
             },
             "fontLink": "https://z2586300277.github.io/three-editor/dist/files/font/cn1.json",
-            "text": "Hello ThreeSceneEditor",
+            "text": "Hello Three-Editor!",
             "geometry": {
                 "geometryType": "TextGeometry",
                 "parameters": {

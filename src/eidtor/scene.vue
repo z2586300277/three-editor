@@ -6,7 +6,7 @@
 import { onMounted, onUnmounted, ref } from 'vue';
 import { ThreeEditor, getDistanceScalePoint, createGsapAnimation } from 'three-editor-cores';
 
-ThreeEditor.dracoPath = '/three-editor/dist/draco/';
+ThreeEditor.dracoPath = '/three-editor/dist/draco/'
 
 const threeBox = ref(null)
 
@@ -24,7 +24,7 @@ function getEvent(e) {
 
             const { camera, controls } = props.emitEditor.threeEditor
 
-            const p = getDistanceScalePoint(camera.position, info.point, 0.9)
+            const p = getDistanceScalePoint(camera.position, info.point, 0.8)
 
             createGsapAnimation(camera.position, p)
 
@@ -43,7 +43,6 @@ function createScene(sceneParams) {
         const params = localStorage.getItem(props.emitEditor.sceneName)
 
         if (params) sceneParams = JSON.parse(params)
-
 
         function getIndexDBUrl(i, name) {
 
@@ -67,18 +66,7 @@ function createScene(sceneParams) {
 
             }
 
-            else if (i.rootInfo.url.indexOf('IndexDB:') === 0) {
-
-                const [_, name] = i.rootInfo.url.split(':')
-
-                i.rootInfo.indexDBNameUrl = i.rootInfo.url
-
-                getIndexDBUrl(i, name)
-
-            }
-
         })
-
 
     }
 
