@@ -1,9 +1,9 @@
 <template>
-  <Layout />
+  <router-view />
 </template>
 
 <script setup>
-import Layout from './layout.vue'
+
 </script>
 <style lang="less">
 ::-webkit-scrollbar {

@@ -114,7 +114,7 @@ const Editor = defineAsyncComponent(() => {
 
         emitEditor.IndexDB = res
 
-        return import('./eidtor/scene.vue')
+        return import('./scene.vue')
 
     })
 
