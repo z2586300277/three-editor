@@ -3,7 +3,7 @@
     <div class="info">
         <div class="link">
             <el-link class="text" @click="openUrl('https://z2586300277.github.io/three-editor/docs/dist/')">-官网</el-link>
-            <el-link class="text" @click="openUrl('https://z2586300277.github.io/three-editor/dist/#/codeMirror')">-案例</el-link>
+            <el-link class="text" @click="openUrl('https://z2586300277.github.io/three-editor/dist/#/example')">-案例</el-link>
             <el-link class="text" @click="openUrl('https://z2586300277.github.io/three-editor/dist/#/editor')">-编辑器</el-link>
         </div>
         <div class="flexAuthor">
@@ -21,7 +21,7 @@ const openUrl = (url) => window.open(url)
 .info {
     position: fixed;
     bottom: 5px;
-    z-index: 9999;
+    z-index: 2;
     opacity: 0.6;
     margin-left: 2px;
     .link {

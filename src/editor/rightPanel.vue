@@ -6,12 +6,10 @@
                     <template #header>
                         <div class="card-header">
                             <span>名称：{{ sl(emitEditor.info?.currentModel?.name) }}</span>
-
                         </div>
                     </template>
-                    <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : ' +
-            sl(emitEditor.info?.point[i])
-                        }}</div>
+                    <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : '
+            + sl(emitEditor.info?.point[i]) }}</div>
                     <template #footer><el-button class="button"
                             @click="emitEditor.threeEditor.setLight('AmbientLight', { intensity: 3 })"
                             text>快速添加环境光</el-button></template>

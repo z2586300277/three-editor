@@ -15,6 +15,11 @@ const routes = [
         component: () => import('../editor/index.vue')
       },
       {
+        name: 'example',
+        path: '/example',
+        component: () => import('../example/example.vue')
+      },
+      {
         name: 'codeMirror',
         path: '/codeMirror',
         component: () => import('../codeMirror/index.vue')

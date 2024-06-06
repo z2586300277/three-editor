@@ -1,10 +1,19 @@
 <template>
-   <Codemirror v-model="jsCode" placeholder="代码..." :style="{ height: '100vh', width: '50vw' }" :autofocus="true"
-      :indent-with-tab="true" :tab-size="2" :extensions="extensions" @ready="handleReady" @change="onChange" />
-   <div class="boxIframe">
+   <transition name="el-zoom-in-left">
+      <Codemirror v-show="expand" v-model="jsCode" placeholder="代码..." :style="{ height: '100vh', width: '50vw' }"
+         :autofocus="true" :indent-with-tab="true" :tab-size="2" :extensions="extensions" @ready="handleReady"
+         @change="onChange" />
+   </transition>
+   <div :class="expand ? 'boxIframe' : 'boxIframe2'">
       <Preview ref="preview" />
    </div>
-   <el-button @click="useCode" class="btn">执行</el-button>
+   <div class="lico" :style="{ left: expand ? 'calc(50vw - 4px)' : '0px' }">
+      <el-icon class="icon" @click="expand = !expand">
+         <Expand v-if="!expand" />
+         <Fold v-else />
+      </el-icon>
+   </div>
+   <el-button v-show="expand" @click="useCode" class="btn">执行</el-button>
 </template>
 
 <script setup>
@@ -13,7 +22,9 @@ import Preview from './preview.vue'
 import { Codemirror } from 'vue-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { oneDark } from '@codemirror/theme-one-dark'
-import { defaultCode } from '../examples/createEditor.js'
+import { defaultCode } from '../codes/createEditor.js'
+
+const expand = ref(true)
 
 const str = localStorage.getItem('viewCode') || defaultCode
 
@@ -69,5 +80,32 @@ const useCode = () => {
    height: 100vh;
    display: flex;
    box-sizing: border-box;
+}
+
+.boxIframe2 {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   box-sizing: border-box;
+}
+
+.lico {
+   position: absolute;
+   z-index: 3;
+   top: 0px;
+
+   .icon {
+      font-size: 30px;
+      color: #282c34;
+      cursor: pointer;
+      transition: all 0.8s;
+
+      &:hover {
+         transform: rotate(180deg);
+      }
+   }
 }
 </style>
