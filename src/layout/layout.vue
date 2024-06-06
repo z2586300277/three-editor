@@ -3,8 +3,8 @@
     <div class="info">
         <div class="link">
             <el-link class="text" @click="openUrl('https://z2586300277.github.io/three-editor/docs/dist/')">-官网</el-link>
-            <el-link class="text" @click="openUrl('/#/codeMirror')">-案例</el-link>
-            <el-link class="text" @click="openUrl('/#/editor')">-编辑器</el-link>
+            <el-link class="text" @click="openUrl('https://z2586300277.github.io/three-editor/dist/#/codeMirror')">-案例</el-link>
+            <el-link class="text" @click="openUrl('https://z2586300277.github.io/three-editor/dist/#/editor')">-编辑器</el-link>
         </div>
         <div class="flexAuthor">
             <img class="logo" src="/site.png" alt="logo" width="20px" height="20px"> &nbsp;

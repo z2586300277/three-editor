@@ -1,4 +1,5 @@
 export const defaultCode =
+
 `import { ThreeEditor } from '/three-editor/dist/js/index.js'
 
 ThreeEditor.dracoPath = '/three-editor/dist/draco/' // draco 路径地址

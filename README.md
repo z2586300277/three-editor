@@ -1,6 +1,8 @@
 # 说明
 
-- 预览 https://z2586300277.github.io/three-editor/dist/
+- 预览 https://z2586300277.github.io/three-editor/dist/#/editor
+
+- 在线测试 https://z2586300277.github.io/three-editor/dist/#/codeMirror
 
 - 官网 https://z2586300277.github.io/three-editor/docs/dist
 
