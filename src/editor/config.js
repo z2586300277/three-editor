@@ -1,6 +1,6 @@
 const isDev = localStorage.getItem('dev_local_server_url')
 
-const Host = isDev ? localStorage.getItem('dev_local_server_url') : 'https://z2586300277.github.io/three-editor/dist/files/'
+const Host = isDev ? isDev : 'https://z2586300277.github.io/three-editor/dist/files/'
 
 function listFiles(url) {
 

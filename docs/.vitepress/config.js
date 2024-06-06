@@ -9,7 +9,9 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '指南', link: '/markdown-examples' },
-      { text: '体验', link: 'https://z2586300277.github.io/three-editor/dist' }
+      { text: '使用', link: 'https://z2586300277.github.io/three-editor/dist/#/codeMirror' },
+      { text: '编辑器', link: 'https://z2586300277.github.io/three-editor/dist/#/editor' },
+      { text: 'npm', link: 'https://www.npmjs.com/package/three-editor-cores' }
     ],
 
     sidebar: [

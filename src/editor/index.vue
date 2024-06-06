@@ -132,12 +132,12 @@ let emitEditor = shallowReactive({
     sceneName: localStorage.getItem('sceneName') || ''
 });
 
-
-
 const options = ref(JSON.parse(localStorage.getItem('sceneList')) || [])
 
 const dialogVisible = ref(false);
+
 const inputSceneName = ref('');
+
 const myUpload = ref(null);
 
 // 检测option 中是否含有当前场景名称

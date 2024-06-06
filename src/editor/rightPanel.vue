@@ -81,6 +81,7 @@ import { THREE, createGsapAnimation, setGsapMeshAction } from 'three-editor-core
 const props = defineProps(['emitEditor']);
 
 const card = ref(null);
+
 const card2 = ref(null);
 
 let a_data = ref({ transformAnimationList: [], transformAnimationMesh: null, viewAngleList: [] });

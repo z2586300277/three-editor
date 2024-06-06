@@ -10,6 +10,8 @@
 
 - qq 2586300277 
 
+- node 18+ 较好
+
 - 使用本地资源服务器 控制台执行 localStorage.setItem('dev_local_server_url', '你的资源服务器目录url')
 
 ![](https://z2586300277.github.io/three-editor/dist/home.png)

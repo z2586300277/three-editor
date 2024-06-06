@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Three-Editor"
-  text: 极简的Three.js使用
-  tagline: 基于three.js 高度扩展的可视化配置3D内核
+  text: three.js低代码内核
+  tagline: 简化Three.js使用的基座,基于内核进行扩展，封装企业自己的3D组件库,搭建适用企业场景的无代码编辑器
   actions:
     - theme: brand
       text: 安装

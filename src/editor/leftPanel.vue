@@ -49,17 +49,9 @@ const data = [
 
 let act = localStorage.getItem('active')
 
-if(!act) {
+if (!act) act = 0
 
-    act = 0
-
-}
-
-if (act >= data.length) {
-
-    act = 0
-
-}
+if (act >= data.length) act = 0
 
 const active = ref(act);
 
