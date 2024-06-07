@@ -2,9 +2,11 @@
 
 - 预览 https://z2586300277.github.io/three-editor/dist/#/editor
 
+- 技术案例 https://z2586300277.github.io/three-editor/dist/#/example
+
 - 在线测试 https://z2586300277.github.io/three-editor/dist/#/codeMirror
 
-- 官网 https://z2586300277.github.io/three-editor/docs/dist
+- 文档 https://z2586300277.github.io/three-editor/docs/dist
 
 - npm地址 https://www.npmjs.com/package/three-editor-cores
  
