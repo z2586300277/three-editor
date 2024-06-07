@@ -5,9 +5,9 @@
                 <img class="logo" src="/site.png" alt="logo" width="36px" height="36px">
                 <div class="top-title-text">3D Examples</div>
             </div>
-            <el-menu class="menu" style="border: none;" default-active="0" mode="horizontal" :ellipsis="false"
+            <el-menu class="menu" style="border: none;" :default-active="initPath" mode="horizontal" :ellipsis="false"
                 active-text-color="#fff" text-color="#fff" :default-openeds="['0']">
-                <el-menu-item v-for="(item, index) in list" :key="index" :index="String(index)"
+                <el-menu-item v-for="(item, index) in list" :key="index" :index="String(item.path)"
                     @click="goRouter(item.path)">
                     {{ item.name }}
                 </el-menu-item>
@@ -60,21 +60,26 @@ const goRouter = (path) => {
 
     data.exampleList = list.find(item => item.path === path).list
 
+    localStorage.setItem('example_path', path)
+
+    changeActive(0)
+
 }
 
 const active = ref(0)
 
 const changeActive = (index) => {
 
-    data.activeList = data.exampleList[index].children
+    data.activeList = data.exampleList[index]?.children
 
     active.value = index
+
+    localStorage.setItem('example_active', index)
 
 }
 
 const showCode = (item) => {
 
-    // 获取 codeMirror 路由的绝对路径
     const path = router.resolve({ name: 'codeMirror' }).href
 
     localStorage.setItem('viewCode', item.code)
@@ -83,8 +88,13 @@ const showCode = (item) => {
 
 }
 
-goRouter('threeEditor')
-changeActive(0);
+const initPath = localStorage.getItem('example_path') || 'threeEditor'
+
+const initActive = localStorage.getItem('example_active') || 0
+
+goRouter(initPath)
+
+changeActive(initActive);
 
 </script>
 
@@ -161,7 +171,7 @@ changeActive(0);
         align-items: center;
 
         .box {
-            width: 260px;
+            width: 250px;
             height: 260px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             border-radius: 3px;
@@ -173,11 +183,13 @@ changeActive(0);
             justify-content: space-evenly;
 
             img {
+                margin-top: 10px;
+                border-radius: 3px;
                 width: 180px;
                 height: 180px;
 
                 &:hover {
-                    transform: scale(1.15);
+                    transform: scale(1.1);
                     transition: all 0.5s;
                 }
             }
