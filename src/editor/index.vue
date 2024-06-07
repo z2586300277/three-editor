@@ -116,7 +116,7 @@ const Editor = defineAsyncComponent(() => {
 
         return import('./scene.vue')
 
-    })
+    }).catch(() => import('./scene.vue'))
 
 })
 

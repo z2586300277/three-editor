@@ -13,6 +13,7 @@ const getScript = (v) => `
             margin: 0;
             padding: 2px;
             box-sizing: border-box;
+            background-color: #1f1f1f;
         }
         #box {
             width: 100%;

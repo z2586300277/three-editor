@@ -5,6 +5,24 @@ export default defineConfig({
 
   plugins: [vue()],
 
+  define: {
+
+    __SITE_URLS__: {
+
+      doc: 'https://z2586300277.github.io/three-editor/docs/dist/',
+
+      example: 'https://z2586300277.github.io/three-editor/dist/#/example',
+
+      editor: 'https://z2586300277.github.io/three-editor/dist/#/editor',
+
+      github: 'https://z2586300277/three-editor',
+
+      author: 'https://github.com/z2586300277'
+
+    },
+
+  },
+
   base: '/three-editor/dist',
 
   server: {

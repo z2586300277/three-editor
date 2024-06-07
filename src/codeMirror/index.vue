@@ -8,12 +8,12 @@
       <Preview ref="preview" />
    </div>
    <div class="lico" :style="{ left: expand ? 'calc(50vw - 4px)' : '0px' }">
-      <el-icon class="icon" @click="expand = !expand">
+      <el-icon class="icon" @click="changeExpand(!expand)">
          <Expand v-if="!expand" />
          <Fold v-else />
       </el-icon>
    </div>
-   <el-button v-show="expand" @click="useCode" class="btn">执行</el-button>
+   <el-button v-show="expand" plain icon="CaretRight" @click="useCode" class="btn">执行</el-button>
 </template>
 
 <script setup>
@@ -22,11 +22,18 @@ import Preview from './preview.vue'
 import { Codemirror } from 'vue-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { oneDark } from '@codemirror/theme-one-dark'
-import { defaultCode } from '../codes/createEditor.js'
 
-const expand = ref(true)
+const expand = ref(localStorage.getItem('example_expand') == 'true')
 
-const str = localStorage.getItem('viewCode') || defaultCode
+const changeExpand = v => {
+
+   expand.value = v
+
+   localStorage.setItem('example_expand', v)
+
+}
+
+const str = localStorage.getItem('viewCode')
 
 const jsCode = ref(str)
 
@@ -69,7 +76,9 @@ const useCode = () => {
    position: absolute;
    top: 0px;
    z-index: 1;
-   left: calc(50vw - 60px);
+   left: calc(50vw - 80px);
+   border: none;
+   background-color: none;
 }
 
 .boxIframe {
@@ -99,7 +108,7 @@ const useCode = () => {
 
    .icon {
       font-size: 30px;
-      color: #282c34;
+      color: #fff;
       cursor: pointer;
       transition: all 0.8s;
 
