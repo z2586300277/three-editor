@@ -19,13 +19,13 @@ export default [
                 name: '创建场景',
                 key: 'createEditor',
                 code: createEditor,
-                image: getURL(`./quickStart/createEditor.jpg`)
+                image: new URL(`./quickStart/createEditor.jpg`, import.meta.url).href
             },
             {
                 name: '加载参数',
                 key: 'loadParams',
                 code: loadParams,
-                image: getURL(`./quickStart/loadParams.jpg`)
+                image: new URL(`./quickStart/loadParams.jpg`, import.meta.url).href
             }
         ]
     },
@@ -37,19 +37,19 @@ export default [
                 name: '加载GLTF模型',
                 key: 'loadGltf',
                 code: loadGltf,
-                image: getURL(`./loadModel/loadGltf.jpg`)
+                image: new URL(`./loadModel/loadGltf.jpg`, import.meta.url).href
             },
             {
                 name: '加载FBX模型',
                 key: 'loadFbx',
                 code: loadFbx,
-                image: getURL(`./loadModel/loadFbx.jpg`)
+                image: new URL(`./loadModel/loadFbx.jpg`, import.meta.url).href
             },
             {
                 name: '加载OBJ模型',
                 key: 'loadObj',
                 code: loadObj,
-                image: getURL(`./loadModel/loadObj.jpg`)
+                image: new URL(`./loadModel/loadObj.jpg`, import.meta.url).href
             }
         ]
     }
