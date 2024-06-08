@@ -2,8 +2,7 @@ export default
 
 `import { ThreeEditor } from '/three-editor/dist/js/index.js'
 
-ThreeEditor.dracoPath = '/three-editor/dist/draco/' // draco 路径地址
-
+/* three.js 初始化场景系列操作 */
 const threeEditor = new ThreeEditor( 
     
     document.getElementById('box'), // 容器

@@ -1,8 +1,7 @@
 <template>
    <transition name="el-zoom-in-left">
       <Codemirror v-show="expand" v-model="jsCode" placeholder="代码..." :style="{ height: '100vh', width: '50vw' }"
-         :autofocus="true" :indent-with-tab="true" :tab-size="2" :extensions="extensions" @ready="handleReady"
-         @change="onChange" />
+         :autofocus="true" :indent-with-tab="true" :tab-size="2" :extensions="extensions" @ready="handleReady" />
    </transition>
    <div :class="expand ? 'boxIframe' : 'boxIframe2'">
       <Preview ref="preview" />
@@ -22,6 +21,21 @@ import Preview from './preview.vue'
 import { Codemirror } from 'vue-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { oneDark } from '@codemirror/theme-one-dark'
+import ThreeEditorExamples from '../codes/threeEditor/index.js';
+import ThreeJsExamples from '../codes/threejs/index.js';
+import { useRoute } from 'vue-router'
+
+const { query } = useRoute()
+
+const list = [
+
+   { name: 'Three-Editor案例', path: 'threeEditor', list: ThreeEditorExamples },
+
+   { name: 'Three.js案例', path: 'threejs', list: ThreeJsExamples }
+
+]
+
+const str = list.find(item => item.path === query.example_path)?.list[query.example_active]?.children?.find(item => item.key === query.key)?.code 
 
 const expand = ref(localStorage.getItem('example_expand') == 'true')
 
@@ -33,8 +47,6 @@ const changeExpand = v => {
 
 }
 
-const str = localStorage.getItem('viewCode')
-
 const jsCode = ref(str)
 
 const extensions = [javascript(), oneDark]
@@ -43,31 +55,11 @@ const preview = ref()
 
 const view = shallowRef()
 
-const handleReady = (payload) => view.value = payload.view
+const handleReady = (payload) => view.value = payload.view // 获取view
 
-const onChange = (payload) => { }
+onMounted(() => str && preview.value.usePreview(str)) // 初始执行
 
-document.addEventListener('keydown', (e) => {
-
-   if (e.ctrlKey && e.key === 's') {
-
-      e.preventDefault()
-
-      localStorage.setItem('viewCode', jsCode.value)
-
-   }
-
-})
-
-onMounted(() => str && preview.value.usePreview(str))
-
-const useCode = () => {
-
-   localStorage.setItem('viewCode', jsCode.value)
-
-   preview.value.usePreview(jsCode.value)
-
-};
+const useCode = () => preview.value.usePreview(jsCode.value) // 执行
 
 </script>
 

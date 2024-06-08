@@ -4,8 +4,6 @@ export default
 
 const sceneParams = await fetch('https://z2586300277.github.io/three-editor/dist/files/editorJson/地图.json').then(res => res.json())
 
-ThreeEditor.dracoPath = '/three-editor/dist/draco/' // draco 路径地址
-
 const threeEditor = new ThreeEditor( 
     
     document.getElementById('box'), // 容器

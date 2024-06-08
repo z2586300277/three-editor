@@ -4,12 +4,6 @@ import loadGltf from './loadModel/loadGltf.js'
 import loadFbx from './loadModel/loadFbx.js'
 import loadObj from './loadModel/loadObj.js'
 
-function getURL(path) {
-
-    return new URL(path, import.meta.url).href
-
-}
-
 export default [
     {
         name: '快速开始',

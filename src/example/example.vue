@@ -38,6 +38,7 @@
 <script setup>
 import { ref, reactive } from 'vue';
 import ThreeEditorExamples from '../codes/threeEditor/index.js';
+import ThreeJsExamples from '../codes/threejs/index.js';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -50,9 +51,9 @@ const list = [
 
     { name: 'Three-Editor案例', path: 'threeEditor', list: ThreeEditorExamples },
 
-    { name: 'Three.js案例', path: 'threejs', list: [] },
+    { name: 'Three.js案例', path: 'threejs', list: ThreeJsExamples },
 
-    { name: 'Cesium.js案例', path: 'cesiumjs', list: [] }
+    { name: 'Cesium.js案例', path: 'cesiumjs', list: [] },
 
 ]
 
@@ -80,11 +81,15 @@ const changeActive = (index) => {
 
 const showCode = (item) => {
 
-    const path = router.resolve({ name: 'codeMirror' }).href
+    const path = router.resolve({
 
-    localStorage.setItem('viewCode', item.code)
+        name: 'codeMirror',
 
-    window.open(`${path}`)
+        query: { example_path: localStorage.getItem('example_path'), example_active: localStorage.getItem('example_active'), key: item.key }
+
+    }).href
+
+    window.open(path)
 
 }
 
