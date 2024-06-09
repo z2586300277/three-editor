@@ -1,0 +1,318 @@
+{
+    "perspectiveCamera": {
+        "fov": 50,
+        "near": 0.1,
+        "far": 100000,
+        "zoom": 1,
+        "position": {
+            "x": 98.51880559849626,
+            "y": 58.69131291895101,
+            "z": -202.74591783441693
+        }
+    },
+    "webglRenderer": {
+        "outputColorSpace": "srgb",
+        "toneMapping": 0,
+        "toneMappingExposure": 1,
+        "shadowMap": {
+            "enabled": false,
+            "type": 1
+        },
+        "color": 0,
+        "opacity": 0,
+        "sortObjects": true,
+        "localClippingEnabled": false,
+        "clippingPlanes": []
+    },
+    "orbitControls": {
+        "maxPolarAngle": 3.141592653589793,
+        "autoRotate": false,
+        "autoRotateSpeed": 2,
+        "rotateSpeed": 1,
+        "panSpeed": 1,
+        "zoomSpeed": 1,
+        "enableDamping": true,
+        "dampingFactor": 0.05,
+        "minDistance": 0.01,
+        "maxDistance": 1000000,
+        "target": {
+            "x": 104.52396592937954,
+            "y": -3.3816172754529097,
+            "z": -30.330248995015772
+        }
+    },
+    "transformControls": {
+        "mode": "translate",
+        "space": "world",
+        "size": 1,
+        "showX": true,
+        "showY": true,
+        "showZ": true,
+        "translationSnap": null,
+        "rotationSnap": null,
+        "scaleSnap": null
+    },
+    "effectComposer": {
+        "renderWay": "效果渲染",
+        "saoPass": {
+            "enabled": false,
+            "saoBias": 0.5,
+            "saoIntensity": 0.01,
+            "saoScale": 100,
+            "saoKernelRadius": 100,
+            "saoMinResolution": 0,
+            "saoBlur": true,
+            "saoBlurRadius": 8,
+            "saoBlurStdDev": 4,
+            "saoBlurDepthCutoff": 0.01
+        },
+        "unrealBloomPass": {
+            "enabled": false,
+            "strength": 1.5,
+            "radius": 0.4,
+            "threshold": 0.85
+        },
+        "outlinePass": {
+            "enabled": true,
+            "edgeStrength": 3,
+            "edgeGlow": 0,
+            "edgeThickness": 1,
+            "pulsePeriod": 0,
+            "usePatternTexture": false,
+            "visibleEdgeColor": 16449071,
+            "hiddenEdgeColor": 16449071,
+            "overlayMaterial": {
+                "blending": 5,
+                "blendEquation": 100,
+                "blendSrc": 201,
+                "blendDst": 205
+            }
+        },
+        "fxaaPass": {
+            "enabled": true,
+            "multPixel": 1
+        },
+        "screenMaskPass": {
+            "enabled": false,
+            "intensity": 1,
+            "maskColor": 16777215,
+            "R": 0.2,
+            "sr": 1.2
+        }
+    },
+    "handler": {
+        "mode": "根选择",
+        "openKey": true,
+        "selectPanelEnable": true,
+        "isTransformChildren": false,
+        "stats": {
+            "showStats": false,
+            "statsMode": 0
+        },
+        "helpers": {
+            "axes": {
+                "showAxes": true,
+                "axesLength": 1000
+            },
+            "grid": {
+                "showGrid": true,
+                "size": 1000,
+                "divisions": 15,
+                "colorCenterLine": 4473924,
+                "colorGrid": 8947848
+            },
+            "box3": {
+                "useBox3": true,
+                "color": 16776960
+            }
+        }
+    },
+    "lighting": [
+        {
+            "name": "",
+            "type": "PointLight",
+            "visible": true,
+            "position": {
+                "x": -59.64513545327296,
+                "y": 171.9576356337097,
+                "z": -97.55841009665338
+            },
+            "color": 16777215,
+            "intensity": 2.0000000000000004,
+            "castShadow": false,
+            "shadow": {
+                "bias": 0,
+                "radius": 1,
+                "mapSize": {
+                    "x": 512,
+                    "y": 512
+                },
+                "normalBias": 0,
+                "camera": {
+                    "near": 0.5,
+                    "far": 500,
+                    "fov": 90
+                }
+            },
+            "distance": 0,
+            "decay": 0,
+            "power": 25.132741228718352
+        },
+        {
+            "name": "",
+            "type": "DirectionalLight",
+            "visible": true,
+            "position": {
+                "x": 83.33100873101587,
+                "y": 61.110400972091064,
+                "z": -184.16861418315926
+            },
+            "color": 16777215,
+            "intensity": 3.800000000000002,
+            "castShadow": false,
+            "shadow": {
+                "bias": 0,
+                "radius": 1,
+                "mapSize": {
+                    "x": 512,
+                    "y": 512
+                },
+                "normalBias": 0,
+                "camera": {
+                    "near": 0.5,
+                    "far": 500,
+                    "left": -5,
+                    "right": 5,
+                    "top": 5,
+                    "bottom": -5
+                }
+            },
+            "target": {
+                "x": 10.113713485751347,
+                "y": -11.416585180197115,
+                "z": -194.0756159152715
+            }
+        },
+        {
+            "name": "",
+            "type": "AmbientLight",
+            "visible": true,
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "color": 16777215,
+            "intensity": 3,
+            "castShadow": false
+        }
+    ],
+    "modelList": [
+        {
+            "group": {
+                "name": "ttt",
+                "visible": true,
+                "renderOrder": 0,
+                "castShadow": false,
+                "receiveShadow": false,
+                "position": {
+                    "x": 224.31914756178412,
+                    "y": -9.049743444413053,
+                    "z": -48.945420366756196
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "scale": {
+                    "x": 0.041040529332135936,
+                    "y": 0.041040529332135936,
+                    "z": 0.041040529332135936
+                },
+                "blendShaderPrograms": {
+                    "shaderProgramsCodeName": "光圈扫射",
+                    "isBlendShaderPrograms": true,
+                    "uvType": "material",
+                    "uniforms": {
+                        "innerCircleWidth": 62.957999999999494,
+                        "circleWidth": 160,
+                        "circleMax": 940,
+                        "opacityScale": 1,
+                        "reverseOpacity": true,
+                        "circleSpeed": 1.4989999999999877,
+                        "diff": 7265256,
+                        "color3": 255,
+                        "center": {
+                            "x": -1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "intensity": 2,
+                        "isDisCard": false
+                    }
+                },
+                "globalConfig": {
+                    "useGlobalShadow": false,
+                    "useGlobalMaterial": false,
+                    "isSaveChildren": true,
+                    "isSaveMaterials": true,
+                    "mesh": {
+                        "castShadow": false,
+                        "receiveShadow": false
+                    },
+                    "material": {
+                        "envMap": false,
+                        "envMapIntensity": 1,
+                        "reflectivity": 0.98,
+                        "isGlobalMap": true
+                    }
+                },
+                "RootMaterials": [
+                    {
+                        "visible": true,
+                        "color": 4870231,
+                        "opacity": 0.5,
+                        "transparent": true,
+                        "wireframe": false
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Obj3d66-1191469-441-556",
+                        "visible": true,
+                        "renderOrder": 0,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotation": {
+                            "x": -1.570796608924866,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 9.999999046325684,
+                            "y": 9.999999046325684,
+                            "z": 9.999999046325684
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            "rootInfo": {
+                "url": "https://z2586300277.github.io/three-editor/dist/files/resource/aroundBuilding.FBX",
+                "type": "FBX"
+            }
+        }
+    ],
+    "innerMeshList": [],
+    "drawMeshList": [],
+    "geoGroupList": [],
+    "particleList": [],
+    "textMeshList": [],
+    "borderGroupList": []
+}

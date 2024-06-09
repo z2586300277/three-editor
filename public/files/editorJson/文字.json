@@ -1,0 +1,329 @@
+{
+    "scene": {
+        "backgroundBlurriness": 0,
+        "backgroundIntensity": 1,
+        "backgroundUrls": null,
+        "envBackgroundUrls": null,
+        "environmentEnabled": false
+    },
+    "perspectiveCamera": {
+        "fov": 50,
+        "near": 0.1,
+        "far": 100000,
+        "zoom": 1,
+        "position": {
+            "x": 10.832634725550577,
+            "y": 5.528229324494055,
+            "z": 16.05156176434856
+        }
+    },
+    "webglRenderer": {
+        "outputColorSpace": "srgb",
+        "toneMapping": 0,
+        "toneMappingExposure": 1,
+        "shadowMap": {
+            "enabled": false,
+            "type": 1
+        },
+        "color": 0,
+        "opacity": 0,
+        "sortObjects": true,
+        "localClippingEnabled": false,
+        "clippingPlanes": []
+    },
+    "orbitControls": {
+        "maxPolarAngle": 3.141592653589793,
+        "autoRotate": false,
+        "autoRotateSpeed": 2,
+        "rotateSpeed": 1,
+        "panSpeed": 1,
+        "zoomSpeed": 1,
+        "enableDamping": true,
+        "dampingFactor": 0.05,
+        "minDistance": 0.01,
+        "maxDistance": 1000000,
+        "target": {
+            "x": 7.126118234953212,
+            "y": 2.241849549636422,
+            "z": -1.4947032450344948
+        }
+    },
+    "transformControls": {
+        "mode": "translate",
+        "space": "world",
+        "size": 1,
+        "showX": true,
+        "showY": true,
+        "showZ": true,
+        "translationSnap": null,
+        "rotationSnap": null,
+        "scaleSnap": null
+    },
+    "effectComposer": {
+        "renderWay": "效果渲染",
+        "saoPass": {
+            "enabled": false,
+            "saoBias": 0.5,
+            "saoIntensity": 0.01,
+            "saoScale": 100,
+            "saoKernelRadius": 100,
+            "saoMinResolution": 0,
+            "saoBlur": true,
+            "saoBlurRadius": 8,
+            "saoBlurStdDev": 4,
+            "saoBlurDepthCutoff": 0.01
+        },
+        "unrealBloomPass": {
+            "enabled": true,
+            "strength": 1.5,
+            "radius": 0.4,
+            "threshold": 0.85
+        },
+        "outlinePass": {
+            "enabled": true,
+            "edgeStrength": 3,
+            "edgeGlow": 0,
+            "edgeThickness": 1,
+            "pulsePeriod": 0,
+            "usePatternTexture": false,
+            "visibleEdgeColor": 16449071,
+            "hiddenEdgeColor": 16449071,
+            "overlayMaterial": {
+                "blending": 5,
+                "blendEquation": 100,
+                "blendSrc": 201,
+                "blendDst": 205
+            }
+        },
+        "fxaaPass": {
+            "enabled": true,
+            "multPixel": 1
+        },
+        "screenMaskPass": {
+            "enabled": false,
+            "intensity": 1,
+            "maskColor": 16777215,
+            "R": 0.2,
+            "sr": 1.2
+        }
+    },
+    "handler": {
+        "mode": "根选择",
+        "openKey": true,
+        "selectPanelEnable": true,
+        "isTransformChildren": false,
+        "stats": {
+            "showStats": false,
+            "statsMode": 0
+        },
+        "helpers": {
+            "axes": {
+                "showAxes": true,
+                "axesLength": 1000
+            },
+            "grid": {
+                "showGrid": true,
+                "size": 1000,
+                "divisions": 15,
+                "colorCenterLine": 4473924,
+                "colorGrid": 8947848
+            },
+            "box3": {
+                "useBox3": true,
+                "color": 16776960
+            }
+        }
+    },
+    "lighting": [
+        {
+            "name": "",
+            "type": "DirectionalLight",
+            "visible": true,
+            "position": {
+                "x": -8.887598025974906,
+                "y": 5.610365213402176,
+                "z": 0.27551010531363707
+            },
+            "color": 16777215,
+            "intensity": 3.2000000000000015,
+            "castShadow": false,
+            "shadow": {
+                "bias": 0,
+                "radius": 1,
+                "mapSize": {
+                    "x": 512,
+                    "y": 512
+                },
+                "normalBias": 0,
+                "camera": {
+                    "near": 0.5,
+                    "far": 500,
+                    "left": -5,
+                    "right": 5,
+                    "top": 5,
+                    "bottom": -5
+                }
+            },
+            "target": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "name": "",
+            "type": "AmbientLight",
+            "visible": true,
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "color": 16777215,
+            "intensity": 0.49999999999999845,
+            "castShadow": false
+        }
+    ],
+    "modelList": [],
+    "innerMeshList": [],
+    "drawMeshList": [],
+    "geoGroupList": [],
+    "particleList": [],
+    "textMeshList": [
+        {
+            "name": "",
+            "visible": true,
+            "renderOrder": 0,
+            "castShadow": false,
+            "receiveShadow": false,
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "blendShaderPrograms": {
+                "shaderProgramsCodeName": "水波纹",
+                "isBlendShaderPrograms": true,
+                "uvType": "material",
+                "uniforms": {
+                    "iTime": 330.5399999998444,
+                    "speed": 0.01,
+                    "intensity": 1,
+                    "mixRatio": 0.95,
+                    "mixColor": 16777215,
+                    "hasUv": true,
+                    "TAU": 6.28318530718,
+                    "MAX_ITER": 5
+                }
+            },
+            "fontLink": "https://z2586300277.github.io/three-editor/dist/files/font/cn1.json",
+            "text": "Hello Three-Editor!",
+            "geometry": {
+                "geometryType": "TextGeometry",
+                "parameters": {
+                    "size": 1,
+                    "depth": 0.2,
+                    "height": 0.2,
+                    "curveSegments": 12,
+                    "bevelEnabled": true,
+                    "bevelThickness": 0,
+                    "bevelSize": 0,
+                    "bevelSegments": 5
+                }
+            },
+            "material": {
+                "materialType": "标准材质",
+                "visible": true,
+                "color": 16777215,
+                "wireframe": false,
+                "transparent": true,
+                "opacity": 1,
+                "alphaTest": 0,
+                "blending": 1,
+                "emissive": 0,
+                "emissiveIntensity": 1,
+                "metalness": 0,
+                "roughness": 1,
+                "envMap": false,
+                "envMapIntensity": 1
+            }
+        },
+        {
+            "name": "",
+            "visible": true,
+            "renderOrder": 0,
+            "castShadow": false,
+            "receiveShadow": false,
+            "position": {
+                "x": 0,
+                "y": 2.442035231214714,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "blendShaderPrograms": {
+                "shaderProgramsCodeName": "彩虹光",
+                "isBlendShaderPrograms": true,
+                "uvType": "material",
+                "uniforms": {
+                    "iTime": 151.53000000000716,
+                    "speed": 0.01,
+                    "intensity": 6.699999999999993,
+                    "mixRatio": 0.6999999999999997,
+                    "mixColor": 16777215,
+                    "hasUv": true
+                }
+            },
+            "fontLink": "https://z2586300277.github.io/three-editor/dist/files/font/cn1.json",
+            "text": "three-editor-cores",
+            "geometry": {
+                "geometryType": "TextGeometry",
+                "parameters": {
+                    "size": 1,
+                    "depth": 0.2,
+                    "height": 0.2,
+                    "curveSegments": 12,
+                    "bevelEnabled": true,
+                    "bevelThickness": 0,
+                    "bevelSize": 0,
+                    "bevelSegments": 5
+                }
+            },
+            "material": {
+                "materialType": "镜面高光材质",
+                "visible": true,
+                "color": 16777215,
+                "wireframe": false,
+                "transparent": true,
+                "opacity": 1,
+                "alphaTest": 0,
+                "blending": 1,
+                "shininess": 30,
+                "specular": 1118481,
+                "emissive": 0,
+                "emissiveIntensity": 1,
+                "envMap": false,
+                "reflectivity": 1
+            }
+        }
+    ],
+    "borderGroupList": []
+}

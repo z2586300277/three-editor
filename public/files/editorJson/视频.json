@@ -1,0 +1,223 @@
+{
+    "scene": {
+        "backgroundBlurriness": 0,
+        "backgroundIntensity": 1,
+        "backgroundUrls": null,
+        "envBackgroundUrls": null,
+        "environmentEnabled": false
+    },
+    "perspectiveCamera": {
+        "fov": 50,
+        "near": 0.1,
+        "far": 100000,
+        "zoom": 1,
+        "position": {
+            "x": -2.684210685717802,
+            "y": 5.414866597132977,
+            "z": 12.272450565224515
+        }
+    },
+    "webglRenderer": {
+        "outputColorSpace": "srgb",
+        "toneMapping": 0,
+        "toneMappingExposure": 1,
+        "shadowMap": {
+            "enabled": false,
+            "type": 1
+        },
+        "color": 0,
+        "opacity": 0,
+        "sortObjects": true,
+        "localClippingEnabled": false,
+        "clippingPlanes": []
+    },
+    "orbitControls": {
+        "maxPolarAngle": 3.141592653589793,
+        "autoRotate": false,
+        "autoRotateSpeed": 2,
+        "rotateSpeed": 1,
+        "panSpeed": 1,
+        "zoomSpeed": 1,
+        "enableDamping": true,
+        "dampingFactor": 0.05,
+        "minDistance": 0.01,
+        "maxDistance": 1000000,
+        "target": {
+            "x": -0.044647554830881266,
+            "y": 3.274063710164499,
+            "z": -3.827228607887689
+        }
+    },
+    "transformControls": {
+        "mode": "translate",
+        "space": "world",
+        "size": 1,
+        "showX": true,
+        "showY": true,
+        "showZ": true,
+        "translationSnap": null,
+        "rotationSnap": null,
+        "scaleSnap": null
+    },
+    "effectComposer": {
+        "renderWay": "效果渲染",
+        "saoPass": {
+            "enabled": false,
+            "saoBias": 0.5,
+            "saoIntensity": 0.01,
+            "saoScale": 100,
+            "saoKernelRadius": 100,
+            "saoMinResolution": 0,
+            "saoBlur": true,
+            "saoBlurRadius": 8,
+            "saoBlurStdDev": 4,
+            "saoBlurDepthCutoff": 0.01
+        },
+        "unrealBloomPass": {
+            "enabled": false,
+            "strength": 1.5,
+            "radius": 0.4,
+            "threshold": 0.85
+        },
+        "outlinePass": {
+            "enabled": true,
+            "edgeStrength": 3,
+            "edgeGlow": 0,
+            "edgeThickness": 1,
+            "pulsePeriod": 0,
+            "usePatternTexture": false,
+            "visibleEdgeColor": 16449071,
+            "hiddenEdgeColor": 16449071,
+            "overlayMaterial": {
+                "blending": 5,
+                "blendEquation": 100,
+                "blendSrc": 201,
+                "blendDst": 205
+            }
+        },
+        "fxaaPass": {
+            "enabled": true,
+            "multPixel": 1
+        },
+        "screenMaskPass": {
+            "enabled": false,
+            "intensity": 1,
+            "maskColor": 16777215,
+            "R": 0.2,
+            "sr": 1.2
+        }
+    },
+    "handler": {
+        "mode": "根选择",
+        "openKey": true,
+        "selectPanelEnable": true,
+        "isTransformChildren": false,
+        "stats": {
+            "showStats": false,
+            "statsMode": 0
+        },
+        "helpers": {
+            "axes": {
+                "showAxes": true,
+                "axesLength": 1000
+            },
+            "grid": {
+                "showGrid": true,
+                "size": 1000,
+                "divisions": 15,
+                "colorCenterLine": 4473924,
+                "colorGrid": 8947848
+            },
+            "box3": {
+                "useBox3": true,
+                "color": 16776960
+            }
+        }
+    },
+    "lighting": [
+        {
+            "name": "",
+            "type": "AmbientLight",
+            "visible": true,
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "color": 16777215,
+            "intensity": 3,
+            "castShadow": false
+        }
+    ],
+    "modelList": [
+    ],
+    "innerMeshList": [
+        {
+            "name": "",
+            "visible": true,
+            "renderOrder": 0,
+            "castShadow": false,
+            "receiveShadow": false,
+            "position": {
+                "x": -1.511777024946666,
+                "y": 6.480390654509234,
+                "z": -4.461299677257568
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 2.3313479026457293,
+                "y": 1,
+                "z": 1
+            },
+            "geometry": {
+                "geometryType": "平面",
+                "parameters": {
+                    "width": 5,
+                    "height": 5,
+                    "widthSegments": 32,
+                    "heightSegments": 32
+                }
+            },
+            "material": {
+                "materialType": "基础材质",
+                "visible": true,
+                "color": 16777215,
+                "wireframe": false,
+                "transparent": true,
+                "opacity": 1,
+                "alphaTest": 0,
+                "blending": 1,
+                "mapType": "视频",
+                "mapUrl": "https://z2586300277.github.io/three-editor/dist/files/video/video.mp4",
+                "map": {
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "rotation": 0,
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "repeat": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "envMap": false,
+                "reflectivity": 1
+            }
+        }
+    ],
+    "drawMeshList": [],
+    "geoGroupList": [],
+    "particleList": [],
+    "textMeshList": [],
+    "borderGroupList": []
+}
