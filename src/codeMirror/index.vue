@@ -23,6 +23,7 @@ import { javascript } from '@codemirror/lang-javascript'
 import { oneDark } from '@codemirror/theme-one-dark'
 import ThreeEditorExamples from '../codes/threeEditor/index.js';
 import ThreeJsExamples from '../codes/threejs/index.js';
+import CesiumJsExamples from '../codes/cesiumjs/index.js';
 import { useRoute } from 'vue-router'
 import { setMetaContent } from '../router'
 
@@ -32,7 +33,9 @@ const list = [
 
    { name: 'Three-Editor案例', path: 'threeEditor', list: ThreeEditorExamples },
 
-   { name: 'Three.js案例', path: 'threejs', list: ThreeJsExamples }
+   { name: 'Three.js案例', path: 'threejs', list: ThreeJsExamples },
+
+   { name: 'Cesium.js案例', path: 'cesiumjs', list: CesiumJsExamples }
 
 ]
 
@@ -78,9 +81,9 @@ const view = shallowRef()
 
 const handleReady = (payload) => view.value = payload.view // 获取view
 
-onMounted(() => str && preview.value.usePreview(str)) // 初始执行
+onMounted(() => str && preview.value.usePreview(str, query.example_path)) // 初始执行
 
-const useCode = () => preview.value.usePreview(jsCode.value) // 执行
+const useCode = () => preview.value.usePreview(jsCode.value, query.example_path) // 执行
 
 </script>
 

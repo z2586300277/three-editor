@@ -7,7 +7,10 @@ import { ref } from 'vue'
 
 const frame = ref(null)
 
-const getScript = (v) => `
+const getScript = (v, t) => {
+
+    const html = (t === 'cesiumjs' ? '<link rel="stylesheet" href="/three-editor/dist/cesium/style.css">' : '') +
+        `
     <style>
         body {
             margin: 0;
@@ -23,15 +26,19 @@ const getScript = (v) => `
     </style>
     <div id="box"></div>
     <script type="module">
+        ${t === 'cesiumjs' ? 'window.CESIUM_BASE_URL = "/three-editor/dist/cesium"' : ''}
         ${v}
-    <\/script>
-`
+    <\/script>`
+
+    return html
+
+}
 
 defineExpose({
 
-    usePreview: (v) => {
+    usePreview: (v, t) => {
 
-        const script = getScript(v)
+        const script = getScript(v, t)
 
         frame.value.contentWindow.document.open()
 

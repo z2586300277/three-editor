@@ -39,6 +39,7 @@
 import { ref, reactive } from 'vue';
 import ThreeEditorExamples from '../codes/threeEditor/index.js';
 import ThreeJsExamples from '../codes/threejs/index.js';
+import CesiumJsExamples from '../codes/cesiumjs/index.js';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -53,7 +54,7 @@ const list = [
 
     { name: 'Three.js案例', path: 'threejs', list: ThreeJsExamples },
 
-    { name: 'Cesium.js案例', path: 'cesiumjs', list: [] },
+    { name: 'Cesium.js案例', path: 'cesiumjs', list: CesiumJsExamples },
 
 ]
 
