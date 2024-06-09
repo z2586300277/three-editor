@@ -15,11 +15,7 @@
 
 <script setup>
 
-const openUrl = (k) => {
-
-    window.open(__SITE_URLS__[k])
-
-}
+const openUrl = (k) => window.open(__SITE_URLS__[k])
 
 </script>
 

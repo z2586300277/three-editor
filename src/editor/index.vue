@@ -50,10 +50,8 @@
                 </div>
             </div>
         </div>
-
         <leftPanel :emitEditor="emitEditor" />
         <rightPanel :emitEditor="emitEditor" />
-
         <div class="topl">
             <div
                 style="pointer-events: auto;background-color: #181818;display: flex;align-items: center;border-radius: 3px;">
@@ -68,14 +66,12 @@
                 </el-radio-group>
             </div>
         </div>
-
         <div class="bot">
             <div class="opt">
                 <div>
                     <div>
                         <el-switch inactive-text="选中弹窗" v-model="emitEditor.selectPanelEnable" active-color="#a8d4fd"
                             @change="a => emitEditor.threeEditor.handler.selectPanelEnable = a" />
-
                     </div>
                     <div><el-switch inactive-text="按键操作" v-model="emitEditor.openKey" active-color="#a8d4fd"
                             @change="a => emitEditor.threeEditor.handler.setHandlerOption('openKey', a)" /></div>
@@ -87,7 +83,6 @@
         </pre>
             </div>
         </div>
-
         <div class="main">
             <Editor :emitEditor="emitEditor" :options="options" />
         </div>
@@ -207,11 +202,7 @@ function delScene(item) {
 
 watch(() => emitEditor.sceneName, (v, o) => {
 
-    if (v) {
-
-        setTimeout(() => emitEditor.createScene(), 100)
-
-    }
+    if (v) setTimeout(() => emitEditor.createScene(), 100)
 
     emitEditor?.threeEditor?.destroySceneRender?.()
 

@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue';
+import { reactive } from 'vue';
 import { Config, fetchResource } from '../config'
 import { ElMessage } from 'element-plus'
 
@@ -21,24 +21,37 @@ const data = reactive({ list: [] })
 const props = defineProps(['emitEditor'])
 
 function sl(v) {
+
     return v.replace(/.json/g, '')
+
 }
 
 function copyToClipboard(text) {
+
     const el = document.createElement('textarea');
+
     el.value = text;
+
     document.body.appendChild(el);
+
     el.select();
+
     document.execCommand('copy');
+
     document.body.removeChild(el);
+
 }
 
 function load(url) {
+
     copyToClipboard(Config.fontUrl + url)
+
     ElMessage.success('已复制' + Config.fontUrl + url)
+
 }
 
 fetchResource(Config.fontUrl).then(res => data.list = res)
+
 </script>
 
 <style lang="less" scoped>

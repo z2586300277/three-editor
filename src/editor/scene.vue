@@ -118,8 +118,8 @@ function createScene(sceneParams) {
 
     props.emitEditor.threeEditor = threeEditor
 
-
     window.onresize = () => threeEditor.renderSceneResize()
+
 }
 
 onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())

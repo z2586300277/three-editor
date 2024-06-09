@@ -1,5 +1,5 @@
 <template>
-    <iframe class="iframe" ref="frame"></iframe>
+    <iframe class="iframe" ref="frame" :srcdoc="getScript('')"></iframe>
 </template>
 
 <script setup>
@@ -11,9 +11,10 @@ const getScript = (v) => `
     <style>
         body {
             margin: 0;
-            padding: 2px;
+            padding: 1px;
             box-sizing: border-box;
             background-color: #1f1f1f;
+            overflow: hidden;
         }
         #box {
             width: 100%;

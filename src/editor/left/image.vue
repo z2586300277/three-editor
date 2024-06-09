@@ -21,17 +21,27 @@ const data = reactive({ list: [] })
 const props = defineProps(['emitEditor'])
 
 function copyToClipboard(text) {
+
     const el = document.createElement('textarea');
+
     el.value = text;
+
     document.body.appendChild(el);
+
     el.select();
+
     document.execCommand('copy');
+
     document.body.removeChild(el);
+
 }
 
 function load(url) {
+
     copyToClipboard(Config.channelUrl + url)
+
     ElMessage.success('已复制' + Config.channelUrl + url)
+    
 }
 
 fetchResource(Config.channelUrl).then(res => data.list = res)

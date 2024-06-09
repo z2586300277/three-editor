@@ -8,8 +8,8 @@
                             <span>名称：{{ sl(emitEditor.info?.currentModel?.name) }}</span>
                         </div>
                     </template>
-                    <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : '
-            + sl(emitEditor.info?.point[i]) }}</div>
+                    <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : ' +
+            sl(emitEditor.info?.point[i]) }}</div>
                     <template #footer><el-button class="button"
                             @click="emitEditor.threeEditor.setLight('AmbientLight', { intensity: 3 })"
                             text>快速添加环境光</el-button></template>
@@ -40,7 +40,6 @@
                         </div>
                     </template>
                     <div>
-
                         <div v-if="a_data.transformAnimationList.length > 0">
                             <span class="text_a">物体:</span>
                             <span v-for="i, k in a_data.transformAnimationList" :key="k">
@@ -172,7 +171,6 @@ watch(() => props.emitEditor.threeEditor, (val) => {
 
 })
 
-
 function sl(i) {
 
     if (!i) return '';
@@ -196,6 +194,7 @@ const expandR = ref(true);
     top: 50px;
     right: 0;
     z-index: 100;
+    overflow: auto;
     display: flex;
 
     .main {
@@ -205,7 +204,6 @@ const expandR = ref(true);
         box-sizing: border-box;
     }
 }
-
 
 .lico1 {
     position: absolute;
