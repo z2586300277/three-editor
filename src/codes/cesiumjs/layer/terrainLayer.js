@@ -8,7 +8,7 @@ const { viewer } = new CesiumEditor({ DOM: document.getElementById('box'), viewe
 // arcgis 蓝色地图
 const layer = Cesium.ImageryLayer.fromProviderAsync(
 
-    Cesium.ArcGisMapServerImageryProvider.fromUrl('http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer')
+    Cesium.ArcGisMapServerImageryProvider.fromUrl('https://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer')
 
 )
 

@@ -512,7 +512,7 @@ viewer.imageryLayers.addImageryProvider(
 
     new Cesium.UrlTemplateImageryProvider({
 
-        url: 'http://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=2&style=8&x={x}&y={y}&z={z}',
+        url: 'https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=2&style=8&x={x}&y={y}&z={z}',
 
         maximumLevel: 18
 
@@ -699,7 +699,7 @@ viewer.imageryLayers.addImageryProvider(
 
     new BaiduImageryProvider({
 
-        url: "http://online0.map.bdimg.com/onlinelabel/?qt=tile&x={x}&y={y}&z={z}&styles=pl&scaler=2&p=1"
+        url: 'https://maponline0.bdimg.com/tile/?qt=vtile&x={x}&y={y}&z={z}&styles=pl&scaler=1&udt=20210709'
 
     })
 
@@ -771,7 +771,7 @@ const { viewer } = new CesiumEditor({ DOM: document.getElementById('box'), viewe
 // arcgis 蓝色地图
 const layer = Cesium.ImageryLayer.fromProviderAsync(
 
-    Cesium.ArcGisMapServerImageryProvider.fromUrl('http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer')
+    Cesium.ArcGisMapServerImageryProvider.fromUrl('https://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer')
 
 )
 
@@ -795,7 +795,7 @@ viewer.imageryLayers.addImageryProvider(
 
     new Cesium.UrlTemplateImageryProvider({
 
-        url: 'http://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=2&style=8&x={x}&y={y}&z={z}',
+        url: 'https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=2&style=8&x={x}&y={y}&z={z}',
 
         maximumLevel: 18
 

@@ -179,7 +179,7 @@ viewer.imageryLayers.addImageryProvider(
 
     new BaiduImageryProvider({
 
-        url: "http://online0.map.bdimg.com/onlinelabel/?qt=tile&x={x}&y={y}&z={z}&styles=pl&scaler=2&p=1"
+        url: 'https://maponline0.bdimg.com/tile/?qt=vtile&x={x}&y={y}&z={z}&styles=pl&scaler=1&udt=20210709'
 
     })
 

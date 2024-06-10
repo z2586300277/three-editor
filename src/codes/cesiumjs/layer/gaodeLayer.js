@@ -9,7 +9,7 @@ viewer.imageryLayers.addImageryProvider(
 
     new Cesium.UrlTemplateImageryProvider({
 
-        url: 'http://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=2&style=8&x={x}&y={y}&z={z}',
+        url: 'https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=2&style=8&x={x}&y={y}&z={z}',
 
         maximumLevel: 18
 
