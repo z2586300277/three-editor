@@ -1,5 +1,6 @@
 import changeShader from './learnShader/changeShader'
 import fenceShader from './learnShader/fenceShader'
+import modelLightScan from './learnShader/modelLightScan'
 
 export default [
     {
@@ -26,6 +27,17 @@ export default [
                     title: '围栏着色器',
                     keywords: 'three.js 着色器,区域围栏着色器',
                     description: '使用three.js创建的围栏着色器'
+                }
+            },
+            {
+                name: '模型扫光',
+                key: 'modelLightScan',
+                code: modelLightScan,
+                image: new URL(`./learnShader/modelLightScan.jpg`, import.meta.url).href,
+                meta: {
+                    title: '模型扫光',
+                    keywords: 'three.js 着色器,模型扫光',
+                    description: '使用three.js创建的模型光线扫描'
                 }
             }
         ]
