@@ -9,6 +9,11 @@ import mapfilterLayer from './layer/mapfilterLayer'
 import clickEvent from './basic/clickEvent'
 import multPoint from './basic/multPoint'
 import multFaceLine from './basic/multFaceLine'
+import multCurve from './basic/multCurve'
+import multPointCluster from './basic/multPointCluster'
+import multText from './basic/multText'
+import heatMap from './basic/heatMap'
+import css2dEelement from './basic/css2dEelement'
 
 export default [
     {
@@ -129,6 +134,61 @@ export default [
                     title: 'cesium大量面线',
                     keywords: '地图, 大量面,线',
                     description: '通过cesium 在地图上生成大量面线'
+                }
+            },
+            {
+                name: '大量曲线',
+                key: 'multCurve',
+                code: multCurve,
+                image: new URL(`./basic/multCurve.jpg`, import.meta.url).href,
+                meta: {
+                    title: 'cesium大量曲线',
+                    keywords: '地图, 大量曲线',
+                    description: '通过cesium 在地图上生成大量曲线'
+                }
+            },
+            {
+                name: '大量点聚合',
+                key: 'multPointCluster',
+                code: multPointCluster,
+                image: new URL(`./basic/multPointCluster.jpg`, import.meta.url).href,
+                meta: {
+                    title: 'cesium大量点聚合',
+                    keywords: '地图, 大量点聚合',
+                    description: '通过cesium 在地图上生成大量点聚合'
+                }
+            },
+            {
+                name: '大量文字',
+                key: 'multText',
+                code: multText,
+                image: new URL(`./basic/multText.jpg`, import.meta.url).href,
+                meta: {
+                    title: 'cesium大量文字',
+                    keywords: '地图, 大量文字',
+                    description: '通过cesium 在地图上生成大量文字'
+                }
+            },
+            {
+                name: '热力图',
+                key: 'heatMap',
+                code: heatMap,
+                image: new URL(`./basic/heatMap.jpg`, import.meta.url).href,
+                meta: {
+                    title: 'cesium热力图',
+                    keywords: '地图, 热力图',
+                    description: '通过cesium 在地图上生成热力图'
+                }
+            },
+            {
+                name: 'Css 2D弹窗',
+                key: 'css2dEelement',
+                code: css2dEelement,
+                image: new URL(`./basic/css2dEelement.jpg`, import.meta.url).href,
+                meta: {
+                    title: 'cesium 2d元素',
+                    keywords: '地图, 2d元素',
+                    description: '通过cesium 在地图上生成css2dEelement'
                 }
             }
         ]
