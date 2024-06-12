@@ -74,15 +74,13 @@ function createScene(sceneParams) {
 
         {
 
-            fps: null,
-
             pixelRatio: window.devicePixelRatio * 1,
 
             webglRenderParams: { antialias: true, alpha: true, logarithmicDepthBuffer: true },
 
-        },
+            sceneParams
 
-        sceneParams
+        }
 
     )
 

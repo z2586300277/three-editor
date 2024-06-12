@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Three-Editor"
   text: three.js低代码内核
-  tagline: 简化Three.js使用的基座,基于内核进行扩展，封装企业自己的3D组件库,搭建适用企业场景的无代码编辑器
+  tagline: 简化Three.js使用的基座,可基于内核进行扩展，封装企业自己的3D组件库,搭建适用企业场景的无代码编辑器
   actions:
     - theme: brand
       text: 安装
@@ -22,7 +22,7 @@ features:
   - title: 扩展性强
     details: 可在此基础上,进行多功能扩展,构建自己的3d 组件库,实现3D低代码,无代码化的产品
   - title: 简单易用
-    details: 无需过多了解Three.js 只需要使用几个简单的Api, 就可完成 3D场景搭建
+    details: 无需深入的去学习Three.js 只需要使用几个简单的Api, 就可完成 3D场景搭建
   - title: 超高效率
     details: 10分钟便可了解并使用, 高效可视化配置场景, 10分钟完成项目场景搭建
   - title: 降低成本

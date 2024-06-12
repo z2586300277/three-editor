@@ -2,25 +2,15 @@ export default
 
 `import { ThreeEditor } from '/three-editor/dist/js/index.js'
 
-const sceneParams = await fetch('https://z2586300277.github.io/three-editor/dist/files/editorJson/地图.json').then(res => res.json())
+// 参数地址
+const url = 'https://z2586300277.github.io/three-editor/dist/files/editorJson/地图.json'
 
-const threeEditor = new ThreeEditor( 
-    
-    document.getElementById('box'), // 容器
+// 获取参数
+const sceneParams = await fetch(url).then(res => res.json())
 
-    {
+// 初始化场景系列操作
+const threeEditor = new ThreeEditor(document.getElementById('box'), { sceneParams })
 
-        fps: null, // fps
-
-        pixelRatio: window.devicePixelRatio * 1, // 像素比
-
-        webglRenderParams: { antialias: true, alpha: true, logarithmicDepthBuffer: true }, // webgl 渲染参数
-
-    },
-
-    sceneParams
-
-)
-
-window.onresize = () => threeEditor.renderSceneResize() // 窗口大小变化
+// 窗口大小变化
+window.onresize = () => threeEditor.renderSceneResize() 
 `

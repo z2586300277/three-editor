@@ -3,30 +3,8 @@ export default
 `
 import { ThreeEditor, THREE } from '/three-editor/dist/js/index.js'
 
-/* 使用ThreeEditor 简化 three.js 初始化场景系列操作 */
-const threeEditor = new ThreeEditor( 
-    
-    document.getElementById('box'), // 容器
-
-    {
-
-        fps: null, // fps
-
-        pixelRatio: window.devicePixelRatio * 1, // 像素比
-
-        webglRenderParams: { 
-            
-            antialias: true,
-            
-            alpha: true,
-            
-            logarithmicDepthBuffer: true 
-        
-        }, // webgl 渲染参数
-
-    }
-
-)
+// 使用ThreeEditor 简化three.js 创建场景系列操作
+const threeEditor = new ThreeEditor(document.getElementById('box'))
 
 window.onresize = () => threeEditor.renderSceneResize() // 窗口大小变化
 
@@ -152,13 +130,10 @@ animate()
 /* 渲染函数 */
 function animate() {
 
-    if (custMaterial1) {
-
-        custMaterial1.uniforms.time.value += 0.03;
-
-    }
+    if (custMaterial1) custMaterial1.uniforms.time.value += 0.03;
 
     requestAnimationFrame(animate)
 
 }
+
 `

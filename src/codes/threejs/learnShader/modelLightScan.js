@@ -3,24 +3,12 @@ export default
     `import { THREE, ThreeEditor } from '/three-editor/dist/js/index.js'
 
 /* 使用ThreeEditor 简化 three.js 初始化场景系列操作 */
-const threeEditor = new ThreeEditor( document.getElementById('box'),
-
-    {
-
-        fps: null, // fps
-
-        pixelRatio: window.devicePixelRatio * 1, // 像素比
-
-        webglRenderParams: { antialias: true, alpha: true, logarithmicDepthBuffer: true }, // webgl 渲染参数
-
-    }
-
-)
+const threeEditor = new ThreeEditor( document.getElementById('box'))
 
 window.onresize = () => threeEditor.renderSceneResize() // 窗口大小变化
 
 /* 使用简化的后方式导入 FBX */
-const { loaderService } = threeEditor.modelCore.insertModel({ type: 'FBX', url: 'https://z2586300277.github.io/three-editor/dist/files/resource/aroundBuilding.FBX' })
+const { loaderService } = threeEditor.modelCore.insertModel({ type: 'FBX', url: '/three-editor/dist/files/resource/aroundBuilding.FBX' })
 
 // 模型加载完成回调
 loaderService.complete = group => {
@@ -96,7 +84,7 @@ const material = new THREE.ShaderMaterial({
             }
 
         }
-    \`
+    \`,
 
 })
 

@@ -3,6 +3,8 @@ import loadParams from './quickStart/loadParams.js'
 import loadGltf from './loadModel/loadGltf.js'
 import loadFbx from './loadModel/loadFbx.js'
 import loadObj from './loadModel/loadObj.js'
+import editorEvent from './quickStart/editorEvent.js'
+import loadAndSave from './quickStart/loadAndSave.js'
 
 export default [
     {
@@ -29,6 +31,28 @@ export default [
                     title: '三维地图',
                     keywords: 'three.js 地图',
                     description: '基于three.js创建的三维可视化地图'
+                }
+            },
+            {
+                name: '事件和操作',
+                key: 'editorEvent',
+                code: editorEvent,
+                image: new URL(`./quickStart/editorEvent.jpg`, import.meta.url).href,
+                meta: {
+                    title: '编辑器事件',
+                    keywords: 'three-editor 事件',
+                    description: 'three-editor的事件系统'
+                }
+            },
+            {
+                name: '加载和保存',
+                key: 'loadAndSave',
+                code: loadAndSave,
+                image: '/three-editor/dist/files/channels/loadAndSave.gif',
+                meta: {
+                    title: '加载和保存',
+                    keywords: 'three-editor 加载 保存',
+                    description: 'three-editor的加载和保存'
                 }
             }
         ]

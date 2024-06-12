@@ -1,17 +1,16 @@
 <template>
-    <iframe class="iframe" ref="frame" :srcdoc="getScript('')"></iframe>
+    <div class="iframeParent" ref="iframeParent"></div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-const frame = ref(null)
+const iframeParent = ref(null)
 
-const getScript = (v, t) => {
+const getScript = (v, t) =>
 
-    const html = (t === 'cesiumjs' ? '<link rel="stylesheet" href="/three-editor/dist/cesium/style.css">' : '') +
-        `
-    <style>
+    (t === 'cesiumjs' ? '<link rel="stylesheet" href="/three-editor/dist/cesium/style.css">' : '') +
+    `<style>
         body {
             margin: 0;
             padding: 1px;
@@ -30,21 +29,25 @@ const getScript = (v, t) => {
         ${v}
     <\/script>`
 
-    return html
-
-}
-
 defineExpose({
 
     usePreview: (v, t) => {
 
+        const frame = document.createElement('iframe')
+
+        frame.style = 'width: 100%; height: 100%; border: none;'
+
+        iframeParent.value.appendChild(frame)
+
         const script = getScript(v, t)
 
-        frame.value.contentWindow.document.open()
+        frame.contentWindow.document.open()
 
-        frame.value.contentWindow.document.write(script)
+        frame.contentWindow.document.write(script)
 
-        frame.value.contentWindow.document.close()
+        frame.contentWindow.document.close()
+
+        frame.onload = () =>  iframeParent.value.childNodes.length > 1 && iframeParent.value.removeChild(iframeParent.value.childNodes[0])
 
     }
 
@@ -53,11 +56,9 @@ defineExpose({
 </script>
 
 <style lang="less" scoped>
-.iframe {
-    border: none;
-    padding: 0;
-    margin: 0;
+.iframeParent {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 </style>

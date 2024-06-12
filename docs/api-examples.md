@@ -17,11 +17,11 @@ const initParams = {
 
     webglRenderParams: { antialias: true, alpha: true, logarithmicDepthBuffer: true } // 抗锯齿等
 
+    sceneParams
+
 }
 
-const sceneParams = null // 或保存得场景参数
-
-const threeEditor = new ThreeEditor(containor, initParams, sceneParams)
+const threeEditor = new ThreeEditor(containor, initParams)
 
 </script>
 ```

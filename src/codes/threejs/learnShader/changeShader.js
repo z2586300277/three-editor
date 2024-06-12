@@ -1,40 +1,17 @@
 export default
 
     `
-import { ThreeEditor, THREE, dat } from '/three-editor/dist/js/index.js'
+import { ThreeEditor, THREE, dat } from '/three-editor/dist/js/index.js' 
 
-/* 使用ThreeEditor 简化 three.js 初始化场景系列操作 */
-const DOM = document.getElementById('box')
+const DOM = document.getElementById('box') // 获取DOM
 
-const threeEditor = new ThreeEditor( 
-    
-    DOM, // 容器
-
-    {
-
-        fps: null, // fps
-
-        pixelRatio: window.devicePixelRatio * 1, // 像素比
-
-        webglRenderParams: { 
-            
-            antialias: true,
-            
-            alpha: true,
-            
-            logarithmicDepthBuffer: true 
-        
-        }, // webgl 渲染参数
-
-    }
-
-)
+const threeEditor = new ThreeEditor(DOM) // 使用ThreeEditor 简化 three.js 初始化场景系列操作
 
 window.onresize = () => threeEditor.renderSceneResize() // 窗口大小变化
 
 const { scene } = threeEditor
 
-/* 立方体 */
+// 立方体 
 const geometry = new THREE.BoxGeometry(4, 4, 4);
 
 const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
@@ -50,21 +27,7 @@ scene.add(mesh);
 // GUI 对象
 const GUI = new dat.GUI()
 
-const fileList = [
-
-    '/three-editor/dist/glsl/0.frag',
-
-    '/three-editor/dist/glsl/1.frag',
-
-    '/three-editor/dist/glsl/2.frag',
-
-    '/three-editor/dist/glsl/3.frag',
-
-    '/three-editor/dist/glsl/4.frag',
-
-    '/three-editor/dist/glsl/5.frag'
-
-]
+const fileList = new Array(6).fill().map((_, i) => \`/three-editor/dist/glsl/\${i}.frag\`)
 
 GUI.add({url: fileList[0]}, 'url', fileList).onChange((url) => changeShader(url))
 
@@ -74,7 +37,7 @@ let shader = null
 
 animate()
 
-/* 渲染 */
+// 渲染 
 function animate() {
 
     shader && (shader.uniforms.u_time.value += 0.02)
