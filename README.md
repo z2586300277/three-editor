@@ -1,5 +1,7 @@
 # 说明
 
+- 注: 先点星！先点星！先点星！重要的事情说三遍。
+
 - 预览 https://z2586300277.github.io/three-editor/dist/#/editor
 
 - 技术案例 https://z2586300277.github.io/three-editor/dist/#/example
