@@ -191,7 +191,7 @@ changeActive(initActive);
             img {
                 margin-top: 10px;
                 border-radius: 3px;
-                width: 180px;
+                width: 200px;
                 height: 180px;
 
                 &:hover {

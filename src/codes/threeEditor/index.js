@@ -5,6 +5,8 @@ import loadFbx from './loadModel/loadFbx.js'
 import loadObj from './loadModel/loadObj.js'
 import editorEvent from './quickStart/editorEvent.js'
 import loadAndSave from './quickStart/loadAndSave.js'
+import skyAndEnv from './quickStart/skyAndEnv.js'
+import loadCssDom from './quickStart/loadCssDom.js'
 
 export default [
     {
@@ -53,6 +55,28 @@ export default [
                     title: '加载和保存',
                     keywords: 'three-editor 加载 保存',
                     description: 'three-editor的加载和保存'
+                }
+            },
+            {
+                name: '天空盒和环境贴图',
+                key: 'skyAndEnv',
+                code: skyAndEnv,
+                image: new URL(`./quickStart/skyAndEnv.jpg`, import.meta.url).href,
+                meta: {
+                    title: '天空盒和环境贴图',
+                    keywords: 'three-editor 天空盒 环境贴图',
+                    description: 'three-editor的天空盒和环境贴图'
+                }
+            },
+            {
+                name: '加载CSS和DOM',
+                key: 'loadCssDom',
+                code: loadCssDom,
+                image: new URL(`./quickStart/loadCssDom.jpg`, import.meta.url).href,
+                meta: {
+                    title: '加载CSS和DOM',
+                    keywords: 'three-editor CSS DOM',
+                    description: 'three-editor的CSS和DOM加载'
                 }
             }
         ]
