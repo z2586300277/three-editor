@@ -7,6 +7,9 @@ import editorEvent from './quickStart/editorEvent.js'
 import loadAndSave from './quickStart/loadAndSave.js'
 import skyAndEnv from './quickStart/skyAndEnv.js'
 import loadCssDom from './quickStart/loadCssDom.js'
+import gsapAnimate from './quickStart/gsapAnimate.js'
+import modelAnimate from './loadModel/modelAnimate.js'
+import objectAndShader from './loadModel/objectAndShader.js'
 
 export default [
     {
@@ -78,6 +81,17 @@ export default [
                     keywords: 'three-editor CSS DOM',
                     description: 'three-editor的CSS和DOM加载'
                 }
+            },
+            {
+                name: '视角动画',
+                key: 'gsapAnimate',
+                code: gsapAnimate,
+                image: new URL(`./quickStart/gsapAnimate.jpg`, import.meta.url).href,
+                meta: {
+                    title: '视角动画',
+                    keywords: 'gsap,动画',
+                    description: 'three-editor的视角动画'
+                }
             }
         ]
     },
@@ -116,6 +130,28 @@ export default [
                     title: '加载OBJ模型',
                     keywords: 'three.js OBJ模型',
                     description: '使用three.js加载OBJ模型'
+                }
+            },
+            {
+                name: '模型动画',
+                key: 'modelAnimate',
+                code: modelAnimate,
+                image: new URL(`./loadModel/modelAnimate.jpg`, import.meta.url).href,
+                meta: {
+                    title: '模型动画',
+                    keywords: '模型动画',
+                    description: '使用three.js模型动画'
+                }
+            },
+            {
+                name: '对象和着色器',
+                key: 'objectAndShader',
+                code: objectAndShader,
+                image: new URL(`./loadModel/objectAndShader.jpg`, import.meta.url).href,
+                meta: {
+                    title: '对象和着色器',
+                    keywords: '着色器',
+                    description: '使用three.js对象和着色器'
                 }
             }
         ]

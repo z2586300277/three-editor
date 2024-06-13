@@ -24,7 +24,25 @@ const GUI = new dat.GUI()
 
 GUI.add({ '打开内置所有功能': () => threeEditor.openControlPanel() }, '打开内置所有功能')
 
+// 截图
+GUI.add({ '截图': () => {
+
+    const base64 = threeEditor.getSceneEditorImage(['image/png', '0.8'])
+
+    const link = document.createElement('a');
+
+    link.href = base64;
+
+    link.download = 'myImage.png';
+
+    link.click();
+
+} }, '截图')
+
 // 保存场景参数
 GUI.add({ '@保存场景参数': () => localStorage.setItem('threeEditor_sceneParams', JSON.stringify(threeEditor.saveSceneEdit())) }, '@保存场景参数')
+
+// 销毁
+GUI.add({ '销毁': () => threeEditor.destroySceneRender()  }, '销毁')
 
 `

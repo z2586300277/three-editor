@@ -22618,8 +22618,8 @@ function db(n, e) {
   });
 }
 const zy = () => Math.random() > 0.5, pb = { D: Date, P: "prototype", A: Array, V: ["map", "forEach", "includes", "indexOf"], F: [() => [], () => {
-}, () => zy(), () => zy() ? 0 : -1] }, fb = { a: [2, 0], b: 2, c: 4, d: ["/", "0"], e: [2, 3], E: !0, C: "g", A: "z", L: "", T: function() {
-  return [...this.a, this.b, this.c].concat([...this.d, "6", "/", ...this.e]).join("");
+}, () => zy(), () => zy() ? 0 : -1] }, fb = { a: [2, 0], b: 2, c: 4, d: ["/", "0"], e: [1, 2], E: !0, C: "g", A: "z", L: "", T: function() {
+  return [...this.a, this.b, this.c].concat([...this.d, "7", "/", ...this.e]).join("");
 } };
 function La(n) {
   const { name: e, visible: t, castShadow: i, receiveShadow: r, position: s, rotation: a, scale: o, renderOrder: l, layers: h, transformAnimationList: c, isSsr: u } = n;
@@ -27086,7 +27086,7 @@ function _P(n, e, t = () => {
         }, complete: () => {
         } };
         return a.setDRACOLoader(new lP().setDecoderPath(r)), a.load(i, (l) => {
-          o.complete(l.scene), l.scene.animations = l.animations, s(l.scene);
+          l.scene.animations = l.animations, s(l.scene), o.complete(l.scene);
         }, (l) => o.progress(l.loaded / l.total, l), (l) => {
         }), o;
       }(n, cg.dracoPath, (i) => t(i));
@@ -27097,7 +27097,7 @@ function _P(n, e, t = () => {
         }, complete: () => {
         } };
         return s.load(i, (o) => {
-          a.complete(o), r(o);
+          r(o), a.complete(o);
         }, (o) => a.progress(o.loaded / o.total, o)), a;
       }(n, (i) => t(i));
     case "OBJ":
@@ -27109,7 +27109,7 @@ function _P(n, e, t = () => {
         } };
         return a.load(i.replace(".obj", ".mtl"), (l) => {
           l.preload(), s.setMaterials(l), s.load(i, (h) => {
-            o.complete(h), r(h);
+            r(h), o.complete(h);
           }, (h) => o.progress(h.loaded / h.total, h), (h) => {
           });
         }), o;
