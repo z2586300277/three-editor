@@ -10,6 +10,7 @@ import loadCssDom from './quickStart/loadCssDom.js'
 import gsapAnimate from './quickStart/gsapAnimate.js'
 import modelAnimate from './loadModel/modelAnimate.js'
 import objectAndShader from './loadModel/objectAndShader.js'
+import sceneChange from './quickStart/sceneChange.js'
 
 export default [
     {
@@ -58,6 +59,17 @@ export default [
                     title: '加载和保存',
                     keywords: 'three-editor 加载 保存',
                     description: 'three-editor的加载和保存'
+                }
+            },
+            {
+                name: '场景切换',
+                key: 'sceneChange',
+                code: sceneChange,
+                image: '/three-editor/dist/files/channels/sceneChange.gif',
+                meta: {
+                    title: '场景切换',
+                    keywords: 'three-editor,场景切换',
+                    description: 'three-editor的场景切换'
                 }
             },
             {

@@ -14,6 +14,7 @@ import multPointCluster from './basic/multPointCluster'
 import multText from './basic/multText'
 import heatMap from './basic/heatMap'
 import css2dEelement from './basic/css2dEelement'
+import geojsonFace from './basic/geojsonFace'
 
 export default [
     {
@@ -112,6 +113,17 @@ export default [
                     title: 'cesium点击事件',
                     keywords: 'cesium, 点击事件',
                     description: '点击事件'
+                }
+            },
+            {
+                name: 'GeoJson面',
+                key: 'geojsonFace',
+                code: geojsonFace,
+                image: new URL(`./basic/geojsonFace.jpg`, import.meta.url).href,
+                meta: {
+                    title: 'cesium GeoJson 区域面',
+                    keywords: '地图, geoJson',
+                    description: '通过cesium geoJson 生成区域'
                 }
             },
             {
