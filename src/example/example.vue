@@ -3,7 +3,7 @@
         <div class="top">
             <div class="top-title" @click="openUrl('author')">
                 <img class="logo" src="/site.png" alt="logo" width="36px" height="36px">
-                <div class="top-title-text">3D Examples</div>
+                <div class="top-title-text">优雅永不过时 - 3D</div>
             </div>
             <el-menu class="menu" style="border: none;" :default-active="initPath" mode="horizontal" :ellipsis="false"
                 active-text-color="#fff" text-color="#fff" :default-openeds="['0']">

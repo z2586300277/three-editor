@@ -21,7 +21,7 @@
                             </div>
                         </el-option>
                     </el-select>
-                    <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新增</el-button>
+                    <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建本地场景</el-button>
                     <el-upload class="upload" ref="myUpload" :auto-upload="false" action="" :on-change="uploadChange">
                         <el-button class="btn-add" link icon="plus">导入本地模型到当前场景</el-button></el-upload>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">

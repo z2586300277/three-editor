@@ -1,10 +1,14 @@
 <template>
     <router-view />
     <div class="info">
+
         <div class="link">
             <el-link class="text" @click="openUrl('doc')">-文档</el-link>
             <el-link class="text" @click="openUrl('example')">-案例</el-link>
             <el-link class="text" @click="openUrl('editor')">-编辑器</el-link>
+        </div>
+        <div>
+            <el-link class="text" @click="openUrl('author')">-QQ 2586300277</el-link>
         </div>
         <div class="flexAuthor">
             <img class="logo" src="/site.png" alt="logo" width="20px" height="20px"> &nbsp;
@@ -26,6 +30,7 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
     z-index: 200;
     opacity: 0.6;
     margin-left: 2px;
+    font-size: 11px;
 
     .link {
         display: flex;

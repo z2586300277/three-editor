@@ -28815,7 +28815,7 @@ function e3(n, e) {
       } catch (x) {
       }
       Xe.derive(() => {
-        if (_.val) {
+        if (v.val > window.innerHeight - 100 && setTimeout(() => v.val = window.innerHeight - 200, 100), v.val < 0 && setTimeout(() => v.val = 0, 100), f.val > window.innerWidth - 100 && setTimeout(() => f.val = window.innerWidth - 200, 100), f.val < 0 && setTimeout(() => f.val = 0, 100), _.val) {
           const x = d.map((M) => {
             const { parent: b } = M.folder, w = M.folder.name;
             return delete b.__folders[w], b.load && b.load.folders && b.load.folders[w] && delete b.load.folders[w], { closed: M.folder.closed };
@@ -28823,7 +28823,7 @@ function e3(n, e) {
           localStorage.setItem("threeEditor_Panel", JSON.stringify({ panels: x, x: f.val, y: v.val }));
         }
       });
-      const y = md(Ee({ title: "3D-配置", x: f, y: v, closed: _, width: m, height: g }, Uh), jy({ style: `
+      const y = md(Ee({ title: "3D-配置", x: f, y: v, closed: _, width: m, height: g, zIndex: 99999, customStacking: !0 }, Uh), jy({ style: `
             
                 border: 1px solid rgba(255, 255, 255, 0.2);
                 
