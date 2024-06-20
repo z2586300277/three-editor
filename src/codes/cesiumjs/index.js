@@ -13,6 +13,7 @@ import multCurve from './basic/multCurve'
 import multPointCluster from './basic/multPointCluster'
 import multText from './basic/multText'
 import heatMap from './basic/heatMap'
+import flyCharts from './basic/flyCharts'
 import css2dEelement from './basic/css2dEelement'
 import geojsonFace from './basic/geojsonFace'
 
@@ -190,6 +191,17 @@ export default [
                     title: 'cesium热力图',
                     keywords: '地图, 热力图',
                     description: '通过cesium 在地图上生成热力图'
+                }
+            },
+            {
+                name: 'echarts结合飞线',
+                key: 'flyCharts',
+                code: flyCharts,
+                image: new URL(`./basic/flyCharts.jpg`, import.meta.url).href,
+                meta: {
+                    title: 'cesium echarts结合飞线',
+                    keywords: '地图, echarts, 飞线',
+                    description: '通过cesium 在地图上生成echarts结合飞线'
                 }
             },
             {
