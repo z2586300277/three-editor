@@ -8,6 +8,9 @@ hero:
   tagline: 简化Three.js使用的基座,可基于内核进行扩展，封装企业自己的3D组件库,搭建适用企业场景的无代码编辑器
   actions:
     - theme: brand
+      text: 设计理念
+      link: /createIdea
+    - theme: alt
       text: 安装
       link: /markdown-examples
     - theme: alt

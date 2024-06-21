@@ -18,6 +18,7 @@ export default defineConfig({
       {
         text: '开始',
         items: [
+          { text: '设计理念', link: '/createIdea' },
           { text: '安装', link: '/markdown-examples' },
           { text: 'Api', link: '/api-examples' }
         ]

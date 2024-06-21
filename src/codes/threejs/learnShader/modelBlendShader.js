@@ -18,15 +18,7 @@ threeEditor.modelCore.insertModel({ type: 'GLTF', url }).loaderService.complete 
 
     const materials = []
     
-    model.traverse(c => {
-        
-        if (c.isMesh) {
-            
-            materials.push(c.material)
-            
-        }
-        
-    })
+    model.traverse(c => c.isMesh && materials.push(c.material))
 
     materialsBlendShader([... new Set(materials)])
     
@@ -65,7 +57,6 @@ function materialsBlendShader(matarials) {
         requestAnimationFrame(render)
         
     }
-
 
     /* 遍历材质 */
     matarials.forEach(material => {
