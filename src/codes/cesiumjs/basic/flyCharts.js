@@ -1,7 +1,13 @@
 export default
-    `import { Cesium, CesiumEditor, EchartsLayer } from '/three-editor/dist/cesium/index.js'
 
-const { viewer } = new CesiumEditor({ DOM: document.getElementById('box')}) // 使用封装类简化创建cesium代码
+    `import { Cesium, CesiumEditor, EchartsLayer, loadGaodeLayer, setViewerTheme } from '/three-editor/dist/cesium/index.js'
+
+// 使用封装类简化创建cesium代码
+const { viewer } = new CesiumEditor({ DOM: document.getElementById('box'), viewerParams: { baseLayer: false } })
+
+loadGaodeLayer(viewer) // 简化后的的加载高德地图
+
+setViewerTheme(viewer) // 简化后的设置主题
 
 // 看向中国
 viewer.camera.flyTo({ destination: Cesium.Cartesian3.fromDegrees(104.07, 30.67, 4000000) })
@@ -39,9 +45,9 @@ const echartsLayer = new EchartsLayer(viewer, {
 echartsLayer._chart.on('click', params => {
 
     alert(params.data.name)
-    
+
 })
 
 window.onresize = () => echartsLayer.resize() // 监听窗口变化
-    
+
 `

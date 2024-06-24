@@ -1,43 +1,48 @@
 export default
-    `
-    import { Cesium, CesiumEditor, setCesiumHeatmap } from '/three-editor/dist/cesium/index.js'
 
-    const { viewer } = new CesiumEditor({ DOM: document.getElementById('box')}) // 使用封装类简化创建cesium代码
+    `import { Cesium, CesiumEditor, loadGaodeLayer, setViewerTheme, setCesiumHeatmap } from '/three-editor/dist/cesium/index.js'
 
-    // 模拟数值
-    const points = new Array(50).fill('').map(() => {
+// 使用封装类简化创建cesium代码
+const { viewer } = new CesiumEditor({ DOM: document.getElementById('box'), viewerParams: { baseLayer: false } })
 
-        return {
+loadGaodeLayer(viewer) // 简化后的的加载高德地图
 
-            x: 116.46 + Math.random() * 10,
+setViewerTheme(viewer) // 简化后的设置主题
 
-            y: 39.92 + Math.random() * 10,
+// 模拟数值
+const points = new Array(50).fill('').map(() => {
 
-            value: Math.random()
+    return {
 
-        }
-        
-    })
+        x: 116.46 + Math.random() * 10,
+
+        y: 39.92 + Math.random() * 10,
+
+        value: Math.random()
+
+    }
     
-    // 创建热力图
-    new setCesiumHeatmap(viewer, {
+})
 
-        points,
+// 创建热力图
+new setCesiumHeatmap(viewer, {
 
-        viewToLayer: true, 
+    points,
 
-        heatmapDataOptions: { max: 1, min: 0 },
+    viewToLayer: true, 
 
-        heatmapOptions: {
+    heatmapDataOptions: { max: 1, min: 0 },
 
-            radius: 100,
+    heatmapOptions: {
 
-            maxOpacity: 0.5,
+        radius: 100,
 
-            minOpacity: 0
+        maxOpacity: 0.5,
 
-        }
+        minOpacity: 0
 
-    })
-    
+    }
+
+})
+
 `

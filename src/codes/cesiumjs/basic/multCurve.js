@@ -1,8 +1,13 @@
 export default
 
-    `import { Cesium, CesiumEditor } from '/three-editor/dist/cesium/index.js'
+    `import { Cesium, CesiumEditor, loadGaodeLayer, setViewerTheme } from '/three-editor/dist/cesium/index.js'
 
-const { viewer } = new CesiumEditor({ DOM: document.getElementById('box')}) // 使用封装类简化创建cesium代码
+// 使用封装类简化创建cesium代码
+const { viewer } = new CesiumEditor({ DOM: document.getElementById('box'), viewerParams: { baseLayer: false } })
+
+loadGaodeLayer(viewer) // 简化后的的加载高德地图
+
+setViewerTheme(viewer) // 简化后的设置主题
 
 // 经纬度坐标5个点
 const points = [116.405285, 39.904989, 121.472644, 31.231706, 113.280637, 23.125178, 114.057868, 22.543099, 120.153576, 30.287459] 
