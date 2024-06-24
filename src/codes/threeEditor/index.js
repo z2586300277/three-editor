@@ -11,6 +11,8 @@ import gsapAnimate from './quickStart/gsapAnimate.js'
 import modelAnimate from './loadModel/modelAnimate.js'
 import objectAndShader from './loadModel/objectAndShader.js'
 import sceneChange from './quickStart/sceneChange.js'
+import curveAnimate from './quickStart/curveAnimate.js'
+import transformAnimate from './quickStart/transformAnimate.js'
 
 export default [
     {
@@ -103,6 +105,28 @@ export default [
                     title: '视角动画',
                     keywords: 'gsap,动画',
                     description: 'three-editor的视角动画'
+                }
+            },
+            {
+                name: '曲线动画',
+                key: 'curveAnimate',
+                code: curveAnimate,
+                image: new URL(`./quickStart/curveAnimate.jpg`, import.meta.url).href,
+                meta: {
+                    title: '曲线动画',
+                    keywords: '曲线动画',
+                    description: 'three-editor的曲线动画'
+                }
+            },
+            {
+                name: 'gsap变换动画',
+                key: 'transformAnimate',
+                code: transformAnimate,
+                image: new URL(`./quickStart/transformAnimate.jpg`, import.meta.url).href,
+                meta: {
+                    title: '变换动画',
+                    keywords: '变换动画',
+                    description: 'three-editor的变换动画'
                 }
             }
         ]
