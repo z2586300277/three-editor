@@ -45,7 +45,7 @@ if (!currentExample) {
 
    const lengthRandom = v => Math.floor(Math.random() * v)
 
-   const random = lengthRandom(list.length)
+   const random = lengthRandom(list.length - 1)
 
    const random2 = lengthRandom(list[random].list.length)
 

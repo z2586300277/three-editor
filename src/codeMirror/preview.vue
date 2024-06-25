@@ -7,9 +7,8 @@ import { ref } from 'vue'
 
 const iframeParent = ref(null)
 
-const getScript = (v, t) =>
+const getScript = (v, t) => (t === 'cesiumjs' ? '<link rel="stylesheet" href="/three-editor/dist/cesium/style.css">' : '') +
 
-    (t === 'cesiumjs' ? '<link rel="stylesheet" href="/three-editor/dist/cesium/style.css">' : '') +
     `<style>
         body {
             margin: 0;
@@ -47,7 +46,7 @@ defineExpose({
 
         frame.contentWindow.document.close()
 
-        frame.onload = () =>  iframeParent.value.childNodes.length > 1 && iframeParent.value.removeChild(iframeParent.value.childNodes[0])
+        frame.onload = () => iframeParent.value.childNodes.length > 1 && iframeParent.value.removeChild(iframeParent.value.childNodes[0])
 
     }
 

@@ -100,7 +100,7 @@ export async function setIndexDB() {
             // 获取所有数据
             const getAllRequest = () => {
 
-               return new Promise((allResolve, allReject) => {
+                return new Promise((allResolve, allReject) => {
 
                     // 表GLB 事务 只读
                     const transaction = DATABASE.transaction(['GLB'], 'readonly')

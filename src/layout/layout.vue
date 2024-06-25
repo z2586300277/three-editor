@@ -1,7 +1,6 @@
 <template>
     <router-view />
     <div class="info">
-
         <div class="link">
             <el-link class="text" @click="openUrl('doc')">-文档</el-link>
             <el-link class="text" @click="openUrl('example')">-案例</el-link>

@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue';
+import { reactive } from 'vue';
 import { Config, fetchResource } from '../config'
 import { ElMessage } from 'element-plus'
 
@@ -41,7 +41,7 @@ function load(url) {
     copyToClipboard(Config.channelUrl + url)
 
     ElMessage.success('已复制' + Config.channelUrl + url)
-    
+
 }
 
 fetchResource(Config.channelUrl).then(res => data.list = res)

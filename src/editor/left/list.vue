@@ -19,11 +19,7 @@ const data = reactive({ list: [] })
 
 const props = defineProps(['emitEditor'])
 
-function sl(v) {
-
-    return v.replace(/.json/g, '')
-    
-}
+function sl(v) { return v.replace(/.json/g, '') }
 
 function load(url) {
 
