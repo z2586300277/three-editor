@@ -17,7 +17,9 @@ export default defineConfig({
 
       github: 'https://z2586300277/three-editor',
 
-      author: 'https://github.com/z2586300277'
+      author: 'https://github.com/z2586300277',
+
+      wxPay: 'https://z2586300277.github.io/three-editor/dist/wx_pay.jpg',
 
     },
 
