@@ -29,11 +29,13 @@ export default defineConfig({
 
     target: 'es2015',
 
-    chunkSizeWarningLimit: 999999,
+    chunkSizeWarningLimit: 999999, // 最大打包体积
+
+    // assetsInlineLimit: 0, // 资源内联限制
 
     // copyPublicDir: false,
 
-    cssCodeSplit: false,
+    cssCodeSplit: false, // css代码分割
 
   },
 
