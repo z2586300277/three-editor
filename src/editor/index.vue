@@ -98,6 +98,7 @@ import JSZip from 'jszip'
 import { setIndexDB } from './indexDb'
 import { createGsapAnimation, getObjectViews } from 'three-editor-cores'
 import { defineAsyncComponent } from 'vue'
+import sceneVue from './scene.vue'
 
 const Editor = defineAsyncComponent(() => {
 
@@ -109,9 +110,9 @@ const Editor = defineAsyncComponent(() => {
 
         emitEditor.IndexDB = res
 
-        return import('./scene.vue')
+        return sceneVue
 
-    }).catch(() => import('./scene.vue'))
+    }).catch(() => sceneVue)
 
 })
 

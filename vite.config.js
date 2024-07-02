@@ -25,6 +25,16 @@ export default defineConfig({
 
   },
 
+  build: {
+
+    target: 'es2015',
+
+    // copyPublicDir: false,
+
+    cssCodeSplit: false,
+
+  },
+
   base: '/three-editor/dist',
 
   server: {
