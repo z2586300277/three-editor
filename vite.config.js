@@ -29,6 +29,8 @@ export default defineConfig({
 
     target: 'es2015',
 
+    chunkSizeWarningLimit: 999999,
+
     // copyPublicDir: false,
 
     cssCodeSplit: false,
