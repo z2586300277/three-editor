@@ -6,7 +6,7 @@
 
 - 技术案例 https://z2586300277.github.io/three-editor/dist/#/example
 
-- 新技术案例 https://z2586300277.github.io/three-cesium-examples/public/#/example
+- 新技术案例 https://z2586300277.github.io/three-cesium-examples/index.html
 
 - 原生Three.js Cesium.js 案例搬迁到 https://github.com/z2586300277/three-cesium-examples 持续更新中
 
