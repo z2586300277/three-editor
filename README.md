@@ -1,5 +1,7 @@
 # 适合数字孪生，智慧城市使用的组态，低代码 编辑器
 
+[![npm version](https://badge.fury.io/js/three-editor-cores.svg)](https://badge.fury.io/js/three-editor-cores) 
+
 ### 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
 - 注: 先点星！先点星！先点星！重要的事情说三遍。
