@@ -13,6 +13,8 @@ export default defineConfig({
 
       example: 'https://z2586300277.github.io/three-editor/dist/#/example',
 
+      community: 'https://z2586300277.github.io/three-cesium-examples/#/example',
+
       editor: 'https://z2586300277.github.io/three-editor/dist/#/editor',
 
       github: 'https://z2586300277/three-editor',

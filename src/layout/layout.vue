@@ -2,6 +2,7 @@
     <router-view />
     <div v-show="isShow">
         <div class="info">
+            <div><el-link class="textc" @click="openUrl('community')">- 新 3D 案例社区</el-link></div>
             <div class="link">
                 <el-link class="text" @click="openUrl('doc')">-文档</el-link>
                 <el-link class="text" @click="openUrl('example')">-案例</el-link>
@@ -33,6 +34,11 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
 </script>
 
 <style lang="less" scoped>
+.textc {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size:12px ;
+}
 .info {
     position: fixed;
     bottom: 5px;
