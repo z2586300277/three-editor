@@ -1,6 +1,6 @@
 export default
 
-    `import { ThreeEditor, dat } from '/three-editor/dist/js/index.js'
+    `import { ThreeEditor, dat } from 'three-editor-cores'
 
 // draco 路径地址
 ThreeEditor.dracoPath = '/three-editor/dist/draco/' 

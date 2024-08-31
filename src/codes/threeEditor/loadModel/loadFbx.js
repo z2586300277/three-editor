@@ -1,6 +1,6 @@
 export default
 
-    `import { ThreeEditor } from '/three-editor/dist/js/index.js'
+    `import { ThreeEditor } from 'three-editor-cores'
 
 // 初始化场景系列操作
 const threeEditor = new ThreeEditor(document.getElementById('box'))

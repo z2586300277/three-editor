@@ -1,6 +1,6 @@
 export default 
 
-`import { ThreeEditor } from '/three-editor/dist/js/index.js'
+`import { ThreeEditor } from 'three-editor-cores'
 
 // 参数地址
 const url = 'https://z2586300277.github.io/three-editor/dist/files/editorJson/地图.json'

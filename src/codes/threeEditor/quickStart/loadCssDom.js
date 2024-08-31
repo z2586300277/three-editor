@@ -1,6 +1,6 @@
 export default
 
-    `import { ThreeEditor,THREE, dat } from '/three-editor/dist/js/index.js'
+    `import { ThreeEditor,THREE, dat } from 'three-editor-cores'
 
 // 元素
 const DOM = document.getElementById('box')

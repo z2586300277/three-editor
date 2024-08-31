@@ -1,6 +1,6 @@
 export default
 
-    `import { ThreeEditor, gsap } from '/three-editor/dist/js/index.js'
+    `import { ThreeEditor, gsap } from 'three-editor-cores'
 
 // 初始化场景系列操作
 const threeEditor = new ThreeEditor(document.getElementById('box'))
