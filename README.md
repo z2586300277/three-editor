@@ -1,5 +1,7 @@
 # 数字孪生的组态、低代码编辑器 npm 安装 [![npm version](https://badge.fury.io/js/three-editor-cores.svg)](https://www.npmjs.com/package/three-editor-cores) 
 
+## 不用咨询我了, 免费 随你怎么用
+
 ### 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
 - 注: 先点星！先点星！先点星！重要的事情说三遍。
