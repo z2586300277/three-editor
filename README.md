@@ -8,9 +8,9 @@
 
 - 预览 https://z2586300277.github.io/three-editor/dist/#/editor
 
-- 技术案例 https://z2586300277.github.io/three-editor/dist/#/example
+- 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example
 
-- 新技术案例 https://z2586300277.github.io/three-cesium-examples/index.html
+- 原生技术案例 https://z2586300277.github.io/three-cesium-examples
 
 - 原生Three.js Cesium.js 案例搬迁到 https://github.com/z2586300277/three-cesium-examples 持续更新中
 
@@ -24,7 +24,7 @@
 
 - node 18+ 较好 - 当前适配Node 14 - 22 版本 npm pnpm yarn 安装,若一些依赖的捆绑依赖未装上,请手动安装
 
-- 当前项目所有依赖 2024-6-24 已经更新 至 最新版本
+- 当前项目所有依赖 2024-9-10 已使用node 20.9.0 pnpm 更新 至 最新版本
 
 - 目录已最简化 - 通俗易懂 - 开发习惯全靠开发者自行遵守  src-开发 dist-打包 docs-文档 public-文件 index.html-模板 vite.config.js-配置
 
