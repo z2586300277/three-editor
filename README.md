@@ -10,10 +10,8 @@
 
 - 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example
 
-- 原生技术案例 https://z2586300277.github.io/three-cesium-examples
-
-- 原生Three.js Cesium.js 案例搬迁到 https://github.com/z2586300277/three-cesium-examples 持续更新中
-
+- 原生技术案例预览 https://z2586300277.github.io/three-cesium-examples
+ 
 - 在线测试 https://z2586300277.github.io/three-editor/dist/#/codeMirror
 
 - 文档 https://z2586300277.github.io/three-editor/docs/dist
