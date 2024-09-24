@@ -128,7 +128,7 @@ let emitEditor = shallowReactive({
     sceneName: localStorage.getItem('sceneName') || ''
 });
 
-const options = ref(JSON.parse(localStorage.getItem('sceneList')) || [])
+const options = ref(JSON.parse(localStorage.getItem('sceneList')) || [{ name: '测试场景' }])
 
 const dialogVisible = ref(false);
 
