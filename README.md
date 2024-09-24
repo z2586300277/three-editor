@@ -1,8 +1,8 @@
 # 数字孪生的组态、低代码编辑器 npm 安装 [![npm version](https://badge.fury.io/js/three-editor-cores.svg)](https://www.npmjs.com/package/three-editor-cores) 
 
-## 不用咨询我了, 免费 随你怎么用
+### 不用咨询我了, 免费随你怎么用, 有兼职需求可联系我
 
-### 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
+#### 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
 - 注: 先点星！先点星！先点星！重要的事情说三遍。
 
@@ -10,10 +10,8 @@
 
 - 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example
 
-- 原生技术案例 https://z2586300277.github.io/three-cesium-examples
-
-- 原生Three.js Cesium.js 案例搬迁到 https://github.com/z2586300277/three-cesium-examples 持续更新中
-
+- 原生技术案例预览 https://z2586300277.github.io/three-cesium-examples
+ 
 - 在线测试 https://z2586300277.github.io/three-editor/dist/#/codeMirror
 
 - 文档 https://z2586300277.github.io/three-editor/docs/dist
