@@ -2,7 +2,7 @@
 
 ### 不用咨询我了, 免费随你怎么用, 有兼职需求可联系我
 
-#### 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
+##### 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
 - 注: 先点星！先点星！先点星！重要的事情说三遍。
 
@@ -10,13 +10,11 @@
 
 - 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example
 
-- 原生技术案例预览 https://z2586300277.github.io/three-cesium-examples
- 
-- 在线测试 https://z2586300277.github.io/three-editor/dist/#/codeMirror
-
 - 文档 https://z2586300277.github.io/three-editor/docs/dist
 
 - npm地址 https://www.npmjs.com/package/three-editor-cores
+
+- npm包源码 https://github.com/z2586300277/three-editor-cores
  
 - QQ 2586300277 - 交流群 865182188 加群免费技术咨询，帮你解决95% 的技术问题和难题
 
