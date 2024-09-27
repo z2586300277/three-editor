@@ -8,7 +8,7 @@
 
 - 预览 https://z2586300277.github.io/three-editor/dist/#/editor
 
-- 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example
+- 使用案例 https://z2586300277.github.io/three-editor/dist/#/example
 
 - 文档 https://z2586300277.github.io/three-editor/docs/dist
 
@@ -18,9 +18,7 @@
  
 - QQ 2586300277 - 交流群 865182188 加群免费技术咨询，帮你解决95% 的技术问题和难题
 
-- node 18+ 较好 - 当前适配Node 14 - 22 版本 npm pnpm yarn 安装,若一些依赖的捆绑依赖未装上,请手动安装
-
-- 当前项目所有依赖 2024-9-10 已使用node 20.9.0 pnpm 更新 至 最新版本
+- node 18+ 较好 当前项目所有依赖 2024-9-10 已使用node 20.9.0 pnpm 更新 至 最新版本
 
 - 目录已最简化 - 通俗易懂 - 开发习惯全靠开发者自行遵守  src-开发 dist-打包 docs-文档 public-文件 index.html-模板 vite.config.js-配置
 
