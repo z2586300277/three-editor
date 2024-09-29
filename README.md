@@ -1,10 +1,14 @@
-# 数字孪生的组态、低代码编辑器 npm 安装 [![npm version](https://badge.fury.io/js/three-editor-cores.svg)](https://www.npmjs.com/package/three-editor-cores) 
+# 🍃数字孪生组态、低代码编辑器 [![npm version](https://badge.fury.io/js/three-editor-cores.svg)](https://www.npmjs.com/package/three-editor-cores) 
 
-### 不用咨询我了, 免费随你怎么用, 有兼职需求可联系我
+- 不用咨询我了, 免费随你怎么用, 有兼职需求可联系我
 
-##### 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
+- 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
 - 注: 先点星！先点星！先点星！重要的事情说三遍。
+
+加入仓库一起管理 联系🐧QQ             |  🐧QQ群         
+:-------------------------:|:-------------------------:
+2586300277  |  865182188  
 
 - 预览 https://z2586300277.github.io/three-editor/dist/#/editor
 
@@ -15,8 +19,6 @@
 - npm地址 https://www.npmjs.com/package/three-editor-cores
 
 - npm包源码 https://github.com/z2586300277/three-editor-cores
- 
-- QQ 2586300277 - 交流群 865182188 加群免费技术咨询，帮你解决95% 的技术问题和难题
 
 - node 18+ 较好 当前项目所有依赖 2024-9-10 已使用node 20.9.0 pnpm 更新 至 最新版本
 
