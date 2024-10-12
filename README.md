@@ -1,6 +1,6 @@
 # 🍃数字孪生组态、低代码编辑器 [![npm version](https://badge.fury.io/js/three-editor-cores.svg)](https://www.npmjs.com/package/three-editor-cores) 
 
-- 不用咨询我了, 免费随你怎么用, 有兼职需求可联系我
+- 不用咨询我了, 免费随你怎么用, 有兼职, 技术问题, Webgl招人需求可 联系我
 
 - 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
