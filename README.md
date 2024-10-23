@@ -1,8 +1,8 @@
 # 🍃数字孪生组态、低代码编辑器 [![npm version](https://badge.fury.io/js/three-editor-cores.svg)](https://www.npmjs.com/package/three-editor-cores) 
 
-- 不用咨询我了, 免费随你怎么用, 有兼职, 技术问题, Webgl招人需求可 联系我
+- 不用咨询我了,  免费使用, 有兼职, 技术问题, 招人需求可联系我
 
-- 开源 原生 Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
+- 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
 - 注: 先点星！先点星！先点星！重要的事情说三遍。
 
@@ -10,15 +10,15 @@
 :-------------------------:|:-------------------------:
 2586300277  |  865182188  
 
-- 预览 https://z2586300277.github.io/three-editor/dist/#/editor
+- 编辑器预览 https://z2586300277.github.io/three-editor/dist/#/editor
 
-- 使用案例 https://z2586300277.github.io/three-editor/dist/#/example
+- 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example
 
-- 文档 https://z2586300277.github.io/three-editor/docs/dist
+- 编辑器文档 https://z2586300277.github.io/three-editor/docs/dist
 
-- npm地址 https://www.npmjs.com/package/three-editor-cores
+- 编辑器内核npm地址 https://www.npmjs.com/package/three-editor-cores
 
-- npm包源码 https://github.com/z2586300277/three-editor-cores
+- 编辑器内核npm包源码 https://github.com/z2586300277/three-editor-cores
 
 - node 18+ 较好 当前项目所有依赖 2024-9-10 已使用node 20.9.0 pnpm 更新 至 最新版本
 

@@ -21,9 +21,9 @@
                             </div>
                         </el-option>
                     </el-select>
-                    <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建本地场景</el-button>
+                    <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建场景</el-button>
                     <el-upload class="upload" ref="myUpload" :auto-upload="false" action="" :on-change="uploadChange">
-                        <el-button class="btn-add" link icon="plus">导入本地模型到当前场景</el-button></el-upload>
+                        <el-button class="btn-add" link icon="plus">导入模型到当前场景</el-button></el-upload>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">
                         <el-input v-model="inputSceneName" placeholder="请输入场景名称" />
                         <template #footer>
@@ -37,8 +37,10 @@
                     </el-dialog>
                 </div>
                 <div class="title">
-                    <img class="logo" src="/site.png" alt="logo" width="25px" height="25px">
-                    &nbsp;&nbsp;&nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
+                    <el-link style="font-size: 18px;"  @click="openUrl('doc')">文档</el-link>&nbsp;&nbsp; - &nbsp;
+                    <img class="logo" src="/site.png" alt="logo" width="18px" height="18px">
+                    &nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
+                    -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 18px;">案例</el-link>
                 </div>
                 <div class="header-right">
                     <el-button class="btn-add" link icon="Document" @click="exportTemplateJson">模板</el-button>
@@ -99,6 +101,8 @@ import { setIndexDB } from './indexDb'
 import { createGsapAnimation, getObjectViews } from 'three-editor-cores'
 import { defineAsyncComponent } from 'vue'
 import sceneVue from './scene.vue'
+
+const openUrl = (k) => window.open(__SITE_URLS__[k])
 
 const Editor = defineAsyncComponent(() => {
 
@@ -407,6 +411,7 @@ async function exportFile() {
             font-size: 18px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         &-right {

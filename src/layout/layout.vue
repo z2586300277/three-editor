@@ -43,9 +43,9 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
     position: fixed;
     bottom: 5px;
     z-index: 200;
-    opacity: 0.6;
+    opacity: 0.7;
     margin-left: 2px;
-    font-size: 11px;
+    font-size: 13px;
 
     .link {
         display: flex;
