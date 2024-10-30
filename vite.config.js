@@ -3,7 +3,34 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
 
-  plugins: [vue()],
+  plugins: [
+    {
+
+      transformIndexHtml: html => {
+
+        if (process.env.NODE_ENV === 'production') {
+
+          html = html.replace(/<head>/, `<head>\n  <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b744dc965e9b650547844317d73e17e8";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+          `)
+
+        }
+
+        return html
+
+      }
+    },
+
+    vue()
+
+  ],
 
   define: {
 
