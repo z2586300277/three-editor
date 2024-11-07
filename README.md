@@ -1,4 +1,4 @@
-# 🍃数字孪生组态、低代码编辑器 [![npm version](https://badge.fury.io/js/three-editor-cores.svg?1)](https://www.npmjs.com/package/three-editor-cores) 
+# 🍃数字孪生组态、低代码编辑器 [![npm version](https://badge.fury.io/js/three-editor-cores.svg?12)](https://www.npmjs.com/package/three-editor-cores) 
 
 - 不用咨询我了,  免费使用, 有兼职, 技术问题, 招人需求可联系我
 
