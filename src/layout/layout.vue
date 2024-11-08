@@ -13,7 +13,7 @@
             </div>
             <div class="flexAuthor">
                 <img class="logo" src="/site.png" alt="logo" width="20px" height="20px"> &nbsp;
-                <el-link class="text" @click="openUrl('author')">@优雅永不过时</el-link>
+                <el-link class="text" @click="openUrl('blog')">@优雅永不过时</el-link>
             </div>
         </div>
         <div class="pay">
@@ -43,9 +43,9 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
     position: fixed;
     bottom: 5px;
     z-index: 200;
-    opacity: 0.7;
+    opacity: 0.8;
     margin-left: 2px;
-    font-size: 13px;
+    font-size: 12px;
 
     .link {
         display: flex;
@@ -54,7 +54,7 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
     }
 
     .text {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: bold;
     }
 
@@ -72,7 +72,7 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
     opacity: 0.9;
     right: 0px;
     margin-right: 2px;
-    font-size: 11px;
+    font-size: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +96,7 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
     }
 
     .text {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: bold;
     }
 
