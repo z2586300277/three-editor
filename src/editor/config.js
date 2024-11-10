@@ -1,4 +1,4 @@
-const isDev = localStorage.getItem('dev_local_server_url')
+const isDev = localStorage.getItem('dev_local_server_url') // http://localhost:7070/three-editor/dist/files 本机 
 
 const Host = isDev ? isDev : 'https://z2586300277.github.io/three-editor/dist/files/'
 
