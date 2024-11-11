@@ -24,6 +24,8 @@
 
 - 目录已最简化 - 通俗易懂 - 开发习惯全靠开发者自行遵守  src-开发 dist-打包 docs-文档 public-文件 index.html-模板 vite.config.js-配置
 
+- 源码src目录下 codeMirror: 在线运行页面 docs: vitepress 文档  codes: 在线案例实例 example: 案例页 editor: 编辑器  layout: 框架布局
+
 - 若想连接自己本地资源,目录解构需要与public/files/下目录结构一致,控制台执行, localStorage.setItem('dev_local_server_url', '你的资源服务器目录url统一前缀')
 
 预览             
