@@ -26,11 +26,8 @@
 
 - 若想连接自己本地资源,目录解构需要与public/files/下目录结构一致,控制台执行, localStorage.setItem('dev_local_server_url', '你的资源服务器目录url统一前缀')
 
-- 注: 目前底层代码还在重构阶段，不用担心任何未来使用问题。
-
-
-预览             |  赞助我
-:-------------------------:|:-------------------------:
-[![](https://z2586300277.github.io/three-editor/dist/home.png)](https://z2586300277.github.io/three-editor/dist)  |  ![](https://z2586300277.github.io/three-editor/dist/wx_pay.jpg)
+预览             
+:-------------------------:
+[![](https://z2586300277.github.io/three-editor/dist/home.png)](https://z2586300277.github.io/three-editor/dist))
 
 
