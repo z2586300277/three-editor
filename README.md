@@ -1,5 +1,7 @@
 # 🍃数字孪生组态、低代码编辑器 [![npm version](https://badge.fury.io/js/three-editor-cores.svg?12)](https://www.npmjs.com/package/three-editor-cores) 
 
+- 百度搜索 three 编辑器 、three.js 编辑器，第一个就是。
+
 - 不用咨询我了,  免费使用, 有兼职, 技术问题, 招人需求可联系我
 
 - 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
