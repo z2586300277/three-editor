@@ -2,11 +2,11 @@
 
 - 百度搜索 three 编辑器 、three.js 编辑器、 three js 编辑器关键字，第一个就是。
 
-- 不用咨询我了,  免费使用, 有兼职, 技术问题, 招人需求可联系我
-
 - 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples
 
 - 注: 先点星！先点星！先点星！重要的事情说三遍。
+
+- 有兼职, 技术问题, 招人需求可联系我
 
  🐧QQ             |  🐧QQ群         
 :-------------------------:|:-------------------------:
@@ -29,6 +29,8 @@
 - 源码src目录下 codeMirror: 在线运行页面 docs: vitepress 文档  codes: 在线案例实例 example: 案例页 editor: 编辑器  layout: 框架布局
 
 - 若想连接自己本地资源,目录解构需要与public/files/下目录结构一致,控制台执行, localStorage.setItem('dev_local_server_url', '你的资源服务器目录url统一前缀')
+
+- 商用请联系我，或直接使用源码库的不用联系我。
 
 预览             
 :-------------------------:
