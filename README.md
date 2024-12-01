@@ -10,15 +10,15 @@
 :-------------------------:|:-------------------------:
 2586300277  |  865182188  
 
-- 编辑器预览 https://z2586300277.github.io/three-editor/dist/#/editor
+- 编辑器预览 https://z2586300277.github.io/three-editor/dist/#/editor --- 永久上线
 
-- 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example
+- 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example --- 永久上线
 
-- 编辑器文档 https://z2586300277.github.io/three-editor/docs/dist
+- 编辑器文档 https://z2586300277.github.io/three-editor/docs/dist --- 永久在线
 
-- 编辑器内核npm地址 https://www.npmjs.com/package/three-editor-cores --- 免费使用
+- 编辑器内核npm地址 https://www.npmjs.com/package/three-editor-cores --- 永久免费使用
 
-- 编辑器内核npm包源码0.0.1 https://github.com/z2586300277/three-editor-cores --- 免费开源
+- npm包内核源码v1.0.0版本 https://github.com/z2586300277/three-editor-cores --- 永久免费开源
 
 - node 18+ 较好 当前项目所有依赖 2024-9-10 已使用node 20.9.0 pnpm 更新 至 最新版本
 
@@ -28,7 +28,7 @@
 
 - 若想连接自己本地资源,目录解构需要与public/files/下目录结构一致,控制台执行, localStorage.setItem('dev_local_server_url', '你的资源服务器目录url统一前缀')
 
-- 注意：商用请联系我，或直接使用开源内核源码包的不用联系我。
+- 注意：商用尽量联系我告知一声，或直接使用开源内核源码包二次开发自己的npm包的不用联系我。
 
 预览             
 :-------------------------:
