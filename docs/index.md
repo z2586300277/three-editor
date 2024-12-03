@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Three-Editor"
+  name: "Three.js 编辑器"
   text: Three.js低代码内核
   tagline: 简化Three.js使用,可基于内核扩展，封装企业的3D组件库,搭建适用企业场景的无代码编辑器 —— 永久免费
   actions:
@@ -30,4 +30,10 @@ features:
     details: 10分钟便可了解并使用, 高效可视化配置场景, 10分钟完成项目场景搭建
   - title: 降低成本
     details: 降低技术研发成本, 时间成本, 人员使用成本, 降本增效
+  - title: 自定义组件化
+    details: 将所有三维物体进行组件化，数据驱动, 拖拉生成场景的Three 编辑器
+  - title: 低代码产品化
+    details: 内核封装了大部分功能, 三维人员使用更加简单，也便于业务前端使用交互
+  - title: 无代码编辑器
+    details: 在低代码three js 编辑器的基础上集成业务操作，实现企业业务端产品
 
