@@ -3,9 +3,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: '/three-editor/docs/dist',
   outDir: 'dist',
-  title: "THREE-EDITOR",
+  title: "Three.js 编辑器",
   link: '/',
-  description: "基于Three.js的编辑器",
+  description: "three-editor-cores基于Three.js, 实现组态化, 高度灵活扩展的低代码, 无代码, 快速开发的三维场景可视化编辑器内核",
   themeConfig: {
     nav: [
       { text: '指南', link: '/markdown-examples' },
