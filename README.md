@@ -2,7 +2,7 @@
 
 - 百度搜索 three 编辑器 、three.js 编辑器、 three js 编辑器关键字，第一个就是。
 
-- 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples 开源在线案例，点星助力
+- 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples 每日更新
 
 - 有兼职, 技术帮助, 招人需求，合作可联系我，其他问题且勿打扰，时间宝贵。
 

@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Three.js 编辑器"
-  text: Three.js低代码内核
+  name: "THREE-EDITOR"
+  text: Three.js 可视化编辑器
   tagline: 简化Three.js使用,可基于内核扩展，封装企业的3D组件库,搭建适用企业场景的无代码编辑器 —— 永久免费
   actions:
     - theme: brand
