@@ -4,6 +4,8 @@
 
 - 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples 每日更新
 
+- 后续作者会将大部分精力放到开源案例 three-cesium-examples 仓库, 为爱发电。
+
 - 有兼职, 技术帮助, 招人需求，合作可联系我，其他问题且勿打扰，时间宝贵。
 
  🐧QQ             |  🐧QQ群         
