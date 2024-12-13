@@ -4,7 +4,9 @@
 
 - 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples 每日更新
 
-- 后续作者会将大部分精力放到开源案例 three-cesium-examples 仓库, 为爱发电。
+- 2025主线任务我决定将我们公司的所有 three-editor 和 cesium-editor 内核等系列产品重构。
+
+- 后续作者会将自己业余时间的大部分精力放到开源案例 three-cesium-examples 仓库, 为爱发电。
 
 - 有兼职, 技术帮助, 招人需求，合作可联系我，其他问题且勿打扰，时间宝贵。
 
