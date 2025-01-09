@@ -10,7 +10,16 @@ export default defineConfig({
 
         if (process.env.NODE_ENV === 'production') {
 
-          html = html.replace(/<head>/, `<head>\n  <script>
+          html = html.replace(/<head>/, `<head>\n 
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKJQBJNGVF"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LKJQBJNGVF');
+          </script>
+          <script>
             var _hmt = _hmt || [];
             (function() {
               var hm = document.createElement("script");
