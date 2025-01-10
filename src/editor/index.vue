@@ -1,6 +1,6 @@
 <template>
     <div class="layout" v-loading="emitEditor.loading">
-        <div class="header">
+        <div class="header" v-show="!previewScene">
             <div class="header-box">
                 <div class="header-left">
                     <el-select v-model="emitEditor.sceneName" class="m-2" placeholder="场景" size="large"
@@ -21,9 +21,9 @@
                             </div>
                         </el-option>
                     </el-select>
-                    <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建本地场景</el-button>
+                    <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建场景</el-button>
                     <el-upload class="upload" ref="myUpload" :auto-upload="false" action="" :on-change="uploadChange">
-                        <el-button class="btn-add" link icon="plus">导入本地模型到当前场景</el-button></el-upload>
+                        <el-button class="btn-add" link icon="plus">模型导入到当前场景</el-button></el-upload>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">
                         <el-input v-model="inputSceneName" placeholder="请输入场景名称" />
                         <template #footer>
@@ -37,8 +37,10 @@
                     </el-dialog>
                 </div>
                 <div class="title">
-                    <img class="logo" src="/site.png" alt="logo" width="25px" height="25px">
-                    &nbsp;&nbsp;&nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
+                    <el-link style="font-size: 18px;" @click="openUrl('doc')">文档</el-link>&nbsp;&nbsp; - &nbsp;
+                    <img class="logo" src="/site.png" alt="logo" width="18px" height="18px">
+                    &nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
+                    -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 18px;">案例</el-link>
                 </div>
                 <div class="header-right">
                     <el-button class="btn-add" link icon="Document" @click="exportTemplateJson">模板</el-button>
@@ -50,9 +52,11 @@
                 </div>
             </div>
         </div>
-        <leftPanel :emitEditor="emitEditor" />
-        <rightPanel :emitEditor="emitEditor" />
-        <div class="topl">
+        <div v-show="!previewScene">
+            <leftPanel :emitEditor="emitEditor" />
+            <rightPanel :emitEditor="emitEditor" />
+        </div>
+        <div class="topl" v-show="!previewScene">
             <div
                 style="pointer-events: auto;background-color: #181818;display: flex;align-items: center;border-radius: 3px;">
                 <el-radio-group v-model="emitEditor.mode" size="small" fill="#181818" text-color="#a8d4fd">
@@ -69,6 +73,9 @@
         <div class="bot">
             <div class="opt">
                 <div>
+                    <div>
+                        <el-switch inactive-text="预览场景" v-model="previewScene" active-color="#a8d4fd" />
+                    </div>
                     <div>
                         <el-switch inactive-text="选中弹窗" v-model="emitEditor.selectPanelEnable" active-color="#a8d4fd"
                             @change="a => emitEditor.threeEditor.handler.selectPanelEnable = a" />
@@ -100,6 +107,10 @@ import { createGsapAnimation, getObjectViews } from 'three-editor-cores'
 import { defineAsyncComponent } from 'vue'
 import sceneVue from './scene.vue'
 
+const previewScene = ref(false)
+
+const openUrl = (k) => window.open(__SITE_URLS__[k])
+
 const Editor = defineAsyncComponent(() => {
 
     return setIndexDB().then(async res => {
@@ -128,7 +139,7 @@ let emitEditor = shallowReactive({
     sceneName: localStorage.getItem('sceneName') || ''
 });
 
-const options = ref(JSON.parse(localStorage.getItem('sceneList')) || [])
+const options = ref(JSON.parse(localStorage.getItem('sceneList')) || [{ name: '测试场景' }])
 
 const dialogVisible = ref(false);
 
@@ -407,6 +418,7 @@ async function exportFile() {
             font-size: 18px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         &-right {

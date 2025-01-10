@@ -2,6 +2,8 @@
 
 three-editor-cores 是一个[基于three.js开发的内核](https://www.npmjs.com/package/three-editor-cores),专为构建快速构建three.js 3D 项目的一个低代码npm 库。
 
+<iframe src="https://z2586300277.github.io/three-editor/dist/#/codeMirror?example_path=threeEditor&example_active=0&key=loadParams" frameborder="0" width="100%" height="400px"></iframe>
+
 ## 不要让three-editor-cores 对你产生学习成本
   - 为了节省学习成本，你可以只看这一节的使用, 其他使用方式可以拒绝了解。
   - 只了解以下步骤就好了, 然后尽情的去写three.js 相关的东西吧。
@@ -65,8 +67,6 @@ const css2DRender = new THREE.CSS2DRenderer() // 创建Css2D渲染
 ```js
 // 你可以 通过解构方式取出,然后对其使用 Three.js 的操作毫无影响
 const { scene, camera, renderer, controls, transformControls, ... } =  threeEditor
-
-const { scene, camera, renderer, controls, transformControls } =  threeEditor
 
 const box = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial())
 

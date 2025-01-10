@@ -22,6 +22,13 @@ const getScript = (v, t) => (t === 'cesiumjs' ? '<link rel="stylesheet" href="/t
             height: 100%;
         }
     </style>
+    <script type="importmap">
+        {
+            "imports": {
+                "three-editor-cores": "/three-editor/dist/js/index.js"
+            }
+        }
+    <\/script>
     <div id="box"></div>
     <script type="module">
         ${t === 'cesiumjs' ? 'window.CESIUM_BASE_URL = "/three-editor/dist/cesium"' : ''}

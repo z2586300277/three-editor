@@ -1,30 +1,41 @@
-# 说明
+# 🍃数字孪生组态、低/无代码编辑器 [![npm version](https://badge.fury.io/js/three-editor-cores.svg?type=Date)](https://www.npmjs.com/package/three-editor-cores) 
 
-- 注: 先点星！先点星！先点星！重要的事情说三遍。
+- 百度搜索 three 编辑器 、three.js 编辑器、 three js 编辑器关键字，第一个就是。
 
-- 预览 https://z2586300277.github.io/three-editor/dist/#/editor
+- 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples 每日更新
 
-- 技术案例 https://z2586300277.github.io/three-editor/dist/#/example
+- 2025主线任务我决定将我们公司的所有 three-editor 和 cesium-editor 内核等系列产品重构。
 
-- 在线测试 https://z2586300277.github.io/three-editor/dist/#/codeMirror
+- 后续作者会将自己业余时间的大部分精力放到开源案例 three-cesium-examples 仓库, 为爱发电。
 
-- 文档 https://z2586300277.github.io/three-editor/docs/dist
+- 有兼职, 技术帮助, 招人需求，合作可联系我，其他问题且勿打扰，时间宝贵。
 
-- npm地址 https://www.npmjs.com/package/three-editor-cores
- 
-- QQ 2586300277 - 交流群 865182188 加群免费技术咨询，帮你解决95% 的技术问题和难题
+ 🐧QQ        |  微信        |  🐧QQ群         
+:------------:|:---------:|:-----------:
+2586300277 | z2586300277  |  865182188  
 
-- node 18+ 较好 - 当前适配Node 14 - 22 版本 npm pnpm yarn 安装,若一些依赖的捆绑依赖未装上,请手动安装
+- 编辑器预览 https://z2586300277.github.io/three-editor/dist/#/editor --- 永久上线
 
-- 当前项目所有依赖 2024-6-24 已经更新 至 最新版本
+- 编辑器案例 https://z2586300277.github.io/three-editor/dist/#/example --- 永久上线
+
+- 编辑器文档 https://z2586300277.github.io/three-editor/docs/dist --- 永久在线
+
+- 编辑器内核npm地址 https://www.npmjs.com/package/three-editor-cores --- 永久免费使用
+
+- npm包内核源码v1.0.0版本 https://github.com/z2586300277/three-editor-cores --- 永久免费开源
+
+- node 18+ 较好 当前项目所有依赖 2024-9-10 已使用node 20.9.0 pnpm 更新 至 最新版本
 
 - 目录已最简化 - 通俗易懂 - 开发习惯全靠开发者自行遵守  src-开发 dist-打包 docs-文档 public-文件 index.html-模板 vite.config.js-配置
 
+- 源码src目录下 codeMirror: 在线运行页面 docs: vitepress 文档  codes: 在线案例实例 example: 案例页 editor: 编辑器  layout: 框架布局
+
 - 若想连接自己本地资源,目录解构需要与public/files/下目录结构一致,控制台执行, localStorage.setItem('dev_local_server_url', '你的资源服务器目录url统一前缀')
 
+- 注意：商用尽量联系我告知一声，或直接使用开源内核源码包二次开发自己的npm包的不用联系我。
 
-预览             |  赞助我
-:-------------------------:|:-------------------------:
-[![](https://z2586300277.github.io/three-editor/dist/home.png)](https://z2586300277.github.io/three-editor/dist)  |  ![](https://z2586300277.github.io/three-editor/dist/wx_pay.jpg)
+预览             
+:-------------------------:
+[![](https://z2586300277.github.io/three-editor/dist/home.png)](https://z2586300277.github.io/three-editor/dist)
 
-
+<img src="https://profile-counter.glitch.me/z2586300277/count.svg" >

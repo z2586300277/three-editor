@@ -16,3 +16,5 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) app.componen
 app.use(router)
 
 app.mount('#app')
+
+// window.THREE_EDITOR_NOTIP = true
