@@ -41,6 +41,11 @@ export default defineConfig({
       }
     ],
 
+    footer: {
+        message: '基于 MulanPSL2 许可发布',
+        copyright: `版权所有 ©2019-2025 2586300277@qq.com `
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/z2586300277/three-editor' }
     ]
