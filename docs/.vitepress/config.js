@@ -5,6 +5,21 @@ export default defineConfig({
   outDir: 'dist',
   title: "Three.js 编辑器",
   link: '/',
+  head: [
+    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-LKJQBJNGVF' }],
+    ['script', {}, `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKJQBJNGVF');`],
+    ['script', {}, `var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?85aef82369b0fe002f0e62a775344e89";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();`]
+  ],
   description: "THREE-EDITOR 是使用 npm 库 three-editor-cores基于Three.js, 实现组态化, 高度灵活扩展的低代码, 无代码, 快速开发的三维场景可视化编辑器内核",
   themeConfig: {
     nav: [

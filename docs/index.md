@@ -17,6 +17,9 @@ hero:
       text: API
       link: /api-examples
 
+  image:
+    src: https://z2586300277.github.io/three-editor/dist/site.png
+
 features:
   - title: 急速内核
     details: 集成Three.js等众多依赖,依然保持轻量化,内核源码仅占用1.5M,性能急速
