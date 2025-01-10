@@ -9,7 +9,10 @@
                 <el-link class="text" @click="openUrl('editor')">-编辑器</el-link>
             </div>
             <div>
-                <el-link class="text" @click="openUrl('author')">-QQ 2586300277</el-link>
+                <el-link class="text" @click="openUrl('author')">-QQ：2586300277</el-link>
+            </div>
+            <div>
+                <el-link class="text" @click="openUrl('author')">-微信：z2586300277</el-link>
             </div>
             <div class="flexAuthor">
                 <img class="logo" src="/site.png" alt="logo" width="20px" height="20px"> &nbsp;
