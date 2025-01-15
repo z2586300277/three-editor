@@ -28,7 +28,8 @@ export default defineConfig({
       { text: '编辑器🍁', link: 'https://z2586300277.github.io/three-editor/dist/#/editor' },
       { text: 'npm📦', link: 'https://www.npmjs.com/package/three-editor-cores' },
       { text: 'BiBi📺', link: 'https://space.bilibili.com/245165721' },
-      { text: 'CSDN📘', link: 'https://blog.csdn.net/guang2586' }
+      { text: 'CSDN📘', link: 'https://blog.csdn.net/guang2586' },
+      { text: '组织🏠', link: 'https://openthree.github.io/three-cesium-links/' }
     ],
 
     sidebar: [
