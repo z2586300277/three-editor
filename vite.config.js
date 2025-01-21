@@ -10,7 +10,8 @@ export default defineConfig({
 
         if (process.env.NODE_ENV === 'production') {
 
-          html = html.replace(/<head>/, `<head>\n 
+          html = html.replace(/<head>/, `<head>\n
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8697430839896878" crossorigin="anonymous"></script> 
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKJQBJNGVF"></script>
           <script>
             window.dataLayer = window.dataLayer || [];
