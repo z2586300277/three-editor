@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Three.js 编辑器",
   link: '/',
   head: [
+    ['script', { async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8697430839896878', crossorigin: 'anonymous' }],
     ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-LKJQBJNGVF' }],
     ['script', {}, `window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
