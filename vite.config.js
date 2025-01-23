@@ -10,7 +10,8 @@ export default defineConfig({
 
         if (process.env.NODE_ENV === 'production') {
 
-          html = html.replace(/<head>/, `<head>\n 
+          html = html.replace(/<head>/, `<head>\n
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8697430839896878" crossorigin="anonymous"></script> 
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKJQBJNGVF"></script>
           <script>
             window.dataLayer = window.dataLayer || [];
@@ -53,9 +54,11 @@ export default defineConfig({
 
       editor: 'https://z2586300277.github.io/three-editor/dist/#/editor',
 
-      github: 'https://z2586300277/three-editor',
+      github: 'https://github.com/z2586300277/three-editor',
 
       blog: 'https://z2586300277.github.io/blog',
+
+      home: 'https://z2586300277.github.io/',
 
       author: 'https://github.com/z2586300277',
 
