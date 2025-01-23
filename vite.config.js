@@ -54,9 +54,11 @@ export default defineConfig({
 
       editor: 'https://z2586300277.github.io/three-editor/dist/#/editor',
 
-      github: 'https://z2586300277/three-editor',
+      github: 'https://github.com/z2586300277/three-editor',
 
       blog: 'https://z2586300277.github.io/blog',
+
+      home: 'https://z2586300277.github.io/',
 
       author: 'https://github.com/z2586300277',
 
