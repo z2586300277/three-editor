@@ -20,15 +20,15 @@
             </div>
         </div>
         <div class="pay">
-            <div>
-                <el-link class="text" @click="openUrl('home')">个人主页  -</el-link>
+            <div style="margin-bottom: 5px;">
+                <el-link class="text" style="font-size: 14px;" @click="openUrl('home')">个人主页  -</el-link>
             </div>
-            <div>
-                <el-link class="text" @click="openUrl('github')">源码仓库  -</el-link>
+            <div style="margin-bottom: 5px;">
+                <el-link class="text" style="font-size: 14px;" @click="openUrl('github')">源码仓库  -</el-link>
             </div>
             <div class="text1" @click="openUrl('wxPay')">为爱发电</div>
             <div><el-link class="text" @click="openUrl('wxPay')">赞助我</el-link></div>
-            <img class="logo" @click="openUrl('wxPay')" src="/wx_pay.jpg" alt="logo" width="40px" height="40px">
+            <img class="logo" @click="openUrl('wxPay')" src="/wx_pay.jpg" alt="logo" width="30px" height="30px">
         </div>
     </div>
 </template>
@@ -83,6 +83,7 @@ const openUrl = (k) => window.open(__SITE_URLS__[k])
     margin-right: 2px;
     font-size: 12px;
     display: flex;
+    line-height: 15px;
     flex-direction: column;
     align-items: center;
 

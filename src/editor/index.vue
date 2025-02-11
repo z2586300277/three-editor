@@ -23,7 +23,7 @@
                     </el-select>
                     <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建场景</el-button>
                     <el-upload class="upload" ref="myUpload" :auto-upload="false" action="" :on-change="uploadChange">
-                        <el-button class="btn-add" link icon="plus">模型导入到当前场景</el-button></el-upload>
+                        <el-button class="btn-add" link icon="plus">模型导入此场景</el-button></el-upload>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">
                         <el-input v-model="inputSceneName" placeholder="请输入场景名称" />
                         <template #footer>
@@ -37,10 +37,12 @@
                     </el-dialog>
                 </div>
                 <div class="title">
-                    <el-link style="font-size: 18px;" @click="openUrl('doc')">文档</el-link>&nbsp;&nbsp; - &nbsp;
+                    <el-link style="font-size: 17px;" @click="openUrl('home')">🏠主页</el-link>&nbsp;&nbsp;
+                    <el-link style="font-size: 17px;" @click="openUrl('doc')">📘文档</el-link>&nbsp;&nbsp; - &nbsp;
                     <img class="logo" src="/site.png" alt="logo" width="18px" height="18px">
                     &nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
-                    -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 18px;">案例</el-link>
+                    -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 17px;">🍀案例</el-link>
+                    &nbsp;&nbsp;<el-link @click="openUrl('github')" style="font-size: 17px;">🍁源码</el-link>
                 </div>
                 <div class="header-right">
                     <el-button class="btn-add" link icon="Document" @click="exportTemplateJson">模板</el-button>
