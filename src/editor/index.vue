@@ -78,14 +78,14 @@
                     <div>
                         <el-switch inactive-text="预览场景" v-model="previewScene" active-color="#a8d4fd" />
                     </div>
-                    <div>
+                    <div :style="{ opacity: previewScene ? 0 : 1 }">
                         <el-switch inactive-text="选中弹窗" v-model="emitEditor.selectPanelEnable" active-color="#a8d4fd"
                             @change="a => emitEditor.threeEditor.handler.selectPanelEnable = a" />
                     </div>
-                    <div><el-switch inactive-text="按键操作" v-model="emitEditor.openKey" active-color="#a8d4fd"
+                    <div :style="{ opacity: previewScene ? 0 : 1 }"><el-switch inactive-text="按键操作" v-model="emitEditor.openKey" active-color="#a8d4fd"
                             @change="a => emitEditor.threeEditor.handler.setHandlerOption('openKey', a)" /></div>
                 </div>
-                <pre>
+                <pre :style="{ opacity: previewScene ? 0 : 1 }">
             1:选择 2:根选择 3:变换 4:绘制 5:信息
             变换 [r:旋转 g:平移 t:缩放] [ q w e a s d] 方位微调
             tab : 切换模式 z:撤销 y: 反撤销 del: 删除 esc: 退出操作
