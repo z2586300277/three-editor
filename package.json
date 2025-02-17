@@ -20,7 +20,7 @@
     "jszip": "^3.10.1",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
-    "three-editor-cores": "^0.0.9",
+    "three-editor-cores": "^1.1.2",
     "vue": "^3.5.3",
     "vue-codemirror": "^6.1.1",
     "vue-router": "^4.4.3"

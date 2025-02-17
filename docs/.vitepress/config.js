@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Three.js 编辑器",
   link: '/',
   head: [
+    ['script', { async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8697430839896878', crossorigin: 'anonymous' }],
     ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-LKJQBJNGVF' }],
     ['script', {}, `window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -23,11 +24,14 @@ export default defineConfig({
   description: "THREE-EDITOR 是使用 npm 库 three-editor-cores基于Three.js, 实现组态化, 高度灵活扩展的低代码, 无代码, 快速开发的三维场景可视化编辑器内核",
   themeConfig: {
     nav: [
-      { text: '指南', link: '/createIdea' },
-      { text: '开源案例', link: 'https://z2586300277.github.io/three-cesium-examples/#/example' },
-      { text: '使用', link: 'https://z2586300277.github.io/three-editor/dist/#/example' },
-      { text: '编辑器', link: 'https://z2586300277.github.io/three-editor/dist/#/editor' },
-      { text: 'npm', link: 'https://www.npmjs.com/package/three-editor-cores' }
+      { text: '主页🏠', link: 'https://z2586300277.github.io/' },
+      { text: '开源案例🍃', link: 'https://z2586300277.github.io/three-cesium-examples/#/example' },
+      { text: '使用🍀', link: 'https://z2586300277.github.io/three-editor/dist/#/example' },
+      { text: '编辑器🍁', link: 'https://z2586300277.github.io/three-editor/dist/#/editor' },
+      { text: 'npm📦', link: 'https://www.npmjs.com/package/three-editor-cores' },
+      { text: 'BiBi📺', link: 'https://space.bilibili.com/245165721' },
+      { text: 'CSDN📘', link: 'https://blog.csdn.net/guang2586' },
+      { text: '组织🏢', link: 'https://openthree.github.io/three-cesium-links/' }
     ],
 
     sidebar: [

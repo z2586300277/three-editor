@@ -23,7 +23,7 @@
                     </el-select>
                     <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建场景</el-button>
                     <el-upload class="upload" ref="myUpload" :auto-upload="false" action="" :on-change="uploadChange">
-                        <el-button class="btn-add" link icon="plus">模型导入到当前场景</el-button></el-upload>
+                        <el-button class="btn-add" link icon="plus">模型导入此场景</el-button></el-upload>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">
                         <el-input v-model="inputSceneName" placeholder="请输入场景名称" />
                         <template #footer>
@@ -37,10 +37,12 @@
                     </el-dialog>
                 </div>
                 <div class="title">
-                    <el-link style="font-size: 18px;" @click="openUrl('doc')">文档</el-link>&nbsp;&nbsp; - &nbsp;
+                    <el-link style="font-size: 17px;" @click="openUrl('home')">🏠主页</el-link>&nbsp;&nbsp;
+                    <el-link style="font-size: 17px;" @click="openUrl('doc')">📘文档</el-link>&nbsp;&nbsp; - &nbsp;
                     <img class="logo" src="/site.png" alt="logo" width="18px" height="18px">
                     &nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
-                    -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 18px;">案例</el-link>
+                    -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 17px;">🍀案例</el-link>
+                    &nbsp;&nbsp;<el-link @click="openUrl('github')" style="font-size: 17px;">🍁源码</el-link>
                 </div>
                 <div class="header-right">
                     <el-button class="btn-add" link icon="Document" @click="exportTemplateJson">模板</el-button>
@@ -76,14 +78,14 @@
                     <div>
                         <el-switch inactive-text="预览场景" v-model="previewScene" active-color="#a8d4fd" />
                     </div>
-                    <div>
+                    <div :style="{ opacity: previewScene ? 0 : 1 }">
                         <el-switch inactive-text="选中弹窗" v-model="emitEditor.selectPanelEnable" active-color="#a8d4fd"
                             @change="a => emitEditor.threeEditor.handler.selectPanelEnable = a" />
                     </div>
-                    <div><el-switch inactive-text="按键操作" v-model="emitEditor.openKey" active-color="#a8d4fd"
+                    <div :style="{ opacity: previewScene ? 0 : 1 }"><el-switch inactive-text="按键操作" v-model="emitEditor.openKey" active-color="#a8d4fd"
                             @change="a => emitEditor.threeEditor.handler.setHandlerOption('openKey', a)" /></div>
                 </div>
-                <pre>
+                <pre :style="{ opacity: previewScene ? 0 : 1 }">
             1:选择 2:根选择 3:变换 4:绘制 5:信息
             变换 [r:旋转 g:平移 t:缩放] [ q w e a s d] 方位微调
             tab : 切换模式 z:撤销 y: 反撤销 del: 删除 esc: 退出操作

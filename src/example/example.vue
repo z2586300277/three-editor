@@ -1,17 +1,20 @@
 <template>
     <div class="main">
         <div class="top">
-            <div class="top-title" @click="openUrl('author')">
+            <div class="top-title" @click="openUrl('home')">
                 <img class="logo" src="/site.png" alt="logo" width="36px" height="36px">
-                <div class="top-title-text">优雅永不过时 - 3D</div>
+                <div class="top-title-text">Three Editor</div>
             </div>
-            <el-menu class="menu" style="border: none;" :default-active="initPath" mode="horizontal" :ellipsis="false"
-                active-text-color="#fff" text-color="#fff" :default-openeds="['0']">
-                <el-menu-item v-for="(item, index) in list" :key="index" :index="String(item.path)"
-                    @click="goRouter(item.path)">
-                    {{ item.name }}
-                </el-menu-item>
-            </el-menu>
+            <div style="display: flex;align-items: center;">
+                <el-menu class="menu" style="border: none;" :default-active="initPath" mode="horizontal" :ellipsis="false"
+                    active-text-color="#fff" text-color="#fff" :default-openeds="['0']">
+                    <el-menu-item v-for="(item, index) in list" :key="index" :index="String(item.path)"
+                        @click="goRouter(item.path)">
+                        {{ item.name }}
+                    </el-menu-item>
+                </el-menu>
+                <img class="github_img" @click="openUrl('github')" src="https://z2586300277.github.io/three-cesium-examples/files/site/github.png" alt="logo" width="40px" height="40px">
+            </div>
         </div>
         <div class="center">
             <div class="nav">
@@ -52,7 +55,7 @@ const list = [
 
     { name: 'Three-Editor案例', path: 'threeEditor', list: ThreeEditorExamples },
 
-    { name: 'Three.js案例', path: 'threejs', list: ThreeJsExamples },
+    { name: 'Three.js应用', path: 'threejs', list: ThreeJsExamples },
 
     { name: 'Cesium.js案例', path: 'cesiumjs', list: CesiumJsExamples },
 
@@ -201,6 +204,14 @@ changeActive(initActive);
             }
         }
     }
+}
+
+.github_img {
+    &:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
+    }
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
