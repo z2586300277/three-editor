@@ -16,7 +16,7 @@
     "@codemirror/theme-one-dark": "^6.1.2",
     "@element-plus/icons-vue": "^2.3.1",
     "codemirror": "^6.0.1",
-    "element-plus": "^2.8.2",
+    "element-plus": "^2.9.4",
     "jszip": "^3.10.1",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",

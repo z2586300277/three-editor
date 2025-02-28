@@ -42,7 +42,7 @@
                     <img class="logo" src="/site.png" alt="logo" width="18px" height="18px">
                     &nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
                     -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 17px;">🍀案例</el-link>
-                    &nbsp;&nbsp;<el-link @click="openUrl('github')" style="font-size: 17px;">🍁源码</el-link>
+                    &nbsp;&nbsp;<el-link @click="openUrl('github')" style="font-size: 17px;">🍁仓库</el-link>
                 </div>
                 <div class="header-right">
                     <el-button class="btn-add" link icon="Document" @click="exportTemplateJson">模板</el-button>

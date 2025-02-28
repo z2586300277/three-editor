@@ -21,10 +21,7 @@
         </div>
         <div class="pay">
             <div style="margin-bottom: 5px;">
-                <el-link class="text" style="font-size: 14px;" @click="openUrl('home')">个人主页  -</el-link>
-            </div>
-            <div style="margin-bottom: 5px;">
-                <el-link class="text" style="font-size: 14px;" @click="openUrl('github')">源码仓库  -</el-link>
+                <el-link class="text" style="font-size: 14px;" @click="openLink('https://pan.quark.cn/s/4fa387b067fb')">⚡下载源码  -</el-link>
             </div>
             <div class="text1" @click="openUrl('wxPay')">为爱发电</div>
             <div><el-link class="text" @click="openUrl('wxPay')">赞助我</el-link></div>
@@ -39,6 +36,10 @@ import { ref } from 'vue'
 const isShow = ref(!localStorage.getItem('hide_author_info'))
 
 const openUrl = (k) => window.open(__SITE_URLS__[k])
+
+const openLink = (url) => {
+    window.open(url)
+}
 
 </script>
 
