@@ -27,11 +27,12 @@ export default defineConfig({
       { text: '下载⚡', link: 'https://pan.quark.cn/s/4fa387b067fb' },
       { text: '主页🏠', link: 'https://z2586300277.github.io/' },
       { text: '开源案例🍃', link: 'https://z2586300277.github.io/three-cesium-examples/#/example' },
-      { text: '使用🍀', link: 'https://z2586300277.github.io/three-editor/dist/#/example' },
       { text: '编辑器🍁', link: 'https://z2586300277.github.io/three-editor/dist/#/editor' },
+      { text: '使用🍀', link: 'https://z2586300277.github.io/three-editor/dist/#/example' },
       { text: 'npm📦', link: 'https://www.npmjs.com/package/three-editor-cores' },
       { text: 'BiBi📺', link: 'https://space.bilibili.com/245165721' },
       { text: 'CSDN📘', link: 'https://blog.csdn.net/guang2586' },
+      { text: 'QQ群🐧', link: 'https://qm.qq.com/q/QdsKkzo2gI' },
       { text: '组织🏢', link: 'https://openthree.github.io/three-cesium-links/' }
     ],
 
