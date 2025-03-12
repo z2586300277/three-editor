@@ -43,6 +43,7 @@
                     &nbsp;{{ emitEditor.sceneName || ' - - - - ' }}
                     -&nbsp;&nbsp;<el-link @click="openUrl('example')" style="font-size: 17px;">🍀案例</el-link>
                     &nbsp;&nbsp;<el-link @click="openUrl('github')" style="font-size: 17px;">🍁仓库</el-link>
+                    &nbsp;&nbsp;<el-link @click="openUrl('new_editor')" style="font-size: 17px;">🍏新编辑器</el-link>
                 </div>
                 <div class="header-right">
                     <el-button class="btn-add" link icon="Document" @click="exportTemplateJson">模板</el-button>
