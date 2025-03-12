@@ -24,6 +24,7 @@ export default defineConfig({
   description: "THREE-EDITOR 是使用 npm 库 three-editor-cores基于Three.js, 实现组态化, 高度灵活扩展的低代码, 无代码, 快速开发的三维场景可视化编辑器内核",
   themeConfig: {
     nav: [
+      { text: '新编辑器🍏', link: 'https://z2586300277.github.io/threejs-editor/' },
       { text: '下载⚡', link: 'https://pan.quark.cn/s/4fa387b067fb' },
       { text: '主页🏠', link: 'https://z2586300277.github.io/' },
       { text: '开源案例🍃', link: 'https://z2586300277.github.io/three-cesium-examples/#/example' },
@@ -31,7 +32,6 @@ export default defineConfig({
       { text: '使用🍀', link: 'https://z2586300277.github.io/three-editor/dist/#/example' },
       { text: 'npm📦', link: 'https://www.npmjs.com/package/three-editor-cores' },
       { text: 'BiBi📺', link: 'https://space.bilibili.com/245165721' },
-      { text: 'CSDN📘', link: 'https://blog.csdn.net/guang2586' },
       { text: 'QQ群🐧', link: 'https://qm.qq.com/q/QdsKkzo2gI' },
       { text: '组织🏢', link: 'https://openthree.github.io/three-cesium-links/' }
     ],
