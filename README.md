@@ -2,6 +2,8 @@
 
 - 百度搜索 three 编辑器 、three.js 编辑器、 three js 编辑器关键字，第一个就是，点星⭐。
 
+- 高度自定义、扩展、组件化、高级编辑器预览 https://z2586300277.github.io/threejs-editor/ 
+
 - 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples 1000+ Star ⭐
 
 - 后续作者会将自己业余时间的大部分精力放到开源案例 three-cesium-examples 仓库, c 为爱发电⚡。

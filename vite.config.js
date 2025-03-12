@@ -64,6 +64,8 @@ export default defineConfig({
 
       wxPay: 'https://z2586300277.github.io/three-editor/dist/wx_pay.jpg',
 
+      new_editor: 'https://z2586300277.github.io/threejs-editor/'
+
     },
 
   },

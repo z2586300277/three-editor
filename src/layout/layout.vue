@@ -20,6 +20,7 @@
             </div>
         </div>
         <div class="pay">
+            <div style="margin-bottom: 5px;"><el-link class="text" style="font-size: 14px;" @click="openUrl('new_editor')">🍏新 编辑器 -</el-link></div>
             <div style="margin-bottom: 5px;">
                 <el-link class="text" style="font-size: 14px;" @click="openLink('https://pan.quark.cn/s/4fa387b067fb')">⚡下载源码  -</el-link>
             </div>
