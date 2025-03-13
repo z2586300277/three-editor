@@ -40,7 +40,7 @@ function createScene(sceneParams) {
 
     if (!sceneParams) {
 
-        const params = localStorage.getItem(props.emitEditor.sceneName)
+        const params = localStorage.getItem(props.emitEditor.sceneName + '-threeEditor')
 
         if (params) sceneParams = JSON.parse(params)
 

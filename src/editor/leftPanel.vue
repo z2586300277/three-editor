@@ -47,7 +47,7 @@ const data = [
 
 ]
 
-let act = localStorage.getItem('active')
+let act = localStorage.getItem('threeEditor_active')
 
 if (!act) act = 0
 
@@ -57,7 +57,7 @@ const active = ref(act);
 
 function setActive(k) {
 
-    localStorage.setItem('active', k);
+    localStorage.setItem('threeEditor_active', k);
 
     active.value = k;
 

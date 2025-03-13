@@ -301,7 +301,7 @@ function saveSceneList() {
 
     if (options.value.find(item => item.name === emitEditor.sceneName)) {
 
-        localStorage.setItem(emitEditor.sceneName, JSON.stringify(emitEditor.threeEditor.saveSceneEdit()))
+        localStorage.setItem(emitEditor.sceneName + '-threeEditor', JSON.stringify(emitEditor.threeEditor.saveSceneEdit()))
 
     }
 
