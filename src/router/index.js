@@ -42,7 +42,7 @@ const routes = [
   }
 ]
 
-// routes.push({ path: '/:pathMatch(.*)*', redirect: redirect })
+routes.push({ path: '/:pathMatch(.*)*', redirect: redirect })
 
 const router = createRouter({ history: createWebHashHistory(), routes })
 
