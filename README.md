@@ -1,4 +1,4 @@
-# 🍃数字孪生 - 低代码 - 组态编辑器🍁 -
+# 🍃数字孪生 - 低代码 - 组态编辑器🍁 - <img src="https://visitor-badge.laobi.icu/badge?page_id=three_editor" >
 
 - 百度搜索 three 编辑器 、three.js 编辑器、 three js 编辑器关键字，第一个就是，点星⭐。
 
@@ -38,4 +38,4 @@
 :-------------------------:
 [![](https://z2586300277.github.io/three-editor/dist/home.png)](https://z2586300277.github.io/three-editor/dist)
 
-<img src="https://profile-counter.glitch.me/z2586300277/count.svg" >
+
