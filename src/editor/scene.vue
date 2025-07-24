@@ -24,7 +24,7 @@ function getEvent(e) {
 
             const { camera, controls } = props.emitEditor.threeEditor
 
-            const p = getDistanceScalePoint(camera.position, info.point, 0.8)
+            const p = getDistanceScalePoint(camera.position, info.point, 0.6)
 
             createGsapAnimation(camera.position, p)
 

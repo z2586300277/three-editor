@@ -1,12 +1,14 @@
-# 🍃数字孪生 - 低代码 - 组态编辑器🍁 -
+# 🍃数字孪生 - 低代码 - 组态编辑器🍁 - <img src="https://visitor-badge.laobi.icu/badge?page_id=three_editor" >
 
 - 百度搜索 three 编辑器 、three.js 编辑器、 three js 编辑器关键字，第一个就是，点星⭐。
+
+- 国内直连高速下载源码 https://pan.quark.cn/s/4fa387b067fb
 
 - 高度自定义、扩展、组件化、高级编辑器预览 https://z2586300277.github.io/threejs-editor/ 
 
 - 原生Three.js Cesium.js 案例 https://github.com/z2586300277/three-cesium-examples 1000+ Star ⭐
 
-- 后续作者会将自己业余时间的大部分精力放到开源案例 three-cesium-examples 仓库, c 为爱发电⚡。
+- 后续作者会将自己业余时间的大部分精力放到开源案例 three-cesium-examples 仓库, 为爱发电⚡。
 
 - 有兼职，技术帮助，招人需求，合作，开源分享可联系我，其他问题且勿打扰，时间宝贵🍉。
 
@@ -36,4 +38,4 @@
 :-------------------------:
 [![](https://z2586300277.github.io/three-editor/dist/home.png)](https://z2586300277.github.io/three-editor/dist)
 
-<img src="https://profile-counter.glitch.me/z2586300277/count.svg" >
+

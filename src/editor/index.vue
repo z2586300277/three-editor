@@ -207,7 +207,7 @@ function delScene(item) {
 
         options.value.splice(index, 1)
 
-        localStorage.removeItem(item.name)
+        localStorage.removeItem(item.name + '-threeEditor')
 
         saveLocal()
 
