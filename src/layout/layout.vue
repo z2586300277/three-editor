@@ -24,8 +24,8 @@
             <div style="margin-bottom: 5px;">
                 <el-link class="text" style="font-size: 14px;" @click="openLink('https://pan.quark.cn/s/4fa387b067fb')">⚡下载源码  -</el-link>
             </div>
-            <div class="text1" @click="openUrl('wxPay')">为爱发电</div>
-            <div><el-link class="text" @click="openUrl('wxPay')">赞助我</el-link></div>
+            <img src="https://visitor-badge.laobi.icu/badge?page_id=three_editor" >
+            <div><el-link class="text" @click="openUrl('wxPay')">为爱发电 赞助我</el-link></div>
             <img class="logo" @click="openUrl('wxPay')" src="/wx_pay.jpg" alt="logo" width="30px" height="30px">
         </div>
     </div>
