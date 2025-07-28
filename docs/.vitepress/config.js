@@ -19,7 +19,13 @@ export default defineConfig({
       hm.src = "https://hm.baidu.com/hm.js?85aef82369b0fe002f0e62a775344e89";
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
-    })();`]
+    })();`],
+    ['style', {}, `
+    .VPNavBarTitle .title::after {
+      content: url('https://visitor-badge.laobi.icu/badge?page_id=three_editor&format=true');
+      margin-left: 8px;
+      vertical-align: middle;
+    }`]
   ],
   description: "THREE-EDITOR 是使用 npm 库 three-editor-cores基于Three.js, 实现组态化, 高度灵活扩展的低代码, 无代码, 快速开发的三维场景可视化编辑器内核",
   themeConfig: {
