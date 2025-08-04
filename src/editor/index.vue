@@ -96,6 +96,10 @@
         <div class="main">
             <Editor :emitEditor="emitEditor" :options="options" />
         </div>
+        <div class="bot_opt" v-show="!previewScene">
+            <el-checkbox v-model="axes" >坐标轴</el-checkbox>
+            <el-checkbox v-model="grid" >网格</el-checkbox>
+        </div>
     </div>
 </template>
 
@@ -381,6 +385,10 @@ async function exportFile() {
 
 }
 
+const axes = ref(false)
+const grid = ref(false)
+watch(axes, (v) => emitEditor.threeEditor?.handler.setHandlerOption('axes', v))
+watch(grid, (v) => emitEditor.threeEditor?.handler.setHandlerOption('grid', v))
 </script>
 
 <style lang="less" scoped>
@@ -482,5 +490,10 @@ pre {
 
     line-height: 20px;
     padding-top: 10px;
+}
+.bot_opt {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
 }
 </style>
