@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "vite",
+    "dev":"vite",
+    "serve":"vite",
     "build": "vite build",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
