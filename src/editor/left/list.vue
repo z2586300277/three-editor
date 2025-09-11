@@ -1,7 +1,7 @@
 <template>
     <div class="listScene">
         <div class="back" v-for="i, k in data.list">
-            <div class="item">
+            <div class="item" draggable="true" @dragend="load(i)">
                 <img src="/site.png" />
                 <el-link @click="load(i)">
                     {{ sl(i) }}
