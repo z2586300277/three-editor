@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="back" v-for="i in data.list">
-            <div class="item">
+            <div class="item" draggable="true" @dragend="e => load(i.name, 'online', e)">
                 <el-link @click="load(i.name)">
                     {{ i.name }}
                 </el-link>
@@ -20,14 +20,14 @@
 <script setup>
 import { Config, fetchResource } from '../config'
 import { shallowReactive } from 'vue';
-import { getObjectViews, createGsapAnimation } from 'three-editor-cores'
+import { getObjectViews, createGsapAnimation, THREE } from 'three-editor-cores'
 import { ElMessage } from 'element-plus'
 
 const props = defineProps(['emitEditor'])
 
 const sl = name => name.length > 20 ? name.slice(0, 20) + '...' : name
 
-function load(name, t = 'online') {
+function load(name, t = 'online', event) {
 
     const type = name.split('.').pop().toUpperCase()
 
@@ -71,7 +71,22 @@ function load(name, t = 'online') {
 
         props.emitEditor.loading = false
 
-        const { transformControls, camera, controls } = props.emitEditor.threeEditor
+        const { transformControls, camera, DOM, scene, controls } = props.emitEditor.threeEditor
+
+        if (event)  {
+        const { clientX, clientY } = event;
+        const mouse = new THREE.Vector2();
+        mouse.x = (clientX / DOM.clientWidth) * 2 - 1;
+        mouse.y = -(clientY / DOM.clientHeight) * 2 + 1;
+        const raycaster = new THREE.Raycaster();
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(scene.children, true);
+        if (intersects.length > 0) {
+                const intersect = intersects[0];
+                const { point } = intersect;
+                if(point) m.position.copy(point);
+           }
+        }
 
         const { maxView, target } = getObjectViews(m)
 
@@ -82,6 +97,8 @@ function load(name, t = 'online') {
             controls.target.copy(target)
 
             transformControls.attach(m)
+
+            setTimeout(() => props.emitEditor.threeEditor.setOutlinePass([]), 1000)
 
         })
 
