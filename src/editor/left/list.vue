@@ -19,11 +19,14 @@ const data = reactive({ list: [] })
 
 const props = defineProps(['emitEditor'])
 
-function sl(v) { return v.replace(/.json/g, '') }
+function sl(v) { 
+    return v.replace(/.json/g, '').split('/').pop()
+}
 
 function load(url) {
-
-    fetch(Config.editorJsonUrl + url).then(res => res.json()).then(res => {
+    const fullUrl = url.startsWith('http') ? url : Config.editorJsonUrl + url
+    
+    fetch(fullUrl).then(res => res.json()).then(res => {
 
         const { emitEditor } = props
 
@@ -35,7 +38,17 @@ function load(url) {
 
 }
 
-fetchResource(Config.editorJsonUrl).then(res => data.list = res)
+fetchResource(Config.editorJsonUrl).then(res => {
+
+    const storageList = localStorage.getItem('v1_editor_resource_config')
+    if (storageList) {
+        const { editorJson } = JSON.parse(storageList)
+        data.list = [...editorJson, ...res]
+    } else {
+        data.list = res
+    }
+
+})
 
 </script>
 

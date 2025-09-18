@@ -2,6 +2,8 @@ const isDev = localStorage.getItem('dev_local_server_url') // http://localhost:7
 
 const Host = isDev ? isDev : 'https://z2586300277.github.io/three-editor/dist/files/'
 
+fetch('https://z2586300277.github.io/editorJson/config_v1.json').then(res => res.json()).then(res => localStorage.setItem('v1_editor_resource_config', JSON.stringify(res)))
+
 function listFiles(url) {
 
     function parseFolderList(html) {
@@ -91,4 +93,3 @@ export const Config = Object.keys(_Config).reduce((acc, key) => {
     return acc
 
 }, {})
-
