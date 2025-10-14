@@ -56,7 +56,7 @@ export default defineConfig({
 
     footer: {
         message: '基于 MulanPSL2 许可发布',
-        copyright: `版权所有 ©2019-2025 2586300277@qq.com `
+        copyright: `版权所有 ©2019-${new Date().getFullYear()} 北京优雅幻光科技`
     },
 
     socialLinks: [

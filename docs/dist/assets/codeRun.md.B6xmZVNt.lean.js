@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as e,ae as t}from"./chunks/framework.TG5E9i2h.js";const k=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"codeRun.md","filePath":"codeRun.md"}'),l={name:"codeRun.md"};function n(p,a,d,h,o,r){return e(),i("div",null,a[0]||(a[0]=[t("",5)]))}const u=s(l,[["render",n]]);export{k as __pageData,u as default};

@@ -23,7 +23,7 @@
                     </el-select>
                     <el-button class="btn-add" link icon="plus" @click="dialogVisible = true">新建场景</el-button>
                     <el-upload class="upload" ref="myUpload" :auto-upload="false" action="" :on-change="uploadChange">
-                        <el-button class="btn-add" link icon="plus">模型导入此场景</el-button></el-upload>
+                        <el-button class="btn-add" link icon="plus">模型导入</el-button></el-upload>
                     <el-dialog v-model="dialogVisible" title="命名场景" width="500">
                         <el-input v-model="inputSceneName" placeholder="请输入场景名称" />
                         <template #footer>
@@ -420,7 +420,7 @@ watch(grid, (v) => emitEditor.threeEditor?.handler.setHandlerOption('grid', v))
             box-sizing: border-box;
             border-bottom: 1px solid #606267;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, auto);
             align-items: center;
         }
 
