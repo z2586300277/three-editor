@@ -183,17 +183,15 @@ const uploadChange = file => {
 
         loaderService.complete = m => {
 
-            const { transformControls, camera, controls } = emitEditor.threeEditor
+            const { camera, controls } = emitEditor.threeEditor
 
             const { maxView, target } = getObjectViews(m)
 
             Promise.all([createGsapAnimation(camera.position, maxView), createGsapAnimation(controls.target, target)]).then(() => {
 
-                emitEditor.threeEditor.setOutlinePass([m])
-
                 controls.target.copy(target)
 
-                transformControls.attach(m)
+                emitEditor.threeEditor.selectObject(m)
 
             })
 
@@ -221,6 +219,10 @@ function delScene(item) {
 
 watch(() => emitEditor.sceneName, (v, o) => {
 
+    emitEditor?.threeEditor?.clearSelection?.()
+
+    emitEditor.info = null
+
     if (v) setTimeout(() => emitEditor.createScene(), 100)
 
     emitEditor?.threeEditor?.destroySceneRender?.()
@@ -229,37 +231,60 @@ watch(() => emitEditor.sceneName, (v, o) => {
 
 watch(() => emitEditor.mode, (v, o) => {
 
-    if (v == '选中') emitEditor.threeEditor.handler.mode = '选择'
+    const { threeEditor } = emitEditor
 
-    else if (v == '根级') emitEditor.threeEditor.handler.mode = '根选择'
+    if (!threeEditor) return
+
+    const { handler, transformControls } = threeEditor
+    const currentInfo = handler.currentInfo
+
+    if (v == '选中') {
+        handler.mode = '选择'
+        if (currentInfo && currentInfo.currentRootModel) {
+            transformControls.attach(currentInfo.currentRootModel)
+        }
+    }
+
+    else if (v == '根级') {
+        handler.mode = '根选择'
+        if (currentInfo && currentInfo.currentRootModel) {
+            transformControls.attach(currentInfo.currentRootModel)
+        }
+    }
 
     else if (v == '平移') {
-
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('translate')
-
+        handler.mode = '变换'
+        transformControls.setMode('translate')
+        if (currentInfo) {
+            const attachModel = handler.isTransformChildren ? currentInfo.currentModel : currentInfo.currentRootModel
+            if (attachModel) transformControls.attach(attachModel)
+        }
     }
 
     else if (v == '旋转') {
-
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('rotate')
-
+        handler.mode = '变换'
+        transformControls.setMode('rotate')
+        if (currentInfo) {
+            const attachModel = handler.isTransformChildren ? currentInfo.currentModel : currentInfo.currentRootModel
+            if (attachModel) transformControls.attach(attachModel)
+        }
     }
 
     else if (v == '缩放') {
-
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('scale')
-
+        handler.mode = '变换'
+        transformControls.setMode('scale')
+        if (currentInfo) {
+            const attachModel = handler.isTransformChildren ? currentInfo.currentModel : currentInfo.currentRootModel
+            if (attachModel) transformControls.attach(attachModel)
+        }
     }
 
-    else if (v == '绘制') emitEditor.threeEditor.handler.mode = '场景绘制'
+    else if (v == '绘制') handler.mode = '场景绘制'
 
-    else if (v == '预览') emitEditor.threeEditor.handler.mode = '点击信息'
+    else if (v == '预览') {
+        handler.mode = '点击信息'
+        transformControls.detach()
+    }
 
 })
 
