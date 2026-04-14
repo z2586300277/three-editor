@@ -14,59 +14,11 @@ const props = defineProps(['emitEditor', 'options'])
 
 onMounted(() => (props.emitEditor.sceneName !== '') && createScene())
 
-function syncSelectionState(threeEditor, object) {
-    const { transformControls, effectComposer, handler } = threeEditor
-    const { outlinePass } = effectComposer.effectPass
-
-    if (!object || !object.isObject3D) {
-        handler.currentInfo = null
-        transformControls.detach()
-        outlinePass.selectedObjects = []
-        props.emitEditor.info = null
-        return
-    }
-
-    const model = object
-    const rootModel = getRootModel(object)
-
-    handler.currentInfo = {
-        mode: handler.mode,
-        object,
-        currentModel: model,
-        currentRootModel: rootModel,
-        point: model.position
-    }
-
-    if (handler.mode === '变换') {
-        transformControls.attach(handler.isTransformChildren ? model : rootModel)
-    } else {
-        transformControls.attach(rootModel)
-    }
-
-    outlinePass.selectedObjects = [rootModel]
-
-    props.emitEditor.info = handler.currentInfo
-}
-
-function getRootModel(object) {
-    let current = object
-    while (current.parent && current.parent.type !== 'Scene') {
-        current = current.parent
-    }
-    return current
-}
-
 function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
-        if (info.object && info.object.isObject3D) {
-            syncSelectionState(props.emitEditor.threeEditor, info.object)
-        } else if (info.mode === '选择' || info.mode === '根选择') {
-            props.emitEditor.threeEditor.clearSelection()
-        }
-
-        props.emitEditor.info = props.emitEditor.threeEditor.handler.currentInfo
+        props.emitEditor.info = info
 
         if (info.mode === '点击信息') {
 
@@ -80,8 +32,26 @@ function getEvent(e) {
 
         }
 
+        if (info.currentModel && (info.mode === '选择' || info.mode === '根选择')) {
+            const { transformControls } = props.emitEditor.threeEditor
+            const targetObject = info.mode === '根选择' ? info.currentRootModel : info.currentModel
+            if (targetObject && transformControls.object !== targetObject) {
+                transformControls.detach()
+                transformControls.attach(targetObject)
+            }
+        }
+
     })
 
+}
+
+function clearSelection() {
+    props.emitEditor.info = null
+    if (props.emitEditor.threeEditor) {
+        props.emitEditor.threeEditor.transformControls.detach()
+        props.emitEditor.threeEditor.setOutlinePass([])
+        props.emitEditor.threeEditor.handler.currentInfo = null
+    }
 }
 
 function createScene(sceneParams) {
@@ -155,26 +125,12 @@ function createScene(sceneParams) {
     }
 
     else if (mode == '场景绘制') props.emitEditor.mode = '绘制'
+
     else if (mode == '点击信息') props.emitEditor.mode = '预览'
 
     props.emitEditor.openKey = threeEditor.handler.openKey
 
     props.emitEditor.selectPanelEnable = threeEditor.handler.selectPanelEnable
-
-    threeEditor.selectObject = (object) => syncSelectionState(threeEditor, object)
-
-    threeEditor.clearSelection = () => syncSelectionState(threeEditor, null)
-
-    const originalRemove = threeEditor.scene.remove
-    threeEditor.scene.remove = function(...args) {
-        args.forEach(obj => {
-            const currentInfo = threeEditor.handler.currentInfo
-            if (currentInfo && (currentInfo.object === obj || currentInfo.currentModel === obj || currentInfo.currentRootModel === obj)) {
-                threeEditor.clearSelection()
-            }
-        })
-        return originalRemove.apply(this, args)
-    }
 
     props.emitEditor.threeEditor = threeEditor
 
@@ -182,12 +138,10 @@ function createScene(sceneParams) {
 
 }
 
-onUnmounted(() => {
-    props.emitEditor.threeEditor?.clearSelection?.()
-    props.emitEditor.threeEditor?.destroySceneRender?.()
-})
+onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())
 
 props.emitEditor.createScene = createScene
+props.emitEditor.clearSelection = clearSelection
 
 </script>
 
