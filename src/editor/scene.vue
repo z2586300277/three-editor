@@ -20,6 +20,15 @@ function getEvent(e) {
 
         props.emitEditor.info = info
 
+        // 确保画布选中态与控制器、高亮状态一致
+        if (info.currentModel) {
+            const { transformControls } = props.emitEditor.threeEditor
+            // 控制器挂载到当前选中的对象
+            transformControls.attach(info.currentModel)
+            // 高亮当前选中的对象
+            props.emitEditor.threeEditor.setOutlinePass([info.currentModel])
+        }
+
         if (info.mode === '点击信息') {
 
             const { camera, controls } = props.emitEditor.threeEditor
@@ -32,26 +41,8 @@ function getEvent(e) {
 
         }
 
-        if (info.currentModel && (info.mode === '选择' || info.mode === '根选择')) {
-            const { transformControls } = props.emitEditor.threeEditor
-            const targetObject = info.mode === '根选择' ? info.currentRootModel : info.currentModel
-            if (targetObject && transformControls.object !== targetObject) {
-                transformControls.detach()
-                transformControls.attach(targetObject)
-            }
-        }
-
     })
 
-}
-
-function clearSelection() {
-    props.emitEditor.info = null
-    if (props.emitEditor.threeEditor) {
-        props.emitEditor.threeEditor.transformControls.detach()
-        props.emitEditor.threeEditor.setOutlinePass([])
-        props.emitEditor.threeEditor.handler.currentInfo = null
-    }
 }
 
 function createScene(sceneParams) {
@@ -141,7 +132,6 @@ function createScene(sceneParams) {
 onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())
 
 props.emitEditor.createScene = createScene
-props.emitEditor.clearSelection = clearSelection
 
 </script>
 

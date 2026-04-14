@@ -98,14 +98,13 @@ function load(name, t = 'online', event) {
 
             transformControls.attach(m)
 
-            const info = {
+            // 同步选中信息到 emitEditor，确保状态一致
+            props.emitEditor.info = {
                 currentModel: m,
                 currentRootModel: m,
                 point: m.position.clone(),
-                mode: props.emitEditor.threeEditor.handler.mode
+                mode: '选择'
             }
-            props.emitEditor.info = info
-            props.emitEditor.threeEditor.handler.currentInfo = info
 
             setTimeout(() => props.emitEditor.threeEditor.setOutlinePass([]), 1000)
 
