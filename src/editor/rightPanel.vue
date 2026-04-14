@@ -2,21 +2,25 @@
     <transition name="el-zoom-in-bottom">
         <div class="right" v-show="expandR">
             <div class="main">
-                <el-card class="box-card">
+                <el-card class="box-card" v-if="emitEditor.info?.currentModel">
                     <template #header>
                         <div class="card-header">
-                            <span>名称：{{ hasSelection ? sl(emitEditor.info?.currentModel?.name) : '未选中对象' }}</span>
+                            <span>名称：{{ sl(emitEditor.info?.currentModel?.name) }}</span>
                         </div>
                     </template>
-                    <template v-if="hasSelection">
-                        <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : ' +
-                sl(emitEditor.info?.point[i]) }}</div>
-                    </template>
-                    <template v-else>
-                        <div class="empty-state">
-                            <el-empty description="请在场景中双击选择对象" :image-size="80" />
+                    <div class="text item" v-for="i in ['x', 'y', 'z']" :key="i">{{ '坐标 ' + i + ' : ' +
+            sl(emitEditor.info?.point[i]) }}</div>
+                    <template #footer><el-button class="button"
+                            @click="emitEditor.threeEditor.setLight('AmbientLight', { intensity: 3 })"
+                            text>快速添加环境光</el-button></template>
+                </el-card>
+                <el-card class="box-card" v-else>
+                    <template #header>
+                        <div class="card-header">
+                            <span>对象属性</span>
                         </div>
                     </template>
+                    <div class="text item">未选中任何对象</div>
                     <template #footer><el-button class="button"
                             @click="emitEditor.threeEditor.setLight('AmbientLight', { intensity: 3 })"
                             text>快速添加环境光</el-button></template>
@@ -79,7 +83,7 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from 'vue';
+import { ref, watch } from 'vue';
 import { THREE, createGsapAnimation, setGsapMeshAction } from 'three-editor-cores'
 
 const props = defineProps(['emitEditor']);
@@ -89,10 +93,6 @@ const card = ref(null);
 const card2 = ref(null);
 
 let a_data = ref({ transformAnimationList: [], transformAnimationMesh: null, viewAngleList: [] });
-
-const hasSelection = computed(() => {
-    return props.emitEditor.info && props.emitEditor.info.currentModel
-})
 
 const useCss2D = () => props.emitEditor.threeEditor.setCss2dDOM(card.value, new THREE.Vector3(0, 0, 0))
 
@@ -199,7 +199,7 @@ const expandR = ref(true);
 <style lang="less" scoped>
 .right {
     width: 287px;
-    height: calc(100% - 50px);
+    height: calc(100% - 50px); // 50px是顶部导航栏的高度
     background-color: #181818;
     position: fixed;
     top: 50px;
@@ -240,11 +240,5 @@ const expandR = ref(true);
 .text_a {
     line-height: 40px;
     font-size: 12px;
-}
-
-.empty-state {
-    padding: 20px 0;
-    text-align: center;
-    color: #909399;
 }
 </style>
