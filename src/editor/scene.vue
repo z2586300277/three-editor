@@ -20,12 +20,15 @@ function getEvent(e) {
 
         if (!info) {
             props.emitEditor.info = null
-            props.emitEditor.threeEditor.currentInfo = null
-            props.emitEditor.threeEditor.handler.currentInfo = null
             return
         }
 
         props.emitEditor.info = info
+
+        // 同步设置高亮和控制器，保持与其他入口一致
+        const { transformControls } = props.emitEditor.threeEditor
+        props.emitEditor.threeEditor.setOutlinePass([info.currentModel])
+        transformControls.attach(info.currentModel)
 
         if (info.mode === '点击信息') {
 
@@ -129,10 +132,7 @@ function createScene(sceneParams) {
 
 }
 
-onUnmounted(() => {
-    props.emitEditor.info = null
-    props.emitEditor.threeEditor?.destroySceneRender?.()
-})
+onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender?.())
 
 props.emitEditor.createScene = createScene
 

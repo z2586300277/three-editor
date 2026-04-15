@@ -70,9 +70,8 @@ function load(name, t = 'online', event) {
     loaderService.complete = m => {
 
         props.emitEditor.loading = false
-        props.emitEditor.info = null
 
-        const { transformControls, camera, DOM, scene, controls, handler } = props.emitEditor.threeEditor
+        const { transformControls, camera, DOM, scene, controls } = props.emitEditor.threeEditor
 
         if (event)  {
         const { clientX, clientY } = event;
@@ -98,17 +97,6 @@ function load(name, t = 'online', event) {
             controls.target.copy(target)
 
             transformControls.attach(m)
-
-            const info = {
-                currentModel: m,
-                currentRootModel: m,
-                point: m.position.clone(),
-                mode: handler.mode
-            }
-
-            props.emitEditor.info = info
-            props.emitEditor.threeEditor.currentInfo = info
-            handler.currentInfo = info
 
             setTimeout(() => props.emitEditor.threeEditor.setOutlinePass([]), 1000)
 
