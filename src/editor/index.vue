@@ -229,37 +229,68 @@ watch(() => emitEditor.sceneName, (v, o) => {
 
 watch(() => emitEditor.mode, (v, o) => {
 
-    if (v == '选中') emitEditor.threeEditor.handler.mode = '选择'
+    const { threeEditor } = emitEditor
+    if (!threeEditor) return
 
-    else if (v == '根级') emitEditor.threeEditor.handler.mode = '根选择'
+    const { handler, transformControls, effectComposer, scene } = threeEditor
 
-    else if (v == '平移') {
-
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('translate')
-
+    const isObjectValid = (obj) => {
+        if (!obj) return false
+        let parent = obj.parent
+        while (parent) {
+            if (parent === scene) return true
+            parent = parent.parent
+        }
+        return false
     }
 
-    else if (v == '旋转') {
+    const currentObject = transformControls.object || handler.currentInfo?.currentModel
+    const currentRootObject = handler.currentInfo?.currentRootModel || currentObject
+    const hasValidObject = isObjectValid(currentObject)
 
-        emitEditor.threeEditor.handler.mode = '变换'
+    const detachTransform = () => transformControls.object && transformControls.detach()
 
-        emitEditor.threeEditor.transformControls.setMode('rotate')
-
+    const clearIfInvalid = () => {
+        if (!hasValidObject) {
+            detachTransform()
+            effectComposer.effectPass.outlinePass.selectedObjects = []
+            handler.currentInfo = null
+            emitEditor.info = null
+        }
     }
 
-    else if (v == '缩放') {
+    clearIfInvalid()
 
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('scale')
-
+    if (v === '选中') {
+        detachTransform()
+        handler.mode = '选择'
+        hasValidObject && threeEditor.setOutlinePass([currentObject])
     }
+    else if (v === '根级') {
+        detachTransform()
+        handler.mode = '根选择'
+        hasValidObject && threeEditor.setOutlinePass([currentRootObject])
+    }
+    else if (v === '平移' || v === '旋转' || v === '缩放') {
+        handler.mode = '变换'
+        const modeMap = { '平移': 'translate', '旋转': 'rotate', '缩放': 'scale' }
+        transformControls.setMode(modeMap[v])
 
-    else if (v == '绘制') emitEditor.threeEditor.handler.mode = '场景绘制'
-
-    else if (v == '预览') emitEditor.threeEditor.handler.mode = '点击信息'
+        if (hasValidObject && !transformControls.object) {
+            transformControls.attach(v === '根级' || handler.isTransformChildren ? currentRootObject : currentObject)
+            threeEditor.setOutlinePass([transformControls.object])
+        }
+    }
+    else if (v === '绘制') {
+        detachTransform()
+        effectComposer.effectPass.outlinePass.selectedObjects = []
+        handler.mode = '场景绘制'
+    }
+    else if (v === '预览') {
+        detachTransform()
+        effectComposer.effectPass.outlinePass.selectedObjects = []
+        handler.mode = '点击信息'
+    }
 
 })
 

@@ -18,17 +18,7 @@ function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
-        if (!info) {
-            props.emitEditor.info = null
-            return
-        }
-
         props.emitEditor.info = info
-
-        // 同步设置高亮和控制器，保持与其他入口一致
-        const { transformControls } = props.emitEditor.threeEditor
-        props.emitEditor.threeEditor.setOutlinePass([info.currentModel])
-        transformControls.attach(info.currentModel)
 
         if (info.mode === '点击信息') {
 
@@ -47,8 +37,6 @@ function getEvent(e) {
 }
 
 function createScene(sceneParams) {
-
-    props.emitEditor.info = null
 
     if (!sceneParams) {
 
@@ -130,9 +118,37 @@ function createScene(sceneParams) {
 
     window.onresize = () => threeEditor.renderSceneResize()
 
+    function checkAndClearInvalidState() {
+        const { handler, transformControls, effectComposer, scene } = threeEditor
+
+        const isObjectValid = (obj) => {
+            if (!obj) return false
+            let parent = obj.parent
+            while (parent) {
+                if (parent === scene) return true
+                parent = parent.parent
+            }
+            return false
+        }
+
+        const currentObject = transformControls.object || handler.currentInfo?.currentModel
+        if (!isObjectValid(currentObject)) {
+            transformControls.object && transformControls.detach()
+            effectComposer.effectPass.outlinePass.selectedObjects = []
+            handler.currentInfo = null
+            props.emitEditor.info = null
+        }
+    }
+
+    window.addEventListener('keydown', (e) => {
+        if ((e.key === 'Delete' || e.key === 'Backspace') && !e.ctrlKey && !e.metaKey) {
+            setTimeout(checkAndClearInvalidState, 0)
+        }
+    })
+
 }
 
-onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender?.())
+onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())
 
 props.emitEditor.createScene = createScene
 
