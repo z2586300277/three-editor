@@ -195,14 +195,6 @@ const uploadChange = file => {
 
                 transformControls.attach(m)
 
-                // 同步选中信息到 emitEditor，确保状态一致
-                emitEditor.info = {
-                    currentModel: m,
-                    currentRootModel: m,
-                    point: m.position.clone(),
-                    mode: '选择'
-                }
-
             })
 
         }
@@ -229,9 +221,9 @@ function delScene(item) {
 
 watch(() => emitEditor.sceneName, (v, o) => {
 
-    if (v) setTimeout(() => emitEditor.createScene(), 100)
-
+    emitEditor.info = null
     emitEditor?.threeEditor?.destroySceneRender?.()
+    if (v) setTimeout(() => emitEditor.createScene(), 100)
 
 })
 

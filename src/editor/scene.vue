@@ -20,15 +20,6 @@ function getEvent(e) {
 
         props.emitEditor.info = info
 
-        // 确保画布选中态与控制器、高亮状态一致
-        if (info.currentModel) {
-            const { transformControls } = props.emitEditor.threeEditor
-            // 控制器挂载到当前选中的对象
-            transformControls.attach(info.currentModel)
-            // 高亮当前选中的对象
-            props.emitEditor.threeEditor.setOutlinePass([info.currentModel])
-        }
-
         if (info.mode === '点击信息') {
 
             const { camera, controls } = props.emitEditor.threeEditor
@@ -124,6 +115,19 @@ function createScene(sceneParams) {
     props.emitEditor.selectPanelEnable = threeEditor.handler.selectPanelEnable
 
     props.emitEditor.threeEditor = threeEditor
+
+    props.emitEditor.info = null
+
+    threeEditor.scene.addEventListener('objectRemoved', () => {
+        if (!props.emitEditor.info) return
+        const { currentModel, currentRootModel } = props.emitEditor.info
+        const inScene = (obj) => obj && threeEditor.scene.getObjectById(obj.id)
+        if (!inScene(currentModel) || !inScene(currentRootModel)) {
+            threeEditor.setOutlinePass([])
+            threeEditor.transformControls.detach()
+            props.emitEditor.info = null
+        }
+    })
 
     window.onresize = () => threeEditor.renderSceneResize()
 
