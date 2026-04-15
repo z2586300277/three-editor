@@ -229,67 +229,68 @@ watch(() => emitEditor.sceneName, (v, o) => {
 
 watch(() => emitEditor.mode, (v, o) => {
 
-    const { threeEditor } = emitEditor
-    if (!threeEditor) return
+    const { transformControls, effectComposer, handler } = emitEditor.threeEditor
 
-    const { handler, transformControls, effectComposer, scene } = threeEditor
+    const { outlinePass } = effectComposer.effectPass
 
-    const isObjectValid = (obj) => {
-        if (!obj) return false
-        let parent = obj.parent
-        while (parent) {
-            if (parent === scene) return true
-            parent = parent.parent
-        }
-        return false
-    }
+    const { currentInfo } = handler
 
-    const currentObject = transformControls.object || handler.currentInfo?.currentModel
-    const currentRootObject = handler.currentInfo?.currentRootModel || currentObject
-    const hasValidObject = isObjectValid(currentObject)
+    const isObjectValid = (obj) => obj && obj.parent !== null
 
-    const detachTransform = () => transformControls.object && transformControls.detach()
-
-    const clearIfInvalid = () => {
-        if (!hasValidObject) {
-            detachTransform()
-            effectComposer.effectPass.outlinePass.selectedObjects = []
-            handler.currentInfo = null
-            emitEditor.info = null
-        }
-    }
-
-    clearIfInvalid()
-
-    if (v === '选中') {
-        detachTransform()
+    if (v == '选中') {
+        transformControls.detach()
         handler.mode = '选择'
-        hasValidObject && threeEditor.setOutlinePass([currentObject])
     }
-    else if (v === '根级') {
-        detachTransform()
-        handler.mode = '根选择'
-        hasValidObject && threeEditor.setOutlinePass([currentRootObject])
-    }
-    else if (v === '平移' || v === '旋转' || v === '缩放') {
-        handler.mode = '变换'
-        const modeMap = { '平移': 'translate', '旋转': 'rotate', '缩放': 'scale' }
-        transformControls.setMode(modeMap[v])
 
-        if (hasValidObject && !transformControls.object) {
-            transformControls.attach(v === '根级' || handler.isTransformChildren ? currentRootObject : currentObject)
-            threeEditor.setOutlinePass([transformControls.object])
+    else if (v == '根级') {
+        transformControls.detach()
+        handler.mode = '根选择'
+    }
+
+    else if (v == '平移') {
+        handler.mode = '变换'
+        transformControls.setMode('translate')
+        outlinePass.selectedObjects = []
+        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
+            handler.isTransformChildren
+                ? transformControls.attach(currentInfo.currentModel)
+                : transformControls.attach(currentInfo.currentRootModel)
         }
     }
-    else if (v === '绘制') {
-        detachTransform()
-        effectComposer.effectPass.outlinePass.selectedObjects = []
+
+    else if (v == '旋转') {
+        handler.mode = '变换'
+        transformControls.setMode('rotate')
+        outlinePass.selectedObjects = []
+        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
+            handler.isTransformChildren
+                ? transformControls.attach(currentInfo.currentModel)
+                : transformControls.attach(currentInfo.currentRootModel)
+        }
+    }
+
+    else if (v == '缩放') {
+        handler.mode = '变换'
+        transformControls.setMode('scale')
+        outlinePass.selectedObjects = []
+        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
+            handler.isTransformChildren
+                ? transformControls.attach(currentInfo.currentModel)
+                : transformControls.attach(currentInfo.currentRootModel)
+        }
+    }
+
+    else if (v == '绘制') {
+        transformControls.detach()
+        outlinePass.selectedObjects = []
         handler.mode = '场景绘制'
     }
-    else if (v === '预览') {
-        detachTransform()
-        effectComposer.effectPass.outlinePass.selectedObjects = []
+
+    else if (v == '预览') {
+        transformControls.detach()
+        outlinePass.selectedObjects = []
         handler.mode = '点击信息'
+        emitEditor.info = null
     }
 
 })

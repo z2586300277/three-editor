@@ -18,6 +18,25 @@ function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
+        const { transformControls, effectComposer, handler } = props.emitEditor.threeEditor
+        const { outlinePass } = effectComposer.effectPass
+
+        if (!info) {
+            transformControls.detach()
+            outlinePass.selectedObjects = []
+            props.emitEditor.info = null
+            return
+        }
+
+        const isObjectValid = (obj) => obj && obj.parent !== null
+        const prevInfo = handler.currentInfo
+
+        if (prevInfo && prevInfo.currentRootModel && !isObjectValid(prevInfo.currentRootModel)) {
+            transformControls.detach()
+            outlinePass.selectedObjects = []
+            handler.currentInfo = null
+        }
+
         props.emitEditor.info = info
 
         if (info.mode === '点击信息') {
@@ -116,35 +135,14 @@ function createScene(sceneParams) {
 
     props.emitEditor.threeEditor = threeEditor
 
-    window.onresize = () => threeEditor.renderSceneResize()
-
-    function checkAndClearInvalidState() {
-        const { handler, transformControls, effectComposer, scene } = threeEditor
-
-        const isObjectValid = (obj) => {
-            if (!obj) return false
-            let parent = obj.parent
-            while (parent) {
-                if (parent === scene) return true
-                parent = parent.parent
-            }
-            return false
-        }
-
-        const currentObject = transformControls.object || handler.currentInfo?.currentModel
-        if (!isObjectValid(currentObject)) {
-            transformControls.object && transformControls.detach()
-            effectComposer.effectPass.outlinePass.selectedObjects = []
-            handler.currentInfo = null
+    threeEditor.transformControls.addEventListener('objectChange', (event) => {
+        if (!threeEditor.transformControls.object) {
+            threeEditor.effectComposer.effectPass.outlinePass.selectedObjects = []
             props.emitEditor.info = null
         }
-    }
-
-    window.addEventListener('keydown', (e) => {
-        if ((e.key === 'Delete' || e.key === 'Backspace') && !e.ctrlKey && !e.metaKey) {
-            setTimeout(checkAndClearInvalidState, 0)
-        }
     })
+
+    window.onresize = () => threeEditor.renderSceneResize()
 
 }
 
