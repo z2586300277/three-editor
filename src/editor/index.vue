@@ -228,71 +228,45 @@ watch(() => emitEditor.sceneName, (v, o) => {
 })
 
 watch(() => emitEditor.mode, (v, o) => {
+    const editor = emitEditor.threeEditor
+    if (!editor) return
 
-    const { transformControls, effectComposer, handler } = emitEditor.threeEditor
+    const { transformControls, handler } = editor
 
-    const { outlinePass } = effectComposer.effectPass
-
-    const { currentInfo } = handler
-
-    const isObjectValid = (obj) => obj && obj.parent !== null
+    // 清理操控器和高亮，但保留 info（用户可能只是想切换模式看看）
+    const detachControls = () => {
+        transformControls.detach()
+        editor.setOutlinePass([])
+    }
 
     if (v == '选中') {
-        transformControls.detach()
+        detachControls()
         handler.mode = '选择'
     }
-
     else if (v == '根级') {
-        transformControls.detach()
+        detachControls()
         handler.mode = '根选择'
     }
-
     else if (v == '平移') {
         handler.mode = '变换'
         transformControls.setMode('translate')
-        outlinePass.selectedObjects = []
-        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
-            handler.isTransformChildren
-                ? transformControls.attach(currentInfo.currentModel)
-                : transformControls.attach(currentInfo.currentRootModel)
-        }
     }
-
     else if (v == '旋转') {
         handler.mode = '变换'
         transformControls.setMode('rotate')
-        outlinePass.selectedObjects = []
-        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
-            handler.isTransformChildren
-                ? transformControls.attach(currentInfo.currentModel)
-                : transformControls.attach(currentInfo.currentRootModel)
-        }
     }
-
     else if (v == '缩放') {
         handler.mode = '变换'
         transformControls.setMode('scale')
-        outlinePass.selectedObjects = []
-        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
-            handler.isTransformChildren
-                ? transformControls.attach(currentInfo.currentModel)
-                : transformControls.attach(currentInfo.currentRootModel)
-        }
     }
-
     else if (v == '绘制') {
-        transformControls.detach()
-        outlinePass.selectedObjects = []
+        detachControls()
         handler.mode = '场景绘制'
     }
-
     else if (v == '预览') {
-        transformControls.detach()
-        outlinePass.selectedObjects = []
+        detachControls()
         handler.mode = '点击信息'
-        emitEditor.info = null
     }
-
 })
 
 function pict() {
