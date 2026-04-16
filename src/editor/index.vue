@@ -228,45 +228,39 @@ watch(() => emitEditor.sceneName, (v, o) => {
 })
 
 watch(() => emitEditor.mode, (v, o) => {
-    const editor = emitEditor.threeEditor
-    if (!editor) return
 
-    const { transformControls, handler } = editor
+    if (v == '选中') emitEditor.threeEditor.handler.mode = '选择'
 
-    // 清理操控器和高亮，但保留 info（用户可能只是想切换模式看看）
-    const detachControls = () => {
-        transformControls.detach()
-        editor.setOutlinePass([])
-    }
+    else if (v == '根级') emitEditor.threeEditor.handler.mode = '根选择'
 
-    if (v == '选中') {
-        detachControls()
-        handler.mode = '选择'
-    }
-    else if (v == '根级') {
-        detachControls()
-        handler.mode = '根选择'
-    }
     else if (v == '平移') {
-        handler.mode = '变换'
-        transformControls.setMode('translate')
+
+        emitEditor.threeEditor.handler.mode = '变换'
+
+        emitEditor.threeEditor.transformControls.setMode('translate')
+
     }
+
     else if (v == '旋转') {
-        handler.mode = '变换'
-        transformControls.setMode('rotate')
+
+        emitEditor.threeEditor.handler.mode = '变换'
+
+        emitEditor.threeEditor.transformControls.setMode('rotate')
+
     }
+
     else if (v == '缩放') {
-        handler.mode = '变换'
-        transformControls.setMode('scale')
+
+        emitEditor.threeEditor.handler.mode = '变换'
+
+        emitEditor.threeEditor.transformControls.setMode('scale')
+
     }
-    else if (v == '绘制') {
-        detachControls()
-        handler.mode = '场景绘制'
-    }
-    else if (v == '预览') {
-        detachControls()
-        handler.mode = '点击信息'
-    }
+
+    else if (v == '绘制') emitEditor.threeEditor.handler.mode = '场景绘制'
+
+    else if (v == '预览') emitEditor.threeEditor.handler.mode = '点击信息'
+
 })
 
 function pict() {
