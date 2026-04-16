@@ -4,7 +4,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import { ThreeEditor, getDistanceScalePoint, createGsapAnimation, THREE } from 'three-editor-cores';
+import { ThreeEditor, getDistanceScalePoint, createGsapAnimation } from 'three-editor-cores';
 
 ThreeEditor.dracoPath = '/three-editor/dist/draco/'
 
@@ -18,61 +18,9 @@ function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
-        if (info.currentModel && !info.currentModel.visible) {
-            const { transformControls, setOutlinePass, handler } = props.emitEditor.threeEditor
-            transformControls.detach()
-            setOutlinePass([])
-            handler.currentInfo = null
-            props.emitEditor.info = null
+        if (!info) {
+            clearInteractionState()
             return
-        }
-
-        if (info.currentModel) {
-            const descriptor = Object.getOwnPropertyDescriptor(THREE.Object3D.prototype, 'visible')
-            if (descriptor && descriptor.set && !info.currentModel._hasVisibleHook) {
-                const originalVisibleSetter = descriptor.set
-                Object.defineProperty(info.currentModel, 'visible', {
-                    set: function(val) {
-                        originalVisibleSetter.call(this, val)
-                        const { transformControls: tc, setOutlinePass: sop, handler: h } = props.emitEditor.threeEditor
-                        if (!val) {
-                            if (tc.object === this || tc.object?.parent === this || tc.object?.parent?.parent === this ||
-                                (h.currentInfo && (h.currentInfo.currentModel === this || h.currentInfo.currentRootModel === this))) {
-                                tc.detach()
-                                sop([])
-                                h.currentInfo = null
-                                props.emitEditor.info = null
-                            }
-                        }
-                    },
-                    configurable: true
-                })
-                info.currentModel._hasVisibleHook = true
-            }
-
-            if (info.currentRootModel && info.currentRootModel !== info.currentModel && !info.currentRootModel._hasVisibleHook) {
-                const rootDescriptor = Object.getOwnPropertyDescriptor(THREE.Object3D.prototype, 'visible')
-                if (rootDescriptor && rootDescriptor.set) {
-                    const rootOriginalVisibleSetter = rootDescriptor.set
-                    Object.defineProperty(info.currentRootModel, 'visible', {
-                        set: function(val) {
-                            rootOriginalVisibleSetter.call(this, val)
-                            const { transformControls: tc, setOutlinePass: sop, handler: h } = props.emitEditor.threeEditor
-                            if (!val) {
-                                if (tc.object === this || tc.object?.parent === this || tc.object?.parent?.parent === this ||
-                                    (h.currentInfo && (h.currentInfo.currentModel === this || h.currentInfo.currentRootModel === this))) {
-                                    tc.detach()
-                                    sop([])
-                                    h.currentInfo = null
-                                    props.emitEditor.info = null
-                                }
-                            }
-                        },
-                        configurable: true
-                    })
-                    info.currentRootModel._hasVisibleHook = true
-                }
-            }
         }
 
         props.emitEditor.info = info
@@ -91,6 +39,25 @@ function getEvent(e) {
 
     })
 
+}
+
+function clearInteractionState() {
+    const { threeEditor } = props.emitEditor
+    if (!threeEditor) return
+    
+    if (threeEditor.transformControls) {
+        threeEditor.transformControls.detach()
+    }
+    
+    if (threeEditor.effectComposer?.effectPass?.outlinePass) {
+        threeEditor.effectComposer.effectPass.outlinePass.selectedObjects = []
+    }
+    
+    if (threeEditor.handler) {
+        threeEditor.handler.currentInfo = null
+    }
+    
+    props.emitEditor.info = null
 }
 
 function createScene(sceneParams) {
