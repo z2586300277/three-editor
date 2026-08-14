@@ -49,7 +49,9 @@ export default defineConfig({
           { text: '源码运行', link: '/codeRun' },
           { text: '设计理念', link: '/createIdea' },
           { text: '安装', link: '/markdown-examples' },
-          { text: 'Api', link: '/api-examples' }
+          { text: 'Api', link: '/api-examples' },
+          { text: '使用说明', link: '/pdf' },
+          { text: '软件权利', link: '/card' }
         ]
       }
     ],
