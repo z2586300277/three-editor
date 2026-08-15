@@ -116,6 +116,19 @@ function createScene(sceneParams) {
 
     props.emitEditor.threeEditor = threeEditor
 
+    props.emitEditor.info = null
+
+    threeEditor.scene.addEventListener('objectRemoved', () => {
+        if (!props.emitEditor.info) return
+        const { currentModel, currentRootModel } = props.emitEditor.info
+        const inScene = (obj) => obj && threeEditor.scene.getObjectById(obj.id)
+        if (!inScene(currentModel) || !inScene(currentRootModel)) {
+            threeEditor.setOutlinePass([])
+            threeEditor.transformControls.detach()
+            props.emitEditor.info = null
+        }
+    })
+
     window.onresize = () => threeEditor.renderSceneResize()
 
 }

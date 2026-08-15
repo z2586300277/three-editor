@@ -221,9 +221,9 @@ function delScene(item) {
 
 watch(() => emitEditor.sceneName, (v, o) => {
 
-    if (v) setTimeout(() => emitEditor.createScene(), 100)
-
+    emitEditor.info = null
     emitEditor?.threeEditor?.destroySceneRender?.()
+    if (v) setTimeout(() => emitEditor.createScene(), 100)
 
 })
 
