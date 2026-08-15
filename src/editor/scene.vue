@@ -18,6 +18,11 @@ function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
+        if (!info) {
+            clearInteractionState()
+            return
+        }
+
         props.emitEditor.info = info
 
         if (info.mode === '点击信息') {
@@ -34,6 +39,25 @@ function getEvent(e) {
 
     })
 
+}
+
+function clearInteractionState() {
+    const { threeEditor } = props.emitEditor
+    if (!threeEditor) return
+    
+    if (threeEditor.transformControls) {
+        threeEditor.transformControls.detach()
+    }
+    
+    if (threeEditor.effectComposer?.effectPass?.outlinePass) {
+        threeEditor.effectComposer.effectPass.outlinePass.selectedObjects = []
+    }
+    
+    if (threeEditor.handler) {
+        threeEditor.handler.currentInfo = null
+    }
+    
+    props.emitEditor.info = null
 }
 
 function createScene(sceneParams) {
