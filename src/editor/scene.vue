@@ -18,6 +18,25 @@ function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
+        const { transformControls, effectComposer, handler } = props.emitEditor.threeEditor
+        const { outlinePass } = effectComposer.effectPass
+
+        if (!info) {
+            transformControls.detach()
+            outlinePass.selectedObjects = []
+            props.emitEditor.info = null
+            return
+        }
+
+        const isObjectValid = (obj) => obj && obj.parent !== null
+        const prevInfo = handler.currentInfo
+
+        if (prevInfo && prevInfo.currentRootModel && !isObjectValid(prevInfo.currentRootModel)) {
+            transformControls.detach()
+            outlinePass.selectedObjects = []
+            handler.currentInfo = null
+        }
+
         props.emitEditor.info = info
 
         if (info.mode === '点击信息') {
@@ -115,6 +134,13 @@ function createScene(sceneParams) {
     props.emitEditor.selectPanelEnable = threeEditor.handler.selectPanelEnable
 
     props.emitEditor.threeEditor = threeEditor
+
+    threeEditor.transformControls.addEventListener('objectChange', (event) => {
+        if (!threeEditor.transformControls.object) {
+            threeEditor.effectComposer.effectPass.outlinePass.selectedObjects = []
+            props.emitEditor.info = null
+        }
+    })
 
     window.onresize = () => threeEditor.renderSceneResize()
 

@@ -229,37 +229,69 @@ watch(() => emitEditor.sceneName, (v, o) => {
 
 watch(() => emitEditor.mode, (v, o) => {
 
-    if (v == '选中') emitEditor.threeEditor.handler.mode = '选择'
+    const { transformControls, effectComposer, handler } = emitEditor.threeEditor
 
-    else if (v == '根级') emitEditor.threeEditor.handler.mode = '根选择'
+    const { outlinePass } = effectComposer.effectPass
+
+    const { currentInfo } = handler
+
+    const isObjectValid = (obj) => obj && obj.parent !== null
+
+    if (v == '选中') {
+        transformControls.detach()
+        handler.mode = '选择'
+    }
+
+    else if (v == '根级') {
+        transformControls.detach()
+        handler.mode = '根选择'
+    }
 
     else if (v == '平移') {
-
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('translate')
-
+        handler.mode = '变换'
+        transformControls.setMode('translate')
+        outlinePass.selectedObjects = []
+        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
+            handler.isTransformChildren
+                ? transformControls.attach(currentInfo.currentModel)
+                : transformControls.attach(currentInfo.currentRootModel)
+        }
     }
 
     else if (v == '旋转') {
-
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('rotate')
-
+        handler.mode = '变换'
+        transformControls.setMode('rotate')
+        outlinePass.selectedObjects = []
+        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
+            handler.isTransformChildren
+                ? transformControls.attach(currentInfo.currentModel)
+                : transformControls.attach(currentInfo.currentRootModel)
+        }
     }
 
     else if (v == '缩放') {
-
-        emitEditor.threeEditor.handler.mode = '变换'
-
-        emitEditor.threeEditor.transformControls.setMode('scale')
-
+        handler.mode = '变换'
+        transformControls.setMode('scale')
+        outlinePass.selectedObjects = []
+        if (currentInfo && isObjectValid(currentInfo.currentRootModel)) {
+            handler.isTransformChildren
+                ? transformControls.attach(currentInfo.currentModel)
+                : transformControls.attach(currentInfo.currentRootModel)
+        }
     }
 
-    else if (v == '绘制') emitEditor.threeEditor.handler.mode = '场景绘制'
+    else if (v == '绘制') {
+        transformControls.detach()
+        outlinePass.selectedObjects = []
+        handler.mode = '场景绘制'
+    }
 
-    else if (v == '预览') emitEditor.threeEditor.handler.mode = '点击信息'
+    else if (v == '预览') {
+        transformControls.detach()
+        outlinePass.selectedObjects = []
+        handler.mode = '点击信息'
+        emitEditor.info = null
+    }
 
 })
 
