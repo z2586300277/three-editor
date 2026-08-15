@@ -183,7 +183,9 @@ const uploadChange = file => {
 
         loaderService.complete = m => {
 
-            const { transformControls, camera, controls } = emitEditor.threeEditor
+            emitEditor.info = null
+
+            const { transformControls, camera, controls, handler } = emitEditor.threeEditor
 
             const { maxView, target } = getObjectViews(m)
 
@@ -194,6 +196,17 @@ const uploadChange = file => {
                 controls.target.copy(target)
 
                 transformControls.attach(m)
+
+                const info = {
+                    currentModel: m,
+                    currentRootModel: m,
+                    point: m.position.clone(),
+                    mode: handler.mode
+                }
+
+                emitEditor.info = info
+                emitEditor.threeEditor.currentInfo = info
+                handler.currentInfo = info
 
             })
 
@@ -221,9 +234,10 @@ function delScene(item) {
 
 watch(() => emitEditor.sceneName, (v, o) => {
 
-    if (v) setTimeout(() => emitEditor.createScene(), 100)
-
+    emitEditor.info = null
     emitEditor?.threeEditor?.destroySceneRender?.()
+
+    if (v) setTimeout(() => emitEditor.createScene(), 100)
 
 })
 
@@ -389,6 +403,18 @@ const axes = ref(false)
 const grid = ref(false)
 watch(axes, (v) => emitEditor.threeEditor?.handler.setHandlerOption('axes', v))
 watch(grid, (v) => emitEditor.threeEditor?.handler.setHandlerOption('grid', v))
+
+watch(() => emitEditor.threeEditor, (threeEditor) => {
+    if (threeEditor) {
+        threeEditor.handler.keyDownCallback = (key) => {
+            if (key === 'Delete' || key === 'Escape') {
+                emitEditor.info = null
+                threeEditor.currentInfo = null
+                threeEditor.handler.currentInfo = null
+            }
+        }
+    }
+}, { immediate: true })
 </script>
 
 <style lang="less" scoped>

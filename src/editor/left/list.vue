@@ -30,9 +30,10 @@ function load(url) {
 
         const { emitEditor } = props
 
-        setTimeout(() => emitEditor.createScene(res), 100)
-
+        emitEditor.info = null
         emitEditor?.threeEditor?.destroySceneRender?.()
+
+        setTimeout(() => emitEditor.createScene(res), 100)
 
     })
 

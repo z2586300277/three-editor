@@ -18,6 +18,13 @@ function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
+        if (!info) {
+            props.emitEditor.info = null
+            props.emitEditor.threeEditor.currentInfo = null
+            props.emitEditor.threeEditor.handler.currentInfo = null
+            return
+        }
+
         props.emitEditor.info = info
 
         if (info.mode === '点击信息') {
@@ -37,6 +44,8 @@ function getEvent(e) {
 }
 
 function createScene(sceneParams) {
+
+    props.emitEditor.info = null
 
     if (!sceneParams) {
 
@@ -120,7 +129,10 @@ function createScene(sceneParams) {
 
 }
 
-onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())
+onUnmounted(() => {
+    props.emitEditor.info = null
+    props.emitEditor.threeEditor?.destroySceneRender?.()
+})
 
 props.emitEditor.createScene = createScene
 
