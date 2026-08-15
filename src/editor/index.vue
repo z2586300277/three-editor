@@ -195,6 +195,14 @@ const uploadChange = file => {
 
                 transformControls.attach(m)
 
+                // 同步选中信息到 emitEditor，确保状态一致
+                emitEditor.info = {
+                    currentModel: m,
+                    currentRootModel: m,
+                    point: m.position.clone(),
+                    mode: '选择'
+                }
+
             })
 
         }

@@ -20,6 +20,15 @@ function getEvent(e) {
 
         props.emitEditor.info = info
 
+        // 确保画布选中态与控制器、高亮状态一致
+        if (info.currentModel) {
+            const { transformControls } = props.emitEditor.threeEditor
+            // 控制器挂载到当前选中的对象
+            transformControls.attach(info.currentModel)
+            // 高亮当前选中的对象
+            props.emitEditor.threeEditor.setOutlinePass([info.currentModel])
+        }
+
         if (info.mode === '点击信息') {
 
             const { camera, controls } = props.emitEditor.threeEditor
