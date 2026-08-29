@@ -116,6 +116,27 @@ function createScene(sceneParams) {
 
     props.emitEditor.threeEditor = threeEditor
 
+    // 监听删除事件，确保删除对象后清理选中状态
+    const originalKeyDown = threeEditor.handler.keyDownCallback
+    threeEditor.handler.keyDownCallback = (event) => {
+        if (event.key === 'Delete') {
+            const currentInfo = props.emitEditor.info
+            if (currentInfo?.currentModel) {
+                setTimeout(() => {
+                    const obj = currentInfo.currentModel
+                    let stillExists = false
+                    threeEditor.scene.traverse((child) => {
+                        if (child === obj) stillExists = true
+                    })
+                    if (!stillExists) {
+                        props.emitEditor.info = null
+                    }
+                }, 50)
+            }
+        }
+        if (originalKeyDown) originalKeyDown(event)
+    }
+
     window.onresize = () => threeEditor.renderSceneResize()
 
 }

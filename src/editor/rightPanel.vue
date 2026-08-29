@@ -2,14 +2,25 @@
     <transition name="el-zoom-in-bottom">
         <div class="right" v-show="expandR">
             <div class="main">
-                <el-card class="box-card">
+                <el-card class="box-card" v-if="emitEditor.info?.currentModel">
                     <template #header>
                         <div class="card-header">
                             <span>名称：{{ sl(emitEditor.info?.currentModel?.name) }}</span>
                         </div>
                     </template>
-                    <div class="text item" v-for="i in ['x', 'y', 'z']">{{ '坐标 ' + i + ' : ' +
+                    <div class="text item" v-for="i in ['x', 'y', 'z']" :key="i">{{ '坐标 ' + i + ' : ' +
             sl(emitEditor.info?.point[i]) }}</div>
+                    <template #footer><el-button class="button"
+                            @click="emitEditor.threeEditor.setLight('AmbientLight', { intensity: 3 })"
+                            text>快速添加环境光</el-button></template>
+                </el-card>
+                <el-card class="box-card" v-else>
+                    <template #header>
+                        <div class="card-header">
+                            <span>对象属性</span>
+                        </div>
+                    </template>
+                    <div class="text item">未选中任何对象</div>
                     <template #footer><el-button class="button"
                             @click="emitEditor.threeEditor.setLight('AmbientLight', { intensity: 3 })"
                             text>快速添加环境光</el-button></template>
