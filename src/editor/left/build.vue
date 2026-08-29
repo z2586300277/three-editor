@@ -71,7 +71,7 @@ function load(name, t = 'online', event) {
 
         props.emitEditor.loading = false
 
-        const { transformControls, camera, DOM, scene, controls } = props.emitEditor.threeEditor
+        const { camera, DOM, scene, controls } = props.emitEditor.threeEditor
 
         if (event)  {
         const { clientX, clientY } = event;
@@ -92,13 +92,9 @@ function load(name, t = 'online', event) {
 
         Promise.all([createGsapAnimation(camera.position, maxView), createGsapAnimation(controls.target, target)]).then(() => {
 
-            props.emitEditor.threeEditor.setOutlinePass([m])
-
             controls.target.copy(target)
 
-            transformControls.attach(m)
-
-            setTimeout(() => props.emitEditor.threeEditor.setOutlinePass([]), 1000)
+            props.emitEditor.threeEditor.selectObject(m)
 
         })
 
