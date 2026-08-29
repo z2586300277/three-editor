@@ -36,6 +36,31 @@ function getEvent(e) {
 
 }
 
+function syncSelectedInfo() {
+    const { transformControls } = props.emitEditor.threeEditor
+    const object = transformControls.object
+
+    if (object) {
+        props.emitEditor.info = {
+            currentModel: object,
+            point: object.position,
+            mode: props.emitEditor.threeEditor.handler.mode
+        }
+    }
+}
+
+function setupSyncListeners() {
+    const { transformControls } = props.emitEditor.threeEditor
+
+    transformControls.addEventListener('objectChange', syncSelectedInfo)
+
+    transformControls.addEventListener('dragging-changed', (event) => {
+        if (!event.value) syncSelectedInfo()
+    })
+
+    transformControls.addEventListener('attached', syncSelectedInfo)
+}
+
 function createScene(sceneParams) {
 
     if (!sceneParams) {
@@ -118,6 +143,21 @@ function createScene(sceneParams) {
 
     window.onresize = () => threeEditor.renderSceneResize()
 
+    setupSyncListeners()
+
+    threeEditor.transformControls.addEventListener('detached', () => {
+        props.emitEditor.info = null
+    })
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Delete' || e.key === 'Backspace' || e.key === 'Escape') {
+            setTimeout(() => {
+                if (!threeEditor.transformControls.object) {
+                    props.emitEditor.info = null
+                }
+            }, 0)
+        }
+    })
 }
 
 onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())
