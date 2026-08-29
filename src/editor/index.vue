@@ -195,6 +195,15 @@ const uploadChange = file => {
 
                 transformControls.attach(m)
 
+                const info = {
+                    currentModel: m,
+                    currentRootModel: m,
+                    point: m.position.clone(),
+                    mode: emitEditor.threeEditor.handler.mode
+                }
+                emitEditor.info = info
+                emitEditor.threeEditor.handler.currentInfo = info
+
             })
 
         }
@@ -220,6 +229,14 @@ function delScene(item) {
 }
 
 watch(() => emitEditor.sceneName, (v, o) => {
+
+    emitEditor.info = null
+
+    if (emitEditor.threeEditor) {
+        emitEditor.threeEditor.transformControls.detach()
+        emitEditor.threeEditor.setOutlinePass([])
+        emitEditor.threeEditor.handler.currentInfo = null
+    }
 
     if (v) setTimeout(() => emitEditor.createScene(), 100)
 

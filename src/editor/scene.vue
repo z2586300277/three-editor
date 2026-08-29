@@ -32,8 +32,26 @@ function getEvent(e) {
 
         }
 
+        if (info.currentModel && (info.mode === '选择' || info.mode === '根选择')) {
+            const { transformControls } = props.emitEditor.threeEditor
+            const targetObject = info.mode === '根选择' ? info.currentRootModel : info.currentModel
+            if (targetObject && transformControls.object !== targetObject) {
+                transformControls.detach()
+                transformControls.attach(targetObject)
+            }
+        }
+
     })
 
+}
+
+function clearSelection() {
+    props.emitEditor.info = null
+    if (props.emitEditor.threeEditor) {
+        props.emitEditor.threeEditor.transformControls.detach()
+        props.emitEditor.threeEditor.setOutlinePass([])
+        props.emitEditor.threeEditor.handler.currentInfo = null
+    }
 }
 
 function createScene(sceneParams) {
@@ -123,6 +141,7 @@ function createScene(sceneParams) {
 onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())
 
 props.emitEditor.createScene = createScene
+props.emitEditor.clearSelection = clearSelection
 
 </script>
 
