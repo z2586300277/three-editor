@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref, shallowReactive } from 'vue';
 import { ThreeEditor, getDistanceScalePoint, createGsapAnimation } from 'three-editor-cores';
 
 ThreeEditor.dracoPath = '/three-editor/dist/draco/'
@@ -12,13 +12,31 @@ const threeBox = ref(null)
 
 const props = defineProps(['emitEditor', 'options'])
 
+let transformControlsChangeHandler = null
+
+let keyDownHandler = null
+
 onMounted(() => (props.emitEditor.sceneName !== '') && createScene())
+
+function updateInfoPanel(info) {
+    if (!info) {
+        props.emitEditor.info = null
+        return
+    }
+    const newInfo = {
+        currentModel: info.currentModel,
+        currentRootModel: info.currentRootModel,
+        point: info.point ? { x: info.point.x, y: info.point.y, z: info.point.z } : null,
+        mode: info.mode
+    }
+    props.emitEditor.info = shallowReactive(newInfo)
+}
 
 function getEvent(e) {
 
     props.emitEditor.threeEditor.getSceneEvent(e, info => {
 
-        props.emitEditor.info = info
+        updateInfoPanel(info)
 
         if (info.mode === '点击信息') {
 
@@ -34,6 +52,52 @@ function getEvent(e) {
 
     })
 
+}
+
+function setupTransformControlsListener(threeEditor) {
+    const { transformControls, handler } = threeEditor
+    
+    if (transformControlsChangeHandler) {
+        transformControls.removeEventListener('objectChange', transformControlsChangeHandler)
+    }
+    
+    transformControlsChangeHandler = () => {
+        if (props.emitEditor.info && props.emitEditor.info.currentModel) {
+            const currentModel = props.emitEditor.info.currentModel
+            if (currentModel.parent === null) {
+                updateInfoPanel(null)
+                return
+            }
+            const point = currentModel.position
+            updateInfoPanel({
+                currentModel: currentModel,
+                currentRootModel: props.emitEditor.info.currentRootModel,
+                point: point,
+                mode: props.emitEditor.info.mode
+            })
+        }
+    }
+    
+    transformControls.addEventListener('objectChange', transformControlsChangeHandler)
+}
+
+function setupDeleteListener(threeEditor) {
+    if (keyDownHandler) {
+        document.removeEventListener('keydown', keyDownHandler)
+    }
+    
+    keyDownHandler = (e) => {
+        if (e.key === 'Delete' || e.key === 'Backspace') {
+            if (props.emitEditor.info && props.emitEditor.info.currentModel) {
+                const currentModel = props.emitEditor.info.currentModel
+                if (currentModel.parent === null) {
+                    updateInfoPanel(null)
+                }
+            }
+        }
+    }
+    
+    document.addEventListener('keydown', keyDownHandler)
 }
 
 function createScene(sceneParams) {
@@ -115,12 +179,24 @@ function createScene(sceneParams) {
     props.emitEditor.selectPanelEnable = threeEditor.handler.selectPanelEnable
 
     props.emitEditor.threeEditor = threeEditor
+    
+    setupTransformControlsListener(threeEditor)
+    
+    setupDeleteListener(threeEditor)
 
     window.onresize = () => threeEditor.renderSceneResize()
 
 }
 
-onUnmounted(() => props.emitEditor.threeEditor?.destroySceneRender())
+onUnmounted(() => {
+    if (transformControlsChangeHandler && props.emitEditor.threeEditor?.transformControls) {
+        props.emitEditor.threeEditor.transformControls.removeEventListener('objectChange', transformControlsChangeHandler)
+    }
+    if (keyDownHandler) {
+        document.removeEventListener('keydown', keyDownHandler)
+    }
+    props.emitEditor.threeEditor?.destroySceneRender()
+})
 
 props.emitEditor.createScene = createScene
 
