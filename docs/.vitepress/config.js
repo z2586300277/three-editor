@@ -30,7 +30,8 @@ export default defineConfig({
   description: "THREE-EDITOR 是使用 npm 库 three-editor-cores基于Three.js, 实现组态化, 高度灵活扩展的低代码, 无代码, 快速开发的三维场景可视化编辑器内核",
   themeConfig: {
     nav: [
-      { text: '新编辑器🍏', link: 'https://z2586300277.github.io/threejs-editor/' },
+      { text: '预览☘️', link: 'https://z2586300277.github.io/editor-docs/preview.html' },
+      { text: '企业🏬', link: 'http://site.threehub.cn/' },
       { text: '下载⚡', link: 'https://pan.quark.cn/s/4fa387b067fb' },
       { text: '主页🏠', link: 'https://z2586300277.github.io/' },
       { text: '开源案例🍃', link: 'https://z2586300277.github.io/three-cesium-examples/#/example' },
@@ -58,7 +59,7 @@ export default defineConfig({
 
     footer: {
         message: '基于 MulanPSL2 许可发布',
-        copyright: `版权所有 ©2019-${new Date().getFullYear()} 北京优雅幻光科技`
+        copyright: `版权所有 ©2019-${new Date().getFullYear()} 北京优悦幻光科技有限公司`
     },
 
     socialLinks: [
